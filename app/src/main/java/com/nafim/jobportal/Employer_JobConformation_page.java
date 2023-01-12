@@ -13,11 +13,15 @@ public class Employer_JobConformation_page extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,employer,deadLine,eduQualification;
+        String jobTitle,employer,deadLine,eduQualification,employerName,empJobResponsiblity,Salary,deadline;
         jobTitle= extras.getString("jobType");
         employer=extras.getString("jobTitle");
         deadLine=extras.getString("empjobLocation");
         eduQualification=extras.getString("emp_educationalQualification");
+        empJobResponsiblity= extras.getString("empJobResponsiblity");
+        Salary=extras.getString("Salary");
+        deadline= extras.getString("deadline");
+        employerName=extras.getString("employerName");
 
     }
 }

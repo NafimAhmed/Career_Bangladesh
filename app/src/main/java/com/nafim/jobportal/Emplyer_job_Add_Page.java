@@ -14,7 +14,7 @@ import android.widget.Spinner;
 public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner jobTypeSpiner;
-    EditText empjobTitle,empjobLocation,emp_educationalQualification,empJobResponsiblity,Salary,deadline;
+    EditText empjobTitle,employerName,empjobLocation,emp_educationalQualification,empJobResponsiblity,Salary,deadline;
     Button confirmBtn;
 
     @Override
@@ -27,6 +27,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         jobTypeSpiner.setAdapter(adapter);
         jobTypeSpiner.setOnItemSelectedListener(this);
+        employerName=findViewById(R.id.employerName);
         empjobTitle=findViewById(R.id.empjobTitle);
         empjobLocation=findViewById(R.id.empjobLocation);
         emp_educationalQualification=findViewById(R.id.emp_educationalQualification);
@@ -44,6 +45,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
                 Intent intent = new Intent(getApplicationContext(),Employer_JobConformation_page.class);
                 intent.putExtra("jobType",jobTypeSpiner.getSelectedItem().toString());
                 intent.putExtra("jobTitle",empjobTitle.getText().toString());
+                intent.putExtra("employerName",employerName.getText().toString());
                 intent.putExtra("empjobLocation",empjobLocation.getText().toString());
                 intent.putExtra("emp_educationalQualification",emp_educationalQualification.getText().toString());
                 intent.putExtra("empJobResponsiblity",empJobResponsiblity.getText().toString());
