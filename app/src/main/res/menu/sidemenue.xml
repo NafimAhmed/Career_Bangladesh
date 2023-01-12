@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/home_menue"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/resume_menue"
+            android:icon="@drawable/viewresume"
+            android:title="View Resume"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/edit_profile_menue"
+            android:icon="@drawable/edit_profile"
+            android:title="Edit profile"
+            >
+
+        </item>
+
+    </group>
+
+
+    <group>
+        <item android:title="authentication">
+            <menu>
+                <item
+                    android:id="@+id/settings_menue"
+                    android:icon="@drawable/settings"
+                    android:title="Settings"
+                    ></item>
+                <item
+                    android:id="@+id/logout_menue"
+                    android:icon="@drawable/logout"
+                    android:title="Log out"
+                    ></item>
+
+            </menu>
+        </item>
+
+    </group>
+
+    <group>
+        <item android:title="share">
+            <menu>
+                <item
+                    android:id="@+id/share_menue"
+                    android:icon="@drawable/ic_baseline_share_24"
+                    android:title="Share"
+                    ></item>
+                <item
+                    android:id="@+id/refer_menue"
+                    android:icon="@drawable/refer"
+                    android:title="Refer"
+                    ></item>
+
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

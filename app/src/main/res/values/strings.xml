@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Job Portal</string>
+
+    <string-array name="number">
+        <item>Select</item>
+        <item>Job seeker</item>
+        <item>Employer</item>
+
+    </string-array>
+    <string-array name="major">
+        <item>Select</item>
+        <item>Dhaka</item>
+        <item>Rajshahi</item>
+        <item>Khulna</item>
+        <item>Borishal</item>
+        <item>Sylhet</item>
+        <item>Dinajpur</item>
+        <item>Madrasa</item>
+        <item>Vocational</item>
+        <item>Mymensingh</item>
+        <item>British council</item>
+        <item>Mechanical engineering</item>
+
+        <item>Computer Science and Engineering</item>
+        <item>Civil Engineering</item>
+
+        <item>Computer Science and Engineering</item>
+        <item>Civil Engineering</item>
+
+    </string-array>
+    <string-array name="result_type">
+        <item>Select</item>
+        <item>Division</item>
+        <item>CGPA</item>
+        <item>Appeard</item>
+        <item>pass</item>
+
+    </string-array>
+
+    <string-array name="Job_type">
+        <item>Select</item>
+        <item>All</item>
+        <item>IT</item>
+        <item>Banking</item>
+        <item>Business administration</item>
+        <item>Maintanance</item>
+        <item>Engineering</item>
+        <item>Research</item>
+        <item>Management</item>
+        <item>Business administration</item>
+        <item>Technical</item>
+
+
+    </string-array>
+
+
+    <string-array name="edu_level">
+        <item>Select</item>
+        <item>SSC</item>
+        <item>A level</item>
+        <item>O level</item>
+        <item>HSC</item>
+        <item>BSc</item>
+        <item>BSc Engg.</item>
+        <item>BED</item>
+        <item>BA</item>
+        <item>BCom</item>
+        <item>MSc</item>
+        <item>MSc Engg.</item>
+        <item>MA</item>
+        <item>Mcom</item>
+        <item>MBA</item>
+        <item>Phd</item>
+
+
+    </string-array>
+
+
+</resources>
