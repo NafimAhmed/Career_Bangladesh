@@ -120,6 +120,32 @@
                         ></EditText>
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vacancy : "
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/empjobvacancy"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -14,7 +14,7 @@ import android.widget.Spinner;
 public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner jobTypeSpiner;
-    EditText empjobTitle,employerName,empjobLocation,emp_educationalQualification,empJobResponsiblity,Salary,deadline;
+    EditText empjobTitle,employerName,empjobLocation,empjobvacancy,emp_educationalQualification,empJobResponsiblity,Salary,deadline;
     Button confirmBtn;
 
     @Override
@@ -29,6 +29,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
         jobTypeSpiner.setOnItemSelectedListener(this);
         employerName=findViewById(R.id.employerName);
         empjobTitle=findViewById(R.id.empjobTitle);
+        empjobvacancy=findViewById(R.id.empjobvacancy);
         empjobLocation=findViewById(R.id.empjobLocation);
         emp_educationalQualification=findViewById(R.id.emp_educationalQualification);
         empJobResponsiblity=findViewById(R.id.empJobResponsiblity);
@@ -46,6 +47,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
                 intent.putExtra("jobType",jobTypeSpiner.getSelectedItem().toString());
                 intent.putExtra("jobTitle",empjobTitle.getText().toString());
                 intent.putExtra("employerName",employerName.getText().toString());
+                intent.putExtra("empjobvacancy",empjobvacancy.getText().toString());
                 intent.putExtra("empjobLocation",empjobLocation.getText().toString());
                 intent.putExtra("emp_educationalQualification",emp_educationalQualification.getText().toString());
                 intent.putExtra("empJobResponsiblity",empJobResponsiblity.getText().toString());
