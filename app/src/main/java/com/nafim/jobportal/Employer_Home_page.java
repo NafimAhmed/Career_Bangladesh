@@ -63,12 +63,12 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new ItemEmployer("Android Developer","A Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2FArabic.txt"));
-        arrayList.add(new ItemEmployer("Android Developer","B Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2FArabic2.txt"));
-        arrayList.add(new ItemEmployer("Android Developer","C Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2Fsample.txt"));
-        arrayList.add(new ItemEmployer("Android Developer","D Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2Fsample3.txt"));
-        arrayList.add(new ItemEmployer("Android Developer","E Group","1/5/23","uihfdsj"));
-        arrayList.add(new ItemEmployer("Android Developer","AF Group","1/5/23","jifer"));
+        arrayList.add(new ItemEmployer("Android Developer","A Group","1/5/23","MSc. In Computer Science"));
+        arrayList.add(new ItemEmployer("Android Developer","B Group","1/5/23","MSc. In Computer Science"));
+        arrayList.add(new ItemEmployer("Android Developer","C Group","1/5/23","MSc. In Computer Science"));
+        arrayList.add(new ItemEmployer("Android Developer","D Group","1/5/23","MSc. In Computer Science"));
+        arrayList.add(new ItemEmployer("Android Developer","E Group","1/5/23","MSc. In Computer Science"));
+        arrayList.add(new ItemEmployer("Android Developer","AF Group","1/5/23","MSc. In Computer Science"));
         adapter=new AdapterEmployer(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);

@@ -3,10 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/cardview_light_background"
     android:orientation="vertical"
     tools:context=".registration_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="wrap_content"
@@ -27,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name"
+        android:textColor="@color/black"
+        android:textColorHint="#757373"
         android:background="@drawable/edit_text_shape"
         android:padding="20dp"
         android:layout_margin="10dp"
@@ -36,6 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
+        android:textColor="@color/black"
+        android:textColorHint="#757373"
         android:background="@drawable/edit_text_shape"
         android:padding="20dp"
         android:layout_margin="10dp"
@@ -45,6 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
+        android:textColor="@color/black"
+        android:textColorHint="#757373"
         android:background="@drawable/edit_text_shape"
         android:padding="20dp"
         android:layout_margin="10dp"
@@ -54,21 +74,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="#757373"
         android:background="@drawable/edit_text_shape"
         android:padding="20dp"
         android:layout_margin="10dp"
         ></EditText>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
 
-    <Button
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Please Select role : "
+                    android:textSize="20dp"
+                    ></TextView>
+
+                <Spinner
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/loginSpinner"
+                    android:backgroundTint="#93066B"
+                    android:background="@drawable/edit_text_shape"
+                    ></Spinner>
+
+
+            </LinearLayout>
+
+
+
+
+            <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
         android:textSize="25dp"
-        android:backgroundTint="#0DE306"
+        android:backgroundTint="#B10C82"
         android:layout_gravity="center_horizontal"
         ></Button>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
 
 
 

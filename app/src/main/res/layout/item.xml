@@ -13,7 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:background="@color/teal_200"
+        android:background="#9DF1DF"
         >
 
 
@@ -25,6 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:id="@+id/jobTitle"
                 android:hint="Job Title"
                 android:textSize="25dp"
@@ -41,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/employerName"
+                android:textColor="@color/black"
                 android:hint="Employer name"
                 android:textSize="20dp"
                 ></TextView>
@@ -60,6 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="23dp"
+                android:textColor="@color/black"
+
                 android:textStyle="bold"
                 android:text="Dead Line : "
                 ></TextView>
@@ -69,6 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/deadline"
+                android:textColor="@color/black"
+
                 android:hint="Educational Qualification"
                 android:textSize="20dp"
                 ></TextView>
@@ -91,6 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="23dp"
+                android:textColor="@color/black"
+
                 android:textStyle="bold"
                 android:text="Educational Qualification : "
                 ></TextView>
@@ -101,6 +109,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/educationalQualification"
                 android:hint="Dead Line"
+                android:textColor="@color/black"
+
                 android:textSize="20dp"
                 ></TextView>
 

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background="#2EEF03"
+        android:background="#B10C82"
         >
 
         <TextView
@@ -58,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/locationDetail"
                 android:hint="Location Detail"
+                android:text="Uttara, Dhaka"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 ></TextView>
@@ -88,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/vacancyDetail"
                 android:hint="Vacancy Detail"
+                android:text="2"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 ></TextView>
@@ -117,7 +119,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/SalaryDetail"
                 android:textColor="@color/black"
-                android:hint="Vacancy Detail"
+                android:hint="Salary"
+                android:text="12000/="
                 android:textSize="20dp"
                 ></TextView>
 

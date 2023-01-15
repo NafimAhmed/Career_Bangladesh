@@ -33,9 +33,14 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
 
 
         loginSpiner=findViewById(R.id.loginSpinner);
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.number, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,
+                R.array.number,
+                //android.R.layout.simple_spinner_item,
+                R.layout.spinner_text
+                );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         loginSpiner.setAdapter(adapter);
+
         loginSpiner.setOnItemSelectedListener(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener(
@@ -89,5 +94,9 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void forgotPass(View view){
+        Toast.makeText(getApplicationContext(),"This function is not available yet",Toast.LENGTH_SHORT).show();
     }
 }

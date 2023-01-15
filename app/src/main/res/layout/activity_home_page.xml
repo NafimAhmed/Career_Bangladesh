@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+
     android:id="@+id/drewerlayout"
     tools:context=".Home_page"
     tools:openDrawer="start"
@@ -48,10 +49,10 @@
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                     app:title="Home"
                     android:id="@+id/toolbar"
-                    android:background="@color/purple_500"
+                    android:background="#B10C82"
                     app:titleTextColor="@color/white"
                     app:titleMarginStart="10dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     tools:ignore="MissingConstrains"
                     >
 
@@ -60,7 +61,6 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:scrollbars="vertical"
                     android:scrollbarSize="10dp"
                     android:id="@+id/rcvw"

@@ -74,12 +74,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         Adapter.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new Item("Android Developer","A Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
-        arrayList.add(new Item("Android Developer","B Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
-        arrayList.add(new Item("Android Developer","C Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
-        arrayList.add(new Item("Android Developer","D Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
-        arrayList.add(new Item("Android Developer","E Group","1/5/23","uihfdsj","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
-        arrayList.add(new Item("Android Developer","AF Group","1/5/23","jifer","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","A Group","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science","Software development"));
+        arrayList.add(new Item("Android Developer","B Group","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"));
+        arrayList.add(new Item("Android Developer","C Group","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science","Mobile app development"));
+        arrayList.add(new Item("Android Developer","D Group","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",".NET development"));
+        arrayList.add(new Item("Android Developer","E Group","1/5/23","Bongshal, Dhaka","2","12000","MSc. In Computer Science","PHP development"));
+        arrayList.add(new Item("Android Developer","AF Group","1/5/23","Mirpur 12, Dhaka","2","12000","MSc. In Computer Science","Software development"));
         adapter=new Adapter(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background="#2EEF03"
+        android:background="#B10C82"
         >
 
         <TextView
@@ -218,7 +218,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
         android:text="Apply now"
-        android:backgroundTint="#01D52E"
+        android:backgroundTint="#B10C82"
         android:id="@+id/applyNow"
         ></Button>
 
