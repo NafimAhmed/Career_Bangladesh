@@ -145,6 +145,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/empjobvacancy"
                         android:layout_margin="10dp"
+                        android:inputType="number"
                         android:textSize="25dp"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
@@ -224,6 +225,7 @@
                         android:id="@+id/Salary"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:inputType="numberDecimal"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
@@ -244,14 +246,16 @@
                         android:textSize="25dp"
                         ></TextView>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/deadline"
+                        android:clickable="true"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:inputType="date"
                         android:background="@drawable/edit_text_shape"
-                        ></EditText>
+                        ></TextView>
                 </LinearLayout>
 
 

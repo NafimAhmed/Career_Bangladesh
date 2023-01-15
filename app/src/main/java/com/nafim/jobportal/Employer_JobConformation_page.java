@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Employer_JobConformation_page extends AppCompatActivity {
 
-    TextView jobTitleDetail,jobType,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
+    TextView jobTitleDetail,JobResponsiblity,jobType,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
 
     Button btnPost;
     @Override
@@ -25,7 +25,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         employerDetail=findViewById(R.id.employerDetail);
         locationDetail=findViewById(R.id.locationDetail);
         jobType=findViewById(R.id.jobType);
-        //vacancyDetail=findViewById(R.id.vacancyDetail);
+        JobResponsiblity=findViewById(R.id.JobResponsiblity);
         SalaryDetail=findViewById(R.id.SalaryDetail);
         deadlineDetail=findViewById(R.id.deadlineDetail);
         educationalQualificationDetail=findViewById(R.id.educationalQualificationDetail);
@@ -59,7 +59,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         jobLocation=extras.getString("empjobLocation");
         Salary=extras.getString("Salary");
         deadline= extras.getString("deadline");
-        //employerName=extras.getString("employerName");
+
 
 
         jobTitleDetail.setText(jobTitle);
@@ -67,6 +67,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         deadlineDetail.setText(deadline);
         locationDetail.setText(jobLocation);
         SalaryDetail.setText(Salary);
+        JobResponsiblity.setText(empJobResponsiblity);
         jobType.setText(jobtype);
         vacancyDetail.setText(empjobvacancy);
         deadlineDetail.setText(deadline);
