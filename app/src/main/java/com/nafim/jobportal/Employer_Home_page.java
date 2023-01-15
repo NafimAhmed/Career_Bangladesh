@@ -35,6 +35,8 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employer_home_page);
 
+        getSupportActionBar().setTitle("Previous job post");
+
 
         btnFloating=findViewById(R.id.addJob);
         btnFloating.setOnClickListener(new View.OnClickListener() {

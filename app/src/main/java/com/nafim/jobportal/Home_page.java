@@ -74,12 +74,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         Adapter.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new Item("Android Developer","A Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2FArabic.txt"));
-        arrayList.add(new Item("Android Developer","B Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2FArabic2.txt"));
-        arrayList.add(new Item("Android Developer","C Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2Fsample.txt"));
-        arrayList.add(new Item("Android Developer","D Group","1/5/23","content://com.android.exteralstorage.documents/document/9C336BBD%3Atxttospeeck%2Fsample3.txt"));
-        arrayList.add(new Item("Android Developer","E Group","1/5/23","uihfdsj"));
-        arrayList.add(new Item("Android Developer","AF Group","1/5/23","jifer"));
+        arrayList.add(new Item("Android Developer","A Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","B Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","C Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","D Group","1/5/23","dlwjlejr","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","E Group","1/5/23","uihfdsj","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
+        arrayList.add(new Item("Android Developer","AF Group","1/5/23","jifer","2","12000","hrkhtkghtrkhkrhgkrthekhr","dnkernkrnknek"));
         adapter=new Adapter(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);
@@ -97,6 +97,10 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         Item item=arrayList.get(position);
         String jobTitle=item.getJobTitle();
         String employer=item.getEmployerName();
+        String location=item.joblocation;
+        String vacancy= item.vacancy;
+        String salary= item.salary;
+        String jbResponsiblity=item.jobResponsiblity;
         String deadLine=item.getDeadLine();
         String educationalQualification=item.getEducationalQualification();
 
@@ -108,6 +112,10 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         intent.putExtra("employer",employer);
         intent.putExtra("deadLine",deadLine);
         intent.putExtra("educationalQualification",educationalQualification);
+        intent.putExtra("jbResponsiblity",jbResponsiblity);
+        intent.putExtra("location",location);
+        intent.putExtra("vacancy",vacancy);
+        intent.putExtra("salary",salary);
         startActivity(intent);
 
 

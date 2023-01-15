@@ -89,6 +89,10 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
 
 
 
+        /////////////////////////////////
+
+
+
         confirmBtn=findViewById(R.id.confirmPost);
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override

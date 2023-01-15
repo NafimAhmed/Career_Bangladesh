@@ -20,7 +20,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         emp=findViewById(R.id.employerDetail);
         ddln=findViewById(R.id.deadlineDetail);
         edqual=findViewById(R.id.educationalQualificationDetail);
-        //aplyNow=findViewById(R.id.applyNow);
+
 
 
 
@@ -31,7 +31,6 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         employer=extras.getString("employer");
         deadLine=extras.getString("deadLine");
         eduQualification=extras.getString("educationalQualification");
-
         jbttl.setText(jobTitle);
         emp.setText(employer);
         ddln.setText(deadLine);
