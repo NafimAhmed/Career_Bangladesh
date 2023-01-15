@@ -31,6 +31,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
         empjobTitle=findViewById(R.id.empjobTitle);
         empjobvacancy=findViewById(R.id.empjobvacancy);
         empjobLocation=findViewById(R.id.empjobLocation);
+        empjobLocation.setVerticalScrollBarEnabled(true);
         emp_educationalQualification=findViewById(R.id.emp_educationalQualification);
         empJobResponsiblity=findViewById(R.id.empJobResponsiblity);
         Salary=findViewById(R.id.Salary);

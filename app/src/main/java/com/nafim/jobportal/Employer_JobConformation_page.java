@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Employer_JobConformation_page extends AppCompatActivity {
 
-    TextView jobTitleDetail,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
+    TextView jobTitleDetail,jobType,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
 
     Button btnPost;
     @Override
@@ -24,6 +24,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         jobTitleDetail=findViewById(R.id.jobTitleDetail);
         employerDetail=findViewById(R.id.employerDetail);
         locationDetail=findViewById(R.id.locationDetail);
+        jobType=findViewById(R.id.jobType);
         //vacancyDetail=findViewById(R.id.vacancyDetail);
         SalaryDetail=findViewById(R.id.SalaryDetail);
         deadlineDetail=findViewById(R.id.deadlineDetail);
@@ -47,9 +48,9 @@ public class Employer_JobConformation_page extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,jobType,empjobvacancy,jobLocation,employer,deadLine,eduQualification,employerName,empJobResponsiblity,Salary,deadline;
+        String jobTitle,jobtype,empjobvacancy,jobLocation,employer,deadLine,eduQualification,employerName,empJobResponsiblity,Salary,deadline;
         jobTitle= extras.getString("jobTitle");
-        jobType=extras.getString("jobType");
+        jobtype=extras.getString("jobType");
         employer=extras.getString("employerName");
 
         eduQualification=extras.getString("emp_educationalQualification");
@@ -58,7 +59,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         jobLocation=extras.getString("empjobLocation");
         Salary=extras.getString("Salary");
         deadline= extras.getString("deadline");
-        employerName=extras.getString("employerName");
+        //employerName=extras.getString("employerName");
 
 
         jobTitleDetail.setText(jobTitle);
@@ -66,6 +67,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         deadlineDetail.setText(deadline);
         locationDetail.setText(jobLocation);
         SalaryDetail.setText(Salary);
+        jobType.setText(jobtype);
         vacancyDetail.setText(empjobvacancy);
         deadlineDetail.setText(deadline);
         educationalQualificationDetail.setText(eduQualification);

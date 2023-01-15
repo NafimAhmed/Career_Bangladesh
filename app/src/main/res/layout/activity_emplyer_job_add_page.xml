@@ -116,6 +116,11 @@
                         android:id="@+id/empjobLocation"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:lines="5"
+                        android:isScrollContainer="true"
+                        android:scrollbars="vertical"
+                        android:verticalScrollbarPosition="right"
+                        android:inputType="textMultiLine"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
@@ -166,6 +171,7 @@
                         android:id="@+id/empJobResponsiblity"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:inputType="textMultiLine"
                         android:lines="10"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
@@ -191,6 +197,7 @@
                         android:id="@+id/emp_educationalQualification"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:inputType="textMultiLine"
                         android:lines="10"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
