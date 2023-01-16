@@ -2,10 +2,8 @@ package com.nafim.jobportal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+
 import android.os.Bundle;
-import android.view.Gravity;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,7 +15,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
     RadioGroup radioGroup;
     ArrayList<String> buttonNames;
-    TextView jbttl,emp,ddln,edqual,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
+    TextView numb_CV,jbttl,emp,ddln,edqual,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,18 +61,21 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         vacancyDetail=findViewById(R.id.vacancyDetail);
         SalaryDetail=findViewById(R.id.SalaryDetail);
         jbResponsiblity=findViewById(R.id.jbResponsiblity);
+        numb_CV=findViewById(R.id.numb_CV);
 
 
 
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,employer,deadLine,eduQualification,vacancy,location,salary,jobResp;
+        String jobTitle,employer,deadLine,eduQualification,vacancy,location,salary,jobResp,cvnmb;
         jobTitle= extras.getString("jobTitle");
         employer=extras.getString("employer");
         deadLine=extras.getString("deadLine");
         vacancy= extras.getString("vacancy");
         location=extras.getString("location");
+        cvnmb=extras.getString("numb_cv");
+
         salary=extras.getString("salary");
         jobResp=extras.getString("jobResponsiblity");
         eduQualification=extras.getString("educationalQualification");
@@ -85,6 +86,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         locationDetail.setText(location);
         vacancyDetail.setText(vacancy);
         SalaryDetail.setText(salary);
+        numb_CV.setText(cvnmb);
         jbResponsiblity.setText(jobResp);
 
 

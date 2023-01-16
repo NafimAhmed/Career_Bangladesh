@@ -63,12 +63,12 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","4"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment","5"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","6"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","7"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","8"));
+        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","9"));
         adapter=new AdapterEmployer(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);
@@ -114,6 +114,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         String loc=item.location;
         String vacan=item.vacancy;
         String salar=item.salary;
+        String cvNumb=item.numb_CV;
         String jbResp=item.jobResponsiblity;
         String educationalQualification=item.getEducationalQualification();
 
@@ -130,6 +131,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         intent.putExtra("educationalQualification",educationalQualification);
         intent.putExtra("location",loc);
         intent.putExtra("vacancy",vacan);
+        intent.putExtra("numb_cv",cvNumb);
         intent.putExtra("salary",salar);
         intent.putExtra("jobResponsiblity",jbResp);
         startActivity(intent);

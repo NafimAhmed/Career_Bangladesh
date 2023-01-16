@@ -2,16 +2,19 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 
     >
+
+
     <solid
-        android:color="@android:color/transparent"/>
+        android:color="@color/teal_200"
+
+        />
 
     <corners
-        android:bottomRightRadius="12dp"
-        android:bottomLeftRadius="12dp"
-        android:topLeftRadius="12dp"
-        android:topRightRadius="12dp"/>
+        android:bottomRightRadius="15dp"
+        android:bottomLeftRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"/>
     <stroke
         android:color="#93066B"
         android:width="1.5dp"/>
-
 </shape>
