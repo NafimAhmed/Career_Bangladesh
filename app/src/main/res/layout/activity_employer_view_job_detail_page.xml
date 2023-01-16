@@ -157,6 +157,63 @@
         </LinearLayout>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job Status :"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_light_background"
+            ></TextView>
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+
+            android:gravity="center">
+
+            <!--adding a radio button -->
+            <RadioButton
+                android:id="@+id/javaRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+
+                android:text="Active"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <!--adding a radio button -->
+            <RadioButton
+                android:id="@+id/cRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+
+                android:text="Inactive"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <!--adding a radio button -->
+            <RadioButton
+                android:id="@+id/pythonRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:padding="4dp"
+                android:text="Closed"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+        </RadioGroup>
 
 
 
@@ -193,6 +250,36 @@
             ></TextView>
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job responsiblity : "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            ></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jbResponsiblity"
+            android:hint="Educational Qualification Detail"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            ></TextView>
+
+    </LinearLayout>
+
 
 
 
