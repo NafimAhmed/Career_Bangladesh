@@ -5,13 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1C1C"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:id="@+id/startingImage"
 
         ></ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:text="Career               "
+            android:id="@+id/tv_apply"
+            android:textStyle="bold"
+            android:textColor="#B10C82"
+            android:layout_gravity="center_horizontal"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:id="@+id/tv_done"
+            android:text="        Bangladesh"
+            android:textStyle="bold"
+            android:textColor="#B10C82"
+            android:layout_gravity="center_horizontal"
+            ></TextView>
+
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -5,9 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView tv_apply,tv_done;
 
     ImageView image;
     @Override
@@ -20,9 +25,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        tv_apply=findViewById(R.id.tv_apply);
+        tv_done=findViewById(R.id.tv_done);
+
+
+        Animation textanim_apply= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.textanim_left);
+        Animation textanim_done= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.textanim_right);
+        Animation zoom= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom);
+
+
+        tv_apply.setAnimation(textanim_apply);
+        tv_done.setAnimation(textanim_done);
+        image.setAnimation(zoom);
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+
+
+
+
+
 
 
 
