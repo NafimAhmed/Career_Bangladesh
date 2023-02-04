@@ -44,6 +44,8 @@ public class Confirm_Apply_page extends AppCompatActivity {
 
                 }
 
+                finish();
+
             }
         });
 

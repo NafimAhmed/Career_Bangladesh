@@ -1,32 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_height="180dp">
 
-    <ImageView
-        android:layout_width="70dp"
-        android:src="@drawable/person"
-        android:layout_height="70dp">
-
-    </ImageView>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/drawarHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GBL"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        ></TextView>
+        android:orientation="horizontal"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GBL"
-        android:textSize="20dp"
-        ></TextView>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            />
 
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                android:text="User name"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#AE000000"
+                android:text="Email Id"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                />
 
-</LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:elevation="5dp"
+        android:layout_below="@id/drawarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#43000000"
+        />
+
+</RelativeLayout>

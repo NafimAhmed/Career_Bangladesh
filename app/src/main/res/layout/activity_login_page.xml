@@ -40,6 +40,7 @@
                     android:layout_width="wrap_content"
                     android:text="Career Bangladesh"
                     android:textSize="40dp"
+                    android:fontFamily="@font/opensence_variable"
                     android:textStyle="bold"
                     android:textColor="@color/cardview_light_background"
                     android:layout_gravity="center_horizontal"
@@ -62,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:fontFamily="@font/opensence_variable"
             android:text="Please Select role : "
             android:textSize="20dp"
             ></TextView>
@@ -85,6 +87,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:hint="email"
+        android:fontFamily="@font/opensence_variable"
         android:textColorHint="#595757"
         android:textColor="@color/black"
         android:id="@+id/loginEmail"
@@ -99,6 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:fontFamily="@font/opensence_variable"
         android:inputType="textPassword"
         android:textColorHint="#595757"
         android:layout_margin="20dp"
@@ -109,10 +113,13 @@
         ></EditText>
 
 
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:textSize="25dp"
+        android:fontFamily="@font/opensence_variable"
         android:text="Log in"
         android:id="@+id/loginBtn"
         android:backgroundTint="#B10C82"
@@ -124,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:text="Forgot password"
                 android:textSize="20dp"
+                android:fontFamily="@font/opensence_variable"
                 android:textColor="@color/purple_500"
                 android:layout_marginTop="30dp"
                 android:layout_gravity="center_horizontal"
@@ -142,6 +150,7 @@
         android:textSize="20dp"
         android:textColor="@color/purple_500"
         android:layout_marginTop="30dp"
+                android:fontFamily="@font/opensence_variable"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:id="@+id/signupTxt"

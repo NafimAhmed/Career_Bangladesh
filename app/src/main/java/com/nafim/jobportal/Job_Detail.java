@@ -18,7 +18,7 @@ public class Job_Detail extends AppCompatActivity {
         setContentView(R.layout.activity_job_detail);
         
 
-        getSupportActionBar().setTitle("Job Detail");
+        //getSupportActionBar().setTitle("Job Detail");
         
         jbttl=findViewById(R.id.jobTitleDetail);
         locationdt=findViewById(R.id.locationDetail);

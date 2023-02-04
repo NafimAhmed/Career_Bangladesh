@@ -7,32 +7,44 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, NavigationView.OnNavigationItemSelectedListener {
+public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener{
 
     RecyclerView recyclerView;
     Adapter adapter;
-    //RecyclerView.LayoutManager layoutManager;
+
     ArrayList<Item> arrayList;
 
     //Adapter.OnNoteListener onNoteListener=this;
 
     RecyclerView.LayoutManager layoutManager;
 
+    //////////////////////////
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Toolbar toolbar;
+    ActionBarDrawerToggle toggle;
+
+    ImageView imageMenu;
+
+    //////////////////////////
+
+
 
 
     @Override
@@ -42,20 +54,82 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 //        getSupportActionBar().setTitle("Job List");
 
 
-        Toolbar toolbar=findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        drawerLayout=findViewById(R.id.drewerlayout);
-        navigationView=findViewById(R.id.nev_drawer);
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
-        drawerLayout.addDrawerListener(toggle);
-        //drawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView.setNavigationItemSelectedListener(this);
 
 
         ////////////////////////////////
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_View);
+        imageMenu = findViewById(R.id.imageMenu);
+
+
+
+
+        toggle = new ActionBarDrawerToggle(Home_page.this, drawerLayout,R.string.app_name,R.string.app_name);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Drawar click event
+        // Drawer item Click event ------
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.profile:
+                        Toast.makeText(Home_page.this, "Clicked", Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(getApplicationContext(),Resume_Detail.class);
+                        startActivity(i);
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.edit_profile:
+                        Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent in=new Intent(getApplicationContext(),Profile_Page.class);
+                        startActivity(in);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.settings:
+                        Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent setting=new Intent(getApplicationContext(),Settings.class);
+                        startActivity(setting);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.shareapp:
+                        Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        share(Home_page.this);
+                        drawerLayout.closeDrawers();
+                        break;
+
+                }
+
+                return false;
+            }
+        });
+        //------------------------------
+
+        // ------------------------
+        // App Bar Click Event
+        imageMenu = findViewById(R.id.imageMenu);
+
+        imageMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Code Here
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+
+        // ------------------------
+
+
+
+
+
+
 
         ////////////////////////////////
 
@@ -120,44 +194,22 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
 
 
-        /*Intent intent = new Intent(getApplicationContext(),Read.class);
-        //intent.setDataAndType(uri,"application/*");
-        intent.putExtra("txt",read(Uri.parse("content://com.android.exteralstorage.documents/document/9C33-6BBD%3Atxttospeeck%2FArabic2.txt")) );
-        startActivity(intent);*/
-
-
-        // return null;
 
 
         return null;
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id= item.getItemId();
-        Toast.makeText(getApplicationContext(),item.getTitle(),Toast.LENGTH_SHORT).show();
-       /* if(id==R.id.home_menue)
-        {
-            Toast.makeText(getApplicationContext(),"home_menue",Toast.LENGTH_SHORT).show();
-        }
-        else if (id==R.id.resume_menue)
-        {
-            Toast.makeText(getApplicationContext(),"resume_menue",Toast.LENGTH_SHORT).show();
-        }
-        else if (id==R.id.settings_menue)
-        {
-            Toast.makeText(getApplicationContext(),"settings_menue",Toast.LENGTH_SHORT).show();
-        }*/
 
-
-        return false;
+    public void share(Context context){
+        Intent shr=new Intent();
+        shr.setAction(Intent.ACTION_SEND);
+        shr.putExtra(Intent.EXTRA_TEXT,"Download Now : https://play.google.com/store/apps/details?id="+context.getPackageName());
+        shr.setType("text/plain");
+        context.startActivity(shr);
+        //getApplicationContext().startActivity(shr);
     }
 
-    /*@Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-        super.onPointerCaptureChanged(hasCapture);
 
-    }*/
 
 
 

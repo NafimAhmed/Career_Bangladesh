@@ -184,6 +184,7 @@ public class Resume_Detail extends AppCompatActivity {
                 startActivity(intent);
 
                 Toast.makeText(getApplicationContext(),"unavailable",Toast.LENGTH_SHORT).show();
+                finish();
 
             }
         });
