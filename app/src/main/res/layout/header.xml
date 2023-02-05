@@ -18,6 +18,7 @@
             android:layout_marginLeft="10dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:id="@+id/profileImg"
             android:src="@mipmap/ic_launcher"
             />
 
@@ -30,8 +31,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/colorPrimary"
+
                 android:textStyle="bold"
+                android:id="@+id/profileName"
                 android:text="User name"
                 android:layout_marginLeft="10dp"
                 android:textSize="20sp"
@@ -40,8 +42,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#AE000000"
                 android:text="Email Id"
+                android:id="@+id/emlid"
                 android:layout_marginLeft="10dp"
                 android:textSize="18sp"
                 />

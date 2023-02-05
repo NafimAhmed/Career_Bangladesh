@@ -7,6 +7,15 @@
         <item>Employer</item>
 
     </string-array>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Bangla</item>
+        <item>Hindi</item>
+
+    </string-array>
+
+
     <string-array name="major">
         <item>Select</item>
         <item>Dhaka</item>

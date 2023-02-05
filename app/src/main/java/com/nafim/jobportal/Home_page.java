@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -62,6 +63,21 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_View);
         imageMenu = findViewById(R.id.imageMenu);
+
+
+        ////////////////////////////////
+
+        View headerView= navigationView.getHeaderView(0);
+        ImageView imageView=headerView.findViewById(R.id.profileImg);
+        imageView.setImageResource(R.drawable.logo);
+
+        TextView tv=headerView.findViewById(R.id.profileName);
+        TextView tv2=headerView.findViewById(R.id.emlid);
+        tv.setText("Re Ahmed");
+        tv2.setText("re@gmail.com");
+
+
+        ////////////////////////////////////
 
 
 
