@@ -108,6 +108,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                         startActivity(contact);
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.download_resume:
+                        Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent cvDownload=new Intent(getApplicationContext(),Download_Resume.class);
+                        startActivity(cvDownload);
+                        drawerLayout.closeDrawers();
+                        break;
 
                 }
 
