@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/contact_us.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/edit_profile.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_confirm_apply_page.xml" value="0.265625" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_contact_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_download_resume.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_home_page.xml" value="0.265625" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_login_page.xml" value="0.12917933130699089" />

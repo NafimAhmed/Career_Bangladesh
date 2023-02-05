@@ -102,6 +102,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                         share(Home_page.this);
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.contact:
+                        Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+                        Intent contact=new Intent(getApplicationContext(),Contact_page.class);
+                        startActivity(contact);
+                        drawerLayout.closeDrawers();
+                        break;
 
                 }
 

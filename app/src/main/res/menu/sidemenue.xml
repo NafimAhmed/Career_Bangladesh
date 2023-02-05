@@ -47,7 +47,7 @@
 
                 <item
                     android:id="@+id/contact"
-                    android:icon="@drawable/contact_us"
+                    android:icon="@drawable/contact_background"
                     android:title="Contact us" />
 
                 <item
