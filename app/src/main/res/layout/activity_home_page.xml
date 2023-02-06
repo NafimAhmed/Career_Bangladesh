@@ -15,13 +15,6 @@
 
 
 
-
-
-
-
-
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -47,34 +40,109 @@
                 <LinearLayout
                     android:id="@+id/appBar"
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"
+                    android:layout_height="wrap_content"
                     android:background="#93066B"
-                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:visibility="visible">
+
+                    >
 
                     <ImageView
                         android:id="@+id/imageMenu"
-                        android:layout_width="30dp"
+                        android:layout_width="40dp"
                         android:layout_height="30dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_baseline_menu_24"
                         app:tint="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/textTitle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
                         android:text="Job List"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
 
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:layout_height="wrap_content">
+
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/search"
+                            android:clickable="true"
+                            android:onClick="search_Visible"
+                            app:tint="#FFFFFF" ></ImageView>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:id="@+id/search_Layout"
+                    android:orientation="horizontal"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/jobSearch"
+                        android:background="@drawable/edit_text_shape"
+                        android:hint="Search A Job"
+                        android:textColorHint="#858487"
+                        >
+
+
+
+
+
+
+
+                    </EditText>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/btn_shape"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search"
+                        android:padding="10dp"
+                        android:id="@+id/btn_search"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
 
 
                 <androidx.recyclerview.widget.RecyclerView

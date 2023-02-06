@@ -1,22 +1,27 @@
 package com.nafim.jobportal;
 
+import static androidx.core.view.ViewCompat.animate;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.NavigationUI;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +34,9 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     RecyclerView recyclerView,recyclerView_Jobtype;
     Adapter adapter;
     JobType_Adapter jobType_adapter;
+    EditText jobSearch;
+
+    LinearLayout searchLayout;
 
     ArrayList<Item> arrayList;
     ArrayList<JobType_Item> JobType_arrayList;
@@ -57,6 +65,21 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         setContentView(R.layout.activity_home_page);
 //        getSupportActionBar().setTitle("Job List");
 
+        /////////////////////////////////////////
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+        jobSearch=findViewById(R.id.jobSearch);
+
+        jobSearch.setWidth(width-250);
+
+
+
+        ////////////////////////////////
+
 
 
 
@@ -66,6 +89,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_View);
         imageMenu = findViewById(R.id.imageMenu);
+        searchLayout=findViewById(R.id.search_Layout);
 
 
         ////////////////////////////////
@@ -300,4 +324,28 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     public Void onNoteclick(int position) {
         return null;
     }
+
+
+
+
+    public void search_Visible(View view){
+
+
+
+        if (searchLayout.getVisibility()== View.VISIBLE) {
+
+
+
+            searchLayout.setVisibility(View.GONE);
+        } else {
+
+            searchLayout.setVisibility(View.VISIBLE);
+        }
+
+
+
+    }
+
+
+
 }
