@@ -6,9 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/white"
     tools:context=".Home_page"
     tools:openDrawer="start"
     >
+
+
+
+
 
 
 
@@ -21,9 +26,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:layout_height="match_parent">
+
+
+
 
 
 
@@ -37,7 +48,7 @@
                     android:id="@+id/appBar"
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
-                    android:background="#A5053B"
+                    android:background="#93066B"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
                     android:paddingStart="15dp"
@@ -58,12 +69,25 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="15dp"
-                        android:text="Nav drawer"
+                        android:text="Job List"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    android:scrollbarSize="10dp"
+                    android:background="@color/white"
+                    android:id="@+id/rcvw_job_type"
+
+                    ></androidx.recyclerview.widget.RecyclerView>
+
+
 
 
 

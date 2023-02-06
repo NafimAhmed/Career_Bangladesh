@@ -24,16 +24,19 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener{
+public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, JobType_Adapter.JobType_OnNoteListener{
 
-    RecyclerView recyclerView;
+    RecyclerView recyclerView,recyclerView_Jobtype;
     Adapter adapter;
+    JobType_Adapter jobType_adapter;
 
     ArrayList<Item> arrayList;
+    ArrayList<JobType_Item> JobType_arrayList;
+
 
     //Adapter.OnNoteListener onNoteListener=this;
 
-    RecyclerView.LayoutManager layoutManager;
+    RecyclerView.LayoutManager layoutManager,jobType_layoutManager;
 
     //////////////////////////
 
@@ -154,6 +157,61 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         // ------------------------
 
 
+        /////////////////////////////////////////////////////////////
+
+
+
+
+
+        //////////////////////////////////////
+
+
+        recyclerView_Jobtype=findViewById(R.id.rcvw_job_type);
+
+        recyclerView_Jobtype.setClickable(true);
+
+        JobType_arrayList=new ArrayList<>();
+
+        JobType_Adapter.JobType_OnNoteListener jobType_onNoteListener=this;
+
+        JobType_arrayList.add(new JobType_Item("Bank/Non-Bank Fin. Institution"));
+        JobType_arrayList.add(new JobType_Item("Accounting/Finance"));
+        JobType_arrayList.add(new JobType_Item("Education/Training"));
+        JobType_arrayList.add(new JobType_Item("Garments/Textile"));
+        JobType_arrayList.add(new JobType_Item("HR/Org. Development"));
+
+        JobType_arrayList.add(new JobType_Item("Design/Creative"));
+        JobType_arrayList.add(new JobType_Item("IT & Telecommunication"));
+        JobType_arrayList.add(new JobType_Item("Marketing/Sales"));
+        JobType_arrayList.add(new JobType_Item("Media/Ad./Event Mgt."));
+        JobType_arrayList.add(new JobType_Item("Law/Legal"));
+
+        JobType_arrayList.add(new JobType_Item("Electrician/Construction/Repair"));
+        JobType_arrayList.add(new JobType_Item("Research/Consultancy"));
+        JobType_arrayList.add(new JobType_Item("Production/Operation"));
+        JobType_arrayList.add(new JobType_Item("Beauty Care/ Health & Fitness"));
+        JobType_arrayList.add(new JobType_Item("Hospitality/ Travel/ Tourism"));
+
+        JobType_arrayList.add(new JobType_Item("Data Entry/Operator/BPO"));
+        JobType_arrayList.add(new JobType_Item("FHR/Org. Development"));
+        JobType_arrayList.add(new JobType_Item("Customer Service/Call Centre"));
+        JobType_arrayList.add(new JobType_Item("Gen Mgt/Admin"));
+        JobType_arrayList.add(new JobType_Item(" Secretary/Receptionist"));
+
+        JobType_arrayList.add(new JobType_Item("Driving/Motor Technician"));
+        JobType_arrayList.add(new JobType_Item("Commercial"));
+        JobType_arrayList.add(new JobType_Item("Agro (Plant/Animal/Fisheries)"));
+
+
+
+
+
+
+        jobType_adapter= new JobType_Adapter(JobType_arrayList,jobType_onNoteListener);
+        jobType_layoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+        recyclerView_Jobtype.setAdapter(jobType_adapter);
+        recyclerView_Jobtype.setLayoutManager(jobType_layoutManager);
+
 
 
 
@@ -238,8 +296,8 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     }
 
 
-
-
-
-
+    @Override
+    public Void onNoteclick(int position) {
+        return null;
+    }
 }
