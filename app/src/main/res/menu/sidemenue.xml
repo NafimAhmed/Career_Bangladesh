@@ -51,7 +51,7 @@
                     android:title="Contact us" />
 
                 <item
-                    android:id="@+id/Policy"
+                    android:id="@+id/faq_page"
                     android:icon="@drawable/ic_baseline_info_24"
                     android:title="FAQs" />
 

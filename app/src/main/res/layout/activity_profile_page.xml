@@ -93,7 +93,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         >
 
                         <TextView
@@ -105,7 +105,7 @@
                             ></TextView>
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
                             android:layout_margin="10dp"
@@ -117,19 +117,19 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         >
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name : "
+                            android:text="Father's Name : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:inputType=""
                             android:layout_margin="10dp"
@@ -142,19 +142,19 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         >
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Father's Name : "
+                            android:text="Mother's Name : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPersonName"
                             android:layout_margin="10dp"
@@ -166,13 +166,13 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         >
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mother's name : "
+                            android:text="Phone Number : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -180,7 +180,7 @@
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number"
+                            android:inputType="phone"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:background="@drawable/edit_text_shape"
@@ -188,7 +188,7 @@
                     </LinearLayout>
 
 
-                    <LinearLayout
+                    <!--<LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -210,31 +210,49 @@
                             android:textSize="25dp"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
-                    </LinearLayout>
+                    </LinearLayout>-->
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         >
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Email ID : "
+                            android:text="Date of birth : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
 
-                        <EditText
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:id="@+id/DOB"
+                            android:clickable="true"
+                            android:background="@drawable/edit_text_shape"
+                            ></TextView>
+
+                       <!-- <CalendarView
+                            android:id="@+id/calendar"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </CalendarView>-->
+
+                       <!-- <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textEmailAddress"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:background="@drawable/edit_text_shape"
-                            ></EditText>
+                            ></EditText>-->
                     </LinearLayout>
 
 

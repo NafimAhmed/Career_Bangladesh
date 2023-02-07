@@ -1,6 +1,6 @@
 package com.nafim.jobportal;
 
-import static androidx.core.view.ViewCompat.animate;
+
 
 import androidx.annotation.NonNull;
 
@@ -125,6 +125,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                         Toast.makeText(Home_page.this, "Clicked", Toast.LENGTH_SHORT).show();
                         Intent i=new Intent(getApplicationContext(),Resume_Detail.class);
                         startActivity(i);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.faq_page:
+                        Toast.makeText(Home_page.this, "faq_page", Toast.LENGTH_SHORT).show();
+                        Intent faq_page=new Intent(getApplicationContext(),FAQs_paage.class);
+                        startActivity(faq_page);
                         drawerLayout.closeDrawers();
                         break;
 
