@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/bookmark.xml" value="0.1" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/bookmark_add.xml" value="0.12" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/btn_shape.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/contact_us.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/edit_profile.xml" value="0.1" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_employer_home_page.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_faqs_paage.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_home_page.xml" value="0.1" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_job_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_login_page.xml" value="0.12917933130699089" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_new_home.xml" value="0.265625" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_profile_page.xml" value="0.25416666666666665" />

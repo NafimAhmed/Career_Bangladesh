@@ -1,21 +1,33 @@
 package com.nafim.jobportal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Job_Detail extends AppCompatActivity {
 
-    TextView jbttl,emp,ddln,edqual,locationdt,vacancydt,salarydt,jbResponsiblitydt;
+    TextView jbttl,emp,ddln,edqual,locationdt,vacancydt,salarydt,jbResponsiblitydt,saveimg;
     Button aplyNow;
+
+    int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job_detail);
+
+        //saveimg=findViewById(R.id.saveimg);
+
+
         
 
         //getSupportActionBar().setTitle("Job Detail");
@@ -29,6 +41,7 @@ public class Job_Detail extends AppCompatActivity {
         jbResponsiblitydt=findViewById(R.id.jbResponsiblityDetail);
         edqual=findViewById(R.id.educationalQualificationDetail);
         aplyNow=findViewById(R.id.applyNow);
+        saveimg=findViewById(R.id.saveimg);
 
 
         Bundle extras = getIntent().getExtras();
@@ -69,6 +82,33 @@ public class Job_Detail extends AppCompatActivity {
 
 
 
+
+
+
+    }
+
+
+    public void save(View view){
+
+        if(i==0)
+        {
+            i=1;
+            for (Drawable drawable : saveimg.getCompoundDrawables()) {
+                if (drawable != null) {
+                    drawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(saveimg.getContext(), R.color.gold), PorterDuff.Mode.SRC_IN));
+                }
+            }
+
+        }
+        else{
+            i=0;
+            for (Drawable drawable : saveimg.getCompoundDrawables()) {
+                if (drawable != null) {
+                    drawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(saveimg.getContext(), R.color.white), PorterDuff.Mode.SRC_IN));
+                }
+            }
+
+        }
 
 
 
