@@ -16,6 +16,9 @@
         android:theme="@style/Theme.JobPortal"
         tools:targetApi="31">
         <activity
+            android:name=".Employer_profile"
+            android:exported="false" />
+        <activity
             android:name=".FAQs_paage"
             android:exported="false" />
         <activity
@@ -116,8 +119,7 @@
         <activity
             android:name=".Job_Detail"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

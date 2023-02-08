@@ -29,7 +29,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, JobType_Adapter.JobType_OnNoteListener{
+public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, JobType_Adapter.JobType_OnNoteListener,ExampleDialog.ExampleDialogListener{
 
     RecyclerView recyclerView,recyclerView_Jobtype;
     Adapter adapter;
@@ -42,7 +42,6 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     ArrayList<JobType_Item> JobType_arrayList;
 
 
-    //Adapter.OnNoteListener onNoteListener=this;
 
     RecyclerView.LayoutManager layoutManager,jobType_layoutManager;
 
@@ -336,22 +335,32 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
     public void search_Visible(View view){
 
-
-
-        if (searchLayout.getVisibility()== View.VISIBLE) {
+        openDialog();
 
 
 
-            searchLayout.setVisibility(View.GONE);
-        } else {
-
-            searchLayout.setVisibility(View.VISIBLE);
-        }
+//        if (searchLayout.getVisibility()== View.VISIBLE) {
+//
+//
+//
+//            searchLayout.setVisibility(View.GONE);
+//        } else {
+//
+//            searchLayout.setVisibility(View.VISIBLE);
+//        }
 
 
 
     }
 
+    public void openDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    }
 
 
+    @Override
+    public void applyTexts(String username) {
+
+    }
 }

@@ -16,6 +16,16 @@
     </string-array>
 
 
+    <string-array name="job_Type">
+        <item>Select Job Type</item>
+        <item>All</item>
+        <item>Part time</item>
+        <item>Full time</item>
+        <item>contactual</item>
+
+    </string-array>
+
+
     <string-array name="major">
         <item>Select</item>
         <item>Dhaka</item>
