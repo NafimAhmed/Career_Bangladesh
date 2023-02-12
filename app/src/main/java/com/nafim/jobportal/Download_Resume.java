@@ -187,37 +187,74 @@ public class Download_Resume extends AppCompatActivity {
         canvas.drawText("Address : Faidabad, Dakshin khan,", 209, 100, title1);
         canvas.drawText("Email : re@gmail.com\n", 209, 115, title1);
         canvas.drawText("Phone : +8801797609439", 209, 130, title1);
+
+
+        Toast.makeText(getApplicationContext(),canvas.getHeight()+"",Toast.LENGTH_SHORT).show();
+
+
         canvas.drawText("Personal info : \n", 100, 200, title);
         canvas.drawText("Mother's name : MRS. Shahnaz Begum", 100, 215, title1);
         canvas.drawText("Father's : MD. Saiful Islam", 100, 230, title1);
         canvas.drawText("Relagion : Islam", 100, 245, title1);
         canvas.drawText("NID/Passport Number : 4654797911", 100, 260, title1);
 
-        canvas.drawText("Academic info : \n", 100, 285, title);
+        canvas.drawText("Date of birth : 02/04/1999", 100, 275, title1);
+        canvas.drawText("Gender : Male", 100, 290, title1);
+        canvas.drawText("Marital Status : Single", 100, 305, title1);
+        canvas.drawText("Blood Group : B+", 100, 320, title1);
+        canvas.drawText("Nationality : Bangladeshi", 100, 335, title1);
+        canvas.drawText("Parmanent address : Faidabad, Dakshin khan, Dhaka.", 100, 350, title1);
+
+
+        canvas.drawText("Academic info : \n", 100, 380, title);
 
         /////////////////////////////////////////////////////////////
 
-        canvas.drawText("SSC : \n", 100, 305, title2);
-        canvas.drawText("Major : Science\n", 100, 320, title1);
-        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 335, title1);
-        canvas.drawText("Institute : Milestone Collage", 100, 350, title1);
+        canvas.drawText("SSC : \n", 100, 400, title2);
+        canvas.drawText("Major : Science\n", 100, 415, title1);
+        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 430, title1);
+        canvas.drawText("Institute : Milestone Collage", 100, 445, title1);
 
         ///////////////////////////////////////
 
 
-        canvas.drawText("HSC : \n", 100, 370, title2);
-        canvas.drawText("Major : Science\n", 100, 385, title1);
-        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 400, title1);
-        canvas.drawText("Institute : Milestone Collage", 100, 415, title1);
+        canvas.drawText("HSC : \n", 100, 475, title2);
+        canvas.drawText("Major : Science\n", 100, 490, title1);
+        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 505, title1);
+        canvas.drawText("Institute : Milestone Collage", 100, 520, title1);
 
         ////////////////////////////////////
 
 
 
-        canvas.drawText("BSc : \n", 100, 435, title2);
-        canvas.drawText("Major : Computer science and Engineering\n", 100, 455, title1);
-        canvas.drawText("Result : 3.91 out of 4.00\n", 100, 470, title1);
-        canvas.drawText("Institute : Daffodil International University", 100, 485, title1);
+        canvas.drawText("BSc : \n", 100, 550, title2);
+        canvas.drawText("Major : Computer science and Engineering\n", 100, 570, title1);
+        canvas.drawText("Result : 3.91 out of 4.00\n", 100, 585, title1);
+        canvas.drawText("Institute : Daffodil International University", 100, 600, title1);
+
+
+
+        ////////////////////////////////////
+
+
+        canvas.drawText("Employment history : \n", 100, 630, title);
+
+
+        /////////////////////////
+
+        canvas.drawText("A Group : \n", 100, 660, title2);
+        canvas.drawText("Job Responsiblity : Computer science and Engineering\n", 100, 675, title1);
+        canvas.drawText("Duration : From 14/08/2022 to 08/01/2023\n", 100, 690, title1);
+
+
+
+        ////////////////////////
+
+        Toast.makeText(getApplicationContext(),canvas.getHeight()+"",Toast.LENGTH_SHORT).show();
+
+
+
+
 
 
 
@@ -247,7 +284,7 @@ public class Download_Resume extends AppCompatActivity {
         // below line is used for setting
         // our text to center of PDF.
         title.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("This is sample document which we have created.", 396, 560, title);
+        //canvas.drawText("This is sample document which we have created.", 396, 560, title);
 
         // after adding all attributes to our
         // PDF file we will be finishing our page.
