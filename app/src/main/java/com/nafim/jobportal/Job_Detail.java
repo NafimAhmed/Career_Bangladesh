@@ -72,6 +72,7 @@ public class Job_Detail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),Resume_Detail.class);
+                intent.putExtra("button_visible",true);
                 startActivity(intent);
             }
         });

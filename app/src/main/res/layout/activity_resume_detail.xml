@@ -475,8 +475,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Apply"
+                android:visibility="visible"
                 android:backgroundTint="#25E303"
-                android:id="@+id/edit_resume"
+                android:id="@+id/apply"
                 ></Button>
 
 

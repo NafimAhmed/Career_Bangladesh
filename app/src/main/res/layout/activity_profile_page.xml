@@ -131,7 +131,7 @@
                         <EditText
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:inputType=""
+                            android:inputType="textCapWords"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:background="@drawable/edit_text_shape"
@@ -156,7 +156,7 @@
                         <EditText
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
+                            android:inputType="textCapWords"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:background="@drawable/edit_text_shape"
@@ -357,7 +357,6 @@
 
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -609,7 +608,6 @@
             ></EditText>-->
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"

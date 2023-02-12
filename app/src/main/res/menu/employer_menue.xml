@@ -11,17 +11,17 @@
                 <item
                     android:id="@+id/profile"
                     android:icon="@drawable/profile"
-                    android:title="View Resume" />
+                    android:title="Profile" />
 
-                <item
+                <!--<item
                     android:id="@+id/edit_profile"
                     android:icon="@drawable/edit_profile"
-                    android:title="Edit Profile" />
+                    android:title="Edit Profile" />-->
 
-                <item
+                <!--<item
                     android:id="@+id/download_resume"
                     android:icon="@drawable/ic_baseline_home_24"
-                    android:title="Download Resume" />
+                    android:title="Download Resume" />-->
 
                 <item
                     android:id="@+id/settings"
@@ -66,4 +66,6 @@
         </item>
 
     </group>
+
+
 </menu>

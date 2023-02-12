@@ -3,8 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:padding="10dp"
+    android:background="@color/white"
     android:layout_height="match_parent">
-
 
 
 
@@ -15,8 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:textColorHint="#8C8C8A"
+        android:textColor="@color/black"
         android:background="@drawable/edit_text_shape"
-        android:drawableTint="@color/white"
+        android:drawableTint="@color/black"
         android:drawableStart="@drawable/search"
         android:layout_marginBottom="10dp"
         android:hint="Search by keyword" />

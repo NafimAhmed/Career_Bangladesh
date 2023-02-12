@@ -123,6 +123,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                     case R.id.profile:
                         Toast.makeText(Home_page.this, "Clicked", Toast.LENGTH_SHORT).show();
                         Intent i=new Intent(getApplicationContext(),Resume_Detail.class);
+                        i.putExtra("button_visible",false);
                         startActivity(i);
                         drawerLayout.closeDrawers();
                         break;

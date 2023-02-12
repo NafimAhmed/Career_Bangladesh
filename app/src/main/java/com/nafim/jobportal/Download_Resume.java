@@ -131,6 +131,8 @@ public class Download_Resume extends AppCompatActivity {
         // for adding text in our PDF file.
         Paint paint = new Paint();
         Paint title = new Paint();
+        Paint title1 = new Paint();
+        Paint title2 = new Paint();
 
         // we are adding page info to our PDF file
         // in which we will be passing our pageWidth,
@@ -156,11 +158,17 @@ public class Download_Resume extends AppCompatActivity {
 
         // below line is used for adding typeface for
         // our text which we will be adding in our PDF file.
-        title.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
+        title.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+        title1.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
+        title2.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+
 
         // below line is used for setting text size
         // which we will be displaying in our PDF file.
-        title.setTextSize(15);
+        title.setTextSize(25);
+        title2.setTextSize(20);
+        title1.setTextSize(15);
+
 
         // below line is sued for setting color
         // of our text inside our PDF file.
@@ -170,8 +178,65 @@ public class Download_Resume extends AppCompatActivity {
         // the first parameter is our text, second parameter
         // is position from start, third parameter is position from top
         // and then we are passing our variable of paint which is title.
-        canvas.drawText("A portal for IT professionals.", 209, 100, title);
-        canvas.drawText("Geeks for Geeks", 209, 80, title);
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        canvas.drawText("Nafim Ahmed", 209, 80, title);
+        canvas.drawText("Address : Faidabad, Dakshin khan,", 209, 100, title1);
+        canvas.drawText("Email : re@gmail.com\n", 209, 115, title1);
+        canvas.drawText("Phone : +8801797609439", 209, 130, title1);
+        canvas.drawText("Personal info : \n", 100, 200, title);
+        canvas.drawText("Mother's name : MRS. Shahnaz Begum", 100, 215, title1);
+        canvas.drawText("Father's : MD. Saiful Islam", 100, 230, title1);
+        canvas.drawText("Relagion : Islam", 100, 245, title1);
+        canvas.drawText("NID/Passport Number : 4654797911", 100, 260, title1);
+
+        canvas.drawText("Academic info : \n", 100, 285, title);
+
+        /////////////////////////////////////////////////////////////
+
+        canvas.drawText("SSC : \n", 100, 305, title2);
+        canvas.drawText("Major : Science\n", 100, 320, title1);
+        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 335, title1);
+        canvas.drawText("Institute : Milestone Collage", 100, 350, title1);
+
+        ///////////////////////////////////////
+
+
+        canvas.drawText("HSC : \n", 100, 370, title2);
+        canvas.drawText("Major : Science\n", 100, 385, title1);
+        canvas.drawText("Result : 5.00 out of 5.00\n", 100, 400, title1);
+        canvas.drawText("Institute : Milestone Collage", 100, 415, title1);
+
+        ////////////////////////////////////
+
+
+
+        canvas.drawText("BSc : \n", 100, 435, title2);
+        canvas.drawText("Major : Computer science and Engineering\n", 100, 455, title1);
+        canvas.drawText("Result : 3.91 out of 4.00\n", 100, 470, title1);
+        canvas.drawText("Institute : Daffodil International University", 100, 485, title1);
+
+
+
+
+
+
+
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 
         // similarly we are creating another text and in this
         // we are aligning this text to center of our PDF file.
@@ -190,7 +255,7 @@ public class Download_Resume extends AppCompatActivity {
 
         // below line is used to set the name of
         // our PDF file and its path.
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), "GFG.pdf");
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), "career_bangladesh_Resume.pdf");
 
         try {
             // after creating a file name we will

@@ -122,17 +122,17 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
                 switch (item.getItemId()) {
                     case R.id.profile:
                         Toast.makeText(Employer_Home_page.this, "Clicked", Toast.LENGTH_SHORT).show();
-//                        Intent i=new Intent(getApplicationContext(),Resume_Detail.class);
-//                        startActivity(i);
+                        Intent i=new Intent(getApplicationContext(),Employer_profile.class);
+                        startActivity(i);
                         drawerLayout.closeDrawers();
                         break;
 
-                    case R.id.edit_profile:
-                        Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
-//                        Intent in=new Intent(getApplicationContext(),Profile_Page.class);
-//                        startActivity(in);
-                        drawerLayout.closeDrawers();
-                        break;
+//                    case R.id.edit_profile:
+//                        Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+////                        Intent in=new Intent(getApplicationContext(),Profile_Page.class);
+////                        startActivity(in);
+//                        drawerLayout.closeDrawers();
+//                        break;
                     case R.id.settings:
                         Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
                         Intent setting=new Intent(getApplicationContext(),Settings.class);
@@ -150,12 +150,12 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
                         startActivity(contact);
                         drawerLayout.closeDrawers();
                         break;
-                    case R.id.download_resume:
-                        Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
-//                        Intent cvDownload=new Intent(getApplicationContext(),Download_Resume.class);
-//                        startActivity(cvDownload);
-                        drawerLayout.closeDrawers();
-                        break;
+//                    case R.id.download_resume:
+//                        Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
+////                        Intent cvDownload=new Intent(getApplicationContext(),Download_Resume.class);
+////                        startActivity(cvDownload);
+//                        drawerLayout.closeDrawers();
+//                        break;
 
                 }
 
@@ -187,12 +187,12 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","4"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment","5"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","6"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","7"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","8"));
-        arrayList.add(new ItemEmployer("Android Developer","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","9"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","4"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment","5"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","6"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","7"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","8"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","9"));
         adapter=new AdapterEmployer(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);
@@ -236,6 +236,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         String employer=item.getEmployerName();
         String deadLine=item.getDeadLine();
         String loc=item.location;
+        String postingDate=item.jobPostingDate;
         String vacan=item.vacancy;
         String salar=item.salary;
         String cvNumb=item.numb_CV;
@@ -254,6 +255,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         intent.putExtra("deadLine",deadLine);
         intent.putExtra("educationalQualification",educationalQualification);
         intent.putExtra("location",loc);
+        intent.putExtra("postingDate",postingDate);
         intent.putExtra("vacancy",vacan);
         intent.putExtra("numb_cv",cvNumb);
         intent.putExtra("salary",salar);

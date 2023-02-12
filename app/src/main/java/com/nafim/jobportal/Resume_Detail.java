@@ -22,6 +22,7 @@ public class Resume_Detail extends AppCompatActivity {
     Button editButton;
 
     LinearLayout linearLayout;
+    boolean button=true;
 
     FloatingActionButton btnFloating;
 
@@ -32,7 +33,22 @@ public class Resume_Detail extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Resume Detail");
 
-        editButton = findViewById(R.id.edit_resume);
+        Bundle extras = getIntent().getExtras();
+        button=extras.getBoolean("button_visible");
+
+        editButton = findViewById(R.id.apply);
+
+        if (button){
+
+            editButton.setVisibility(View.VISIBLE);
+
+        }else{
+            editButton.setVisibility(View.GONE);
+        }
+
+
+
+
 
 
         ///////////////////////////////////

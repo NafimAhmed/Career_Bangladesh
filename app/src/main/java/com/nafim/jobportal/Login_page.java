@@ -50,6 +50,8 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
 
 
 
+
+
         loginSpiner=findViewById(R.id.loginSpinner);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,
                 R.array.number,

@@ -176,7 +176,7 @@
         android:layout_height="match_parent"
         android:id="@+id/nav_View"
         app:headerLayout="@layout/header"
-        app:menu="@menu/sidemenue"
+        app:menu="@menu/employer_menue"
         android:layout_gravity="start"
         >
 
