@@ -126,13 +126,48 @@ public class Download_Resume extends AppCompatActivity {
         // for our PDF document.
         PdfDocument pdfDocument = new PdfDocument();
 
+        firstpage(pdfDocument);
+        secondtpage(pdfDocument);
+
         // two variables for paint "paint" is used
         // for drawing shapes and we will use "title"
         // for adding text in our PDF file.
+
+        // below line is used to set the name of
+        // our PDF file and its path.
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), "career_bangladesh_Resume.pdf");
+
+        try {
+            // after creating a file name we will
+            // write our PDF file to that location.
+            pdfDocument.writeTo(new FileOutputStream(file));
+
+            // below line is to print toast message
+            // on completion of PDF generation.
+            Toast.makeText(Download_Resume.this, "PDF file generated successfully.", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            // below line is used
+            // to handle error
+            e.printStackTrace();
+        }
+        // after storing our pdf to that
+        // location we are closing our PDF file.
+        pdfDocument.close();
+    }
+
+
+
+
+
+    public void firstpage(PdfDocument pdfDocument){
+
+
         Paint paint = new Paint();
         Paint title = new Paint();
         Paint title1 = new Paint();
         Paint title2 = new Paint();
+        Paint table=new Paint();
+
 
         // we are adding page info to our PDF file
         // in which we will be passing our pageWidth,
@@ -252,6 +287,47 @@ public class Download_Resume extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(),canvas.getHeight()+"",Toast.LENGTH_SHORT).show();
 
+        canvas.drawText("Specialization : \n", 100, 720, title);
+
+        canvas.drawLine(100,750,canvas.getWidth()-150,750,table);
+        canvas.drawText("Field of Specialization", 150, 770, title1);
+        canvas.drawText("Description", 400, 770, title1);
+        canvas.drawLine(100,800,canvas.getWidth()-150,800,table);
+
+
+
+        canvas.drawLine(100,750,100,1000,table);
+        canvas.drawLine(350,750,350,1000,table);
+        canvas.drawLine(canvas.getWidth()-150,750,canvas.getWidth()-150,1000,table);
+
+
+
+        canvas.drawLine(100,1000,canvas.getWidth()-150,1000,table);
+
+
+
+        ////////////////////////////////////////
+        //////////////////////////2nd page///////////////////////////////
+
+
+//        Paint paint2 = new Paint();
+//        Paint title = new Paint();
+//        Paint table2=new Paint();
+
+        // we are adding page info to our PDF file
+        // in which we will be passing our pageWidth,
+        // pageHeight and number of pages and after that
+        // we are calling it to create our PDF.
+
+
+
+        // canvas2.drawText("Language : \n", 100, 200, title);
+
+
+
+
+
+
 
 
 
@@ -290,30 +366,174 @@ public class Download_Resume extends AppCompatActivity {
         // PDF file we will be finishing our page.
         pdfDocument.finishPage(myPage);
 
-        // below line is used to set the name of
-        // our PDF file and its path.
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), "career_bangladesh_Resume.pdf");
-
-        try {
-            // after creating a file name we will
-            // write our PDF file to that location.
-            pdfDocument.writeTo(new FileOutputStream(file));
-
-            // below line is to print toast message
-            // on completion of PDF generation.
-            Toast.makeText(Download_Resume.this, "PDF file generated successfully.", Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
-            // below line is used
-            // to handle error
-            e.printStackTrace();
-        }
-        // after storing our pdf to that
-        // location we are closing our PDF file.
-        pdfDocument.close();
     }
 
 
+
+
+
     //////////////////////////////////////
+
+
+
+
+
+    public void secondtpage(PdfDocument pdfDocument){
+
+
+        Paint paint = new Paint();
+        Paint title = new Paint();
+        Paint title1 = new Paint();
+        Paint title2 = new Paint();
+        Paint table=new Paint();
+
+
+        // we are adding page info to our PDF file
+        // in which we will be passing our pageWidth,
+        // pageHeight and number of pages and after that
+        // we are calling it to create our PDF.
+        PdfDocument.PageInfo mypageInfo = new PdfDocument.PageInfo.Builder(pagewidth, pageHeight, 1).create();
+
+        // below line is used for setting
+        // start page for our PDF file.
+        PdfDocument.Page myPage = pdfDocument.startPage(mypageInfo);
+
+        // creating a variable for canvas
+        // from our page of PDF.
+        Canvas canvas = myPage.getCanvas();
+
+        // below line is used to draw our image on our PDF file.
+        // the first parameter of our drawbitmap method is
+        // our bitmap
+        // second parameter is position from left
+        // third parameter is position from top and last
+        // one is our variable for paint.
+        //canvas.drawBitmap(scaledbmp, 56, 40, paint);
+
+        // below line is used for adding typeface for
+        // our text which we will be adding in our PDF file.
+        title.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+        title1.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
+        title2.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+
+
+        // below line is used for setting text size
+        // which we will be displaying in our PDF file.
+        title.setTextSize(25);
+        title2.setTextSize(20);
+        title1.setTextSize(15);
+
+
+        // below line is sued for setting color
+        // of our text inside our PDF file.
+        title.setColor(ContextCompat.getColor(this, R.color.purple_200));
+
+        // below line is used to draw text in our PDF file.
+        // the first parameter is our text, second parameter
+        // is position from start, third parameter is position from top
+        // and then we are passing our variable of paint which is title.
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        canvas.drawText("Language preficiency : \n", 100, 70, title);
+        canvas.drawText("Bangla :", 100, 100, title2);
+        canvas.drawText(" Speaking: Execelent, Reading : Excellent, Writing : Exellent, ", 100, 120, title1);
+        canvas.drawText("English : ", 100, 140, title2);
+        canvas.drawText(" Speaking: Execelent, Reading : Excellent, Writing : Exellent, ", 100, 160, title1);
+
+
+
+        ////////////////////////////////////////////////////////////////
+
+
+        canvas.drawText("Extracurricular activities : \n", 100, 190, title);
+
+        canvas.drawText(" Coding, Singing, Dancing ", 100, 220, title1);
+
+
+        Toast.makeText(getApplicationContext(),canvas.getHeight()+"",Toast.LENGTH_SHORT).show();
+
+        ////////////////////////////////////////////////////////
+
+        canvas.drawText("Reference : \n", 100, 250, title);
+        canvas.drawText(" Reference1 : ", 100, 280, title2);
+        canvas.drawText(" Name : MD. Saiful Islam", 100, 300, title1);
+        canvas.drawText(" Organization : Bangladesh Bank", 100, 315, title1);
+        canvas.drawText(" Designetion : Join Director", 100, 330, title1);
+        canvas.drawText(" Address : Uttara, Dhaka.", 100, 345, title1);
+        canvas.drawText(" Phone Number : 01726222954", 100, 360, title1);
+        canvas.drawText(" Email : re@gmail.com", 100, 375, title1);
+        canvas.drawText(" Relation : Father", 100, 390, title1);
+
+
+
+
+
+        //////////////////////////////////////////////////
+
+        canvas.drawText("Reference 2 : \n", 100, 420, title2);
+
+        canvas.drawText(" Name : MD. Saiful Islam", 100, 450, title1);
+        canvas.drawText(" Organization : Bangladesh Bank", 100, 465, title1);
+        canvas.drawText(" Designetion : Join Director", 100, 480, title1);
+        canvas.drawText(" Address : Uttara, Dhaka.", 100, 495, title1);
+        canvas.drawText(" Phone Number : 01726222954", 100, 510, title1);
+        canvas.drawText(" Email : re@gmail.com", 100, 525, title1);
+        canvas.drawText(" Relation : Father", 100, 540, title1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+        // similarly we are creating another text and in this
+        // we are aligning this text to center of our PDF file.
+        title.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+        title.setColor(ContextCompat.getColor(this, R.color.purple_200));
+        title.setTextSize(15);
+
+        // below line is used for setting
+        // our text to center of PDF.
+        title.setTextAlign(Paint.Align.CENTER);
+        //canvas.drawText("This is sample document which we have created.", 396, 560, title);
+
+        // after adding all attributes to our
+        // PDF file we will be finishing our page.
+        pdfDocument.finishPage(myPage);
+
+    }
+
 
 
 
