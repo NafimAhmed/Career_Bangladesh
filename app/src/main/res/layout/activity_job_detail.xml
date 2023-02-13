@@ -12,7 +12,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#93066B"
+        android:background="@color/white"
 
 
         android:paddingStart="20dp"
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:drawableRight="@drawable/bookmark"
-            android:drawableTint="@color/white"
+            android:drawableTint="#575656"
             android:id="@+id/saveimg"
             android:paddingEnd="21dp"
             android:clickable="true"
@@ -58,36 +58,69 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background="#00BCD4"
+        android:background="#BBBDBD"
         >
 
 
 
 
-
-
-
-
-
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/jobTitleDetail"
-            android:hint="Job title detail"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            ></TextView>
+            android:orientation="vertical"
+            >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/employerDetail"
-            android:textColor="@color/black"
-            android:hint="Employer Detail"
-            android:textSize="20dp"
-            ></TextView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/google"
+                ></ImageView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jobTitleDetail"
+                    android:hint="Job title detail"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/employerDetail"
+                    android:textColor="@color/black"
+                    android:hint="Employer Detail"
+                    android:textSize="20dp"
+                    ></TextView>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,8 +132,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location : "
+                android:text="  Location : "
                 android:textStyle="bold"
+                android:drawableStart="@drawable/location"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 ></TextView>
@@ -129,7 +163,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vacancy : "
+                android:drawableStart="@drawable/vacancy"
+                android:text="  Vacancy : "
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -158,7 +193,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salary : "
+                android:text="  Salary : "
+                android:drawableStart="@drawable/salary"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -189,7 +225,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Deadline : "
+                android:text="  Deadline : "
+                android:drawableStart="@drawable/last_date"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 ></TextView>
@@ -205,6 +242,10 @@
                 ></TextView>
 
         </LinearLayout>
+
+
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -266,11 +307,17 @@
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
         android:text="Apply now"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/btn_shape"
         android:backgroundTint="#B10C82"
         android:id="@+id/applyNow"
         ></Button>

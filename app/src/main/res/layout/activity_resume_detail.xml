@@ -50,6 +50,14 @@
 
 
 
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/logo"
+                        ></ImageView>
+
+
+
 
 
 
@@ -475,8 +483,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Apply"
+                android:textSize="25dp"
                 android:visibility="visible"
-                android:backgroundTint="#25E303"
+                android:background="@drawable/btn_shape"
+                android:backgroundTint="#B10C82"
                 android:id="@+id/apply"
                 ></Button>
 

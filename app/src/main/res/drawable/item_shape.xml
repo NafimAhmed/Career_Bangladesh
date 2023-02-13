@@ -3,9 +3,9 @@
 
 
     <solid
-        android:color="@android:color/transparent"
+    android:color="#E6E3E3"
 
-        />
+    />
 
     <corners
         android:bottomRightRadius="15dp"
@@ -13,7 +13,7 @@
         android:topLeftRadius="15dp"
         android:topRightRadius="15dp"/>
     <stroke
-        android:color="#131012"
+        android:color="@android:color/transparent"
         android:width="1.5dp"/>
 
 

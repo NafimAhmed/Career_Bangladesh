@@ -105,7 +105,7 @@ public class Job_Detail extends AppCompatActivity {
             i=0;
             for (Drawable drawable : saveimg.getCompoundDrawables()) {
                 if (drawable != null) {
-                    drawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(saveimg.getContext(), R.color.white), PorterDuff.Mode.SRC_IN));
+                    drawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(saveimg.getContext(), R.color.grey), PorterDuff.Mode.SRC_IN));
                 }
             }
 
