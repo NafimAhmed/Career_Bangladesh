@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/back_color"
     android:fitsSystemWindows="true"
     tools:context=".Login_page">
     <ScrollView
@@ -115,7 +115,7 @@
                 android:textSize="20dp"
 
                 android:fontFamily="@font/opensence_variable"
-                android:textColor="@color/purple_500"
+                android:textColor="#BD106A"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="10dp"
@@ -133,14 +133,14 @@
         android:layout_height="50dp"
         android:textSize="20dp"
         android:fontFamily="@font/opensence_variable"
-        android:text="Log in"
+        android:text="Sign in"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/loginBtn"
         android:background="@drawable/btn_shape"
-        android:backgroundTint="#E623AE"
+        android:backgroundTint="#BD106A"
         android:layout_gravity="center_horizontal"
         ></Button>
 
@@ -168,8 +168,11 @@
                    android:layout_height="wrap_content"
                    android:layout_marginLeft="20dp"
                    android:padding="10dp"
-                   android:background="@drawable/btn_shape2"
-                   android:backgroundTint="#555454"
+                   android:clickable="true"
+
+                   android:id="@+id/google_signin"
+                   android:background="@drawable/btn_shape"
+                   android:backgroundTint="@color/white"
                    android:orientation="horizontal"
                    >
                    <ImageView
@@ -182,9 +185,10 @@
                        android:layout_height="wrap_content"
                        android:textSize="20dp"
                        android:textStyle="bold"
+                       android:textColor="@color/grey"
                        android:layout_gravity="center"
                        android:gravity="center"
-                       android:text="  Google"
+                       android:text="  Google "
                        ></TextView>
 
                </LinearLayout>
@@ -196,8 +200,8 @@
                     android:layout_marginLeft="20dp"
                     android:padding="10dp"
                     android:layout_gravity="right"
-                    android:background="@drawable/btn_shape2"
-                    android:backgroundTint="#0F72C1"
+                    android:background="@drawable/btn_shape"
+                    android:backgroundTint="@color/white"
                     android:orientation="horizontal"
                     >
                     <ImageView
@@ -210,6 +214,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
                         android:textStyle="bold"
+                        android:textColor="@color/grey"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="  Facebook"

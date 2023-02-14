@@ -20,7 +20,7 @@
             android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:background="#93066B"
+            android:background="@color/white"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:paddingStart="15dp"
@@ -33,7 +33,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_baseline_menu_24"
-                app:tint="#FFFFFF" />
+                app:tint="#090909" />
 
             <TextView
                 android:id="@+id/textTitle"
@@ -42,7 +42,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
                 android:text="Previous Job Post"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -54,6 +54,9 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -68,6 +71,7 @@
                     android:paddingEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
+                    android:backgroundTint="@color/grey"
                     android:layout_marginEnd="10dp"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -78,6 +82,7 @@
                     android:text="Active jobs"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
+                    android:backgroundTint="@color/grey"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
@@ -90,6 +95,7 @@
                     android:text="Inactive jobs"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
+                    android:backgroundTint="@color/grey"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
@@ -103,6 +109,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/grey"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
                     android:layout_height="wrap_content">

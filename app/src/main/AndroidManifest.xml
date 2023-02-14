@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -15,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobPortal"
         tools:targetApi="31">
+        <activity
+            android:name=".Apply_contact"
+            android:exported="false" />
+        <activity
+            android:name=".Application_detail"
+            android:exported="false" />
+        <activity
+            android:name=".Application_list"
+            android:exported="false" />
         <activity
             android:name=".Employer_profile"
             android:exported="false" />

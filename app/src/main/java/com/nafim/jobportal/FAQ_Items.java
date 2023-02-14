@@ -10,7 +10,7 @@ public class FAQ_Items
     }
 
     public String getQuestions() {
-        return "Question : "+questions;
+        return questions;
     }
 
     public void setQuestions(String questions) {
@@ -18,7 +18,7 @@ public class FAQ_Items
     }
 
     public String getAnswer() {
-        return "Answer : "+ answer;
+        return answer;
     }
 
     public void setAnswer(String answer) {

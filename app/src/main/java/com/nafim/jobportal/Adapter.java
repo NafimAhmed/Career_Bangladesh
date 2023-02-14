@@ -1,12 +1,16 @@
 package com.nafim.jobportal;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -16,11 +20,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder>
     //////////////////////////////////////////////////////////////////////////////
     OnNoteListener onNoteListener;
     ArrayList<Item> arrayList;
+    Activity activity;
 
-    public Adapter(ArrayList<Item> arrayList,OnNoteListener onNoteListener)
+    public Adapter(ArrayList<Item> arrayList,OnNoteListener onNoteListener,Activity activity)
     {
         this.arrayList = arrayList;
         this.onNoteListener=onNoteListener;
+        this.activity=activity;
     }
 
     @NonNull
@@ -42,6 +48,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder>
         holder.writer.setText(item.getEmployerName());
         holder.link.setText(item.getEducationalQualification());
         holder.id.setText(item.getDeadLine());
+        Glide.with(activity).load(item.logoURL).into(holder.itemLogo);
+
 
 
     }
@@ -56,6 +64,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder>
 
         TextView bookname,writer,link,id;
         OnNoteListener onNoteListener;
+        ImageView itemLogo;
         public ExampleViewHolder(@NonNull View itemView,OnNoteListener onNoteListener) {
             super(itemView);
 
@@ -63,6 +72,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder>
             writer=itemView.findViewById(R.id.employerName);
             link=itemView.findViewById(R.id.educationalQualification);
             id=itemView.findViewById(R.id.deadline);
+            itemLogo=itemView.findViewById(R.id.itemLogo);
             this.onNoteListener=onNoteListener;
 
             itemView.setOnClickListener(this);

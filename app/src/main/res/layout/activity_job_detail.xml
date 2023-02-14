@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".Job_Detail">
 
+
+
     <LinearLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
@@ -51,18 +53,11 @@
 
     </LinearLayout>
 
-
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:background="#BBBDBD"
+
         >
-
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,39 +66,199 @@
             >
 
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/google"
-                ></ImageView>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:padding="20dp"
+                android:background="#BBBDBD"
+                >
 
-                <TextView
+
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jobTitleDetail"
-                    android:hint="Job title detail"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    ></TextView>
+                    android:orientation="vertical"
+                    >
 
-                <TextView
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/companyLogo"
+                        android:src="@drawable/google"
+                        ></ImageView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/jobTitleDetail"
+                            android:hint="Job title detail"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employerDetail"
+                            android:textColor="@color/black"
+                            android:hint="Employer Detail"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/employerDetail"
-                    android:textColor="@color/black"
-                    android:hint="Employer Detail"
-                    android:textSize="20dp"
-                    ></TextView>
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Location : "
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/location"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/locationDetail"
+                        android:hint="Location Detail"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/vacancy"
+                        android:text="  Vacancy : "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vacancyDetail"
+                        android:hint="Vacancy Detail"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Salary : "
+                        android:drawableStart="@drawable/salary"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/SalaryDetail"
+                        android:textColor="@color/black"
+                        android:hint="Salary Detail"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="  Deadline : "
+                        android:drawableStart="@drawable/last_date"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deadlineDetail"
+                        android:textColor="@color/black"
+                        android:hint="deadline Detail"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
 
 
             </LinearLayout>
@@ -111,216 +266,123 @@
 
 
 
-
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  Location : "
-                android:textStyle="bold"
-                android:drawableStart="@drawable/location"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/locationDetail"
-                android:hint="Location Detail"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Description : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jobDescriptionDetail"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/vacancy"
-                android:text="  Vacancy : "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
+            </LinearLayout>
 
 
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/vacancyDetail"
-                android:hint="Vacancy Detail"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Educational Qualification : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/educationalQualificationDetail"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            </LinearLayout>
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  Salary : "
-                android:drawableStart="@drawable/salary"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/SalaryDetail"
-                android:textColor="@color/black"
-                android:hint="Salary Detail"
-                android:textSize="20dp"
-                ></TextView>
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
 
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Responsiblity : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="  Deadline : "
-                android:drawableStart="@drawable/last_date"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                ></TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jbResponsiblityDetail"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+            </LinearLayout>
 
 
-            <TextView
+
+
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/deadlineDetail"
-                android:textColor="@color/black"
-                android:hint="deadline Detail"
-                android:textSize="20dp"
-                ></TextView>
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="50dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:text="Apply now"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:background="@drawable/btn_shape"
+                android:backgroundTint="#B10C82"
+                android:id="@+id/applyNow"
+                ></Button>
 
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Educational Qualification : "
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/educationalQualificationDetail"
-            android:hint="Educational Qualification Detail"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job Responsiblity : "
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/jbResponsiblityDetail"
-            android:hint="Educational Qualification Detail"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-    </LinearLayout>
 
 
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="25dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginRight="21dp"
-        android:text="Apply now"
-        android:textColor="@color/white"
-        android:padding="10dp"
-        android:background="@drawable/btn_shape"
-        android:backgroundTint="#B10C82"
-        android:id="@+id/applyNow"
-        ></Button>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
 
 
 

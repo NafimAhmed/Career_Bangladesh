@@ -9,344 +9,375 @@
     tools:context=".Employer_ViewJobDetail_page">
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:background="#B10C82"
+        android:layout_height="match_parent"
         >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/jobTitleDetail"
-            android:hint="Job title detail"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            ></TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/employerDetail"
-            android:textColor="@color/black"
-            android:hint="Employer Detail"
-            android:textSize="20dp"
-            ></TextView>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             >
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location : "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/locationDetail"
-                android:hint="Location Detail"
-                android:text="Uttara, Dhaka"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="#BBBDBD"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jobTitleDetail"
+                    android:hint="Job title detail"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/employerDetail"
+                    android:textColor="@color/black"
+                    android:hint="Employer Detail"
+                    android:textSize="20dp"
+                    ></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location : "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/locationDetail"
+                        android:hint="Location Detail"
+                        android:text="Uttara, Dhaka"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vacancy : "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vacancyDetail"
+                        android:hint="Vacancy Detail"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salary : "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/SalaryDetail"
+                        android:textColor="@color/black"
+                        android:hint="Salary"
+                        android:text="12000/="
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Deadline : "
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deadlineDetail"
+                        android:textColor="@color/black"
+                        android:hint="deadline Detail"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job posting Date : "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jopPostingDate"
+                        android:hint="Vacancy Detail"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        ></TextView>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Status :"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cardview_light_background"
+                    ></TextView>
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+
+                    android:gravity="center">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/javaRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+
+                        android:text="Active"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/cRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+
+                        android:text="Inactive"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/pythonRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="Closed"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Educational Qualification : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/educationalQualificationDetail"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job responsiblity : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jbResponsiblity"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of dropped Application : "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numb_CV"
+                    android:padding="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:hint="Educational Qualification Detail"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="See All Applications"
+                android:id="@+id/allApp"
+                ></Button>
+
 
         </LinearLayout>
 
 
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vacancy : "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/vacancyDetail"
-                android:hint="Vacancy Detail"
-                android:text="2"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Salary : "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/SalaryDetail"
-                android:textColor="@color/black"
-                android:hint="Salary"
-                android:text="12000/="
-                android:textSize="20dp"
-                ></TextView>
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Deadline : "
-                android:textStyle="bold"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/deadlineDetail"
-                android:textColor="@color/black"
-                android:hint="deadline Detail"
-                android:textSize="20dp"
-                ></TextView>
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Job posting Date : "
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/jopPostingDate"
-                android:hint="Vacancy Detail"
-                android:text="2"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                ></TextView>
-
-        </LinearLayout>
-
-
-
-
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Job Status :"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="@color/cardview_light_background"
-            ></TextView>
-
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-
-            android:gravity="center">
-
-            <!--adding a radio button -->
-            <RadioButton
-                android:id="@+id/javaRB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checked="false"
-
-                android:text="Active"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <!--adding a radio button -->
-            <RadioButton
-                android:id="@+id/cRB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checked="false"
-
-                android:text="Inactive"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <!--adding a radio button -->
-            <RadioButton
-                android:id="@+id/pythonRB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checked="false"
-                android:padding="4dp"
-                android:text="Closed"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-        </RadioGroup>
-
-
-
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Educational Qualification : "
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/educationalQualificationDetail"
-            android:hint="Educational Qualification Detail"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job responsiblity : "
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/jbResponsiblity"
-            android:hint="Educational Qualification Detail"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Number of dropped Application : "
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/numb_CV"
-            android:padding="5dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:hint="Educational Qualification Detail"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            ></TextView>
-
-    </LinearLayout>
 
 
 

@@ -1,22 +1,27 @@
 package com.nafim.jobportal;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -28,9 +33,19 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
     TextView tvRegister;
     EditText editTextEmail, editTextPassword;
     Button btnLogin;
+    LinearLayout google_signin;
     int roleID=0;
     Spinner loginSpiner;
     private FirebaseAuth mAuth;
+
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+
+
+
+
+
+
 // ...
 // Initialize Firebase Auth
 
@@ -40,6 +55,48 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+
+        ////////////////////////Google sign in//////////////////////
+
+        google_signin=findViewById(R.id.google_signin);
+
+        gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        gsc=GoogleSignIn.getClient(Login_page.this, gso);
+
+
+        google_signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SignIn();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        ///////////Google Sign in/////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
 
         tvRegister=findViewById(R.id.signupTxt);
         editTextEmail=findViewById(R.id.loginEmail);
@@ -224,4 +281,35 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
 
 
 
+
+
+    public void SignIn(){
+
+        Intent signInIntent=gsc.getSignInIntent();
+        startActivityForResult(signInIntent,1000);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==1000){
+
+
+            Task<GoogleSignInAccount> task= GoogleSignIn.getSignedInAccountFromIntent(data);
+            Intent intent=new Intent(getApplicationContext(),Home_page.class);
+                startActivity(intent);
+
+//            try {
+//                task.getResult(ApiException.class);
+//                Intent intent=new Intent(getApplicationContext(),Home_page.class);
+//                startActivity(intent);
+//            } catch (ApiException e) {
+//                Toast.makeText(getApplicationContext(),"Some thing is wrong",Toast.LENGTH_SHORT).show();
+//                e.printStackTrace();
+//            }
+        }
+
+    }
 }

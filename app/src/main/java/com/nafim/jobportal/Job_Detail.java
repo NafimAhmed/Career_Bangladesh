@@ -5,19 +5,29 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class Job_Detail extends AppCompatActivity {
 
-    TextView jbttl,emp,ddln,edqual,locationdt,vacancydt,salarydt,jbResponsiblitydt,saveimg;
+    TextView jbttl,emp,jobDescriptionDetail,ddln,edqual,locationdt,vacancydt,salarydt,jbResponsiblitydt,saveimg;
     Button aplyNow;
+    ImageView companyLogo;
 
     int i=0;
     @Override
@@ -25,12 +35,21 @@ public class Job_Detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job_detail);
 
+        companyLogo=findViewById(R.id.companyLogo);
+
         //saveimg=findViewById(R.id.saveimg);
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+        //////////////////////////////////////////////////
 
 
         
 
-        //getSupportActionBar().setTitle("Job Detail");
+
         
         jbttl=findViewById(R.id.jobTitleDetail);
         locationdt=findViewById(R.id.locationDetail);
@@ -43,17 +62,23 @@ public class Job_Detail extends AppCompatActivity {
         aplyNow=findViewById(R.id.applyNow);
         saveimg=findViewById(R.id.saveimg);
 
+        jobDescriptionDetail=findViewById(R.id.jobDescriptionDetail);
+
+
+
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,employer,location,vacancy,salary,jbResponsiblity,deadLine,eduQualification;
+        String jobTitle,employer,jbDesription,location,vacancy,salary,jbResponsiblity,deadLine,eduQualification;
         jobTitle= extras.getString("jobTitle");
         employer=extras.getString("employer");
         location=extras.getString("location");
         vacancy=extras.getString("vacancy");
         salary=extras.getString("salary");
+        jbDesription=extras.getString("jobDescription");
         jbResponsiblity=extras.getString("jbResponsiblity");
         deadLine=extras.getString("deadLine");
+        String img=extras.getString("img");
 
         eduQualification=extras.getString("educationalQualification");
 
@@ -65,6 +90,11 @@ public class Job_Detail extends AppCompatActivity {
         locationdt.setText(location);
         vacancydt.setText(vacancy);
         jbResponsiblitydt.setText(jbResponsiblity);
+        jobDescriptionDetail.setText(jbDesription);
+
+
+        Glide.with(this).load(img).into(companyLogo);
+
 
 
 
@@ -114,4 +144,12 @@ public class Job_Detail extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
+
+
 }

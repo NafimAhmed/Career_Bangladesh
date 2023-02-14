@@ -3,7 +3,10 @@ package com.nafim.jobportal;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,6 +18,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
     RadioGroup radioGroup;
     ArrayList<String> buttonNames;
+    Button allApp;
     TextView numb_CV,jbttl,emp,ddln,edqual,jopPostingDate,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
        // radioActiveGroup =findViewById(R.id.radio_active_group);
 
         radioGroup = findViewById(R.id.radioGroup);
+        allApp=findViewById(R.id.allApp);
 
         radioGroup.check(R.id.javaRB);
 
@@ -46,12 +51,25 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
 
 
+        allApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),Application_list.class);
+
+                startActivity(i);
+            }
+        });
+
+
+
+
 
 
         ////////////////////////////////
 
 
         getSupportActionBar().setTitle("Pervious Job Detail");
+
 
         jbttl=findViewById(R.id.jobTitleDetail);
         emp=findViewById(R.id.employerDetail);

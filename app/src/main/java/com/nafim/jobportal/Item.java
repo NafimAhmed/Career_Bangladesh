@@ -2,15 +2,17 @@ package com.nafim.jobportal;
 
 public class Item
 {
-    String jobTitle,joblocation,vacancy, salary, employerName, deadLine, educationalQualification,jobResponsiblity;
+    String jobTitle,jobDescription,joblocation,vacancy, salary, employerName, deadLine, educationalQualification,jobResponsiblity,logoURL;
 
-    public Item(String jobTitle, String employerName, String deadLine,String joblocation, String vacancy, String salary, String educationalQualification,String jobResponsiblity) {
+    public Item(String jobTitle, String employerName,String jobDescription, String deadLine,String joblocation, String vacancy, String salary, String educationalQualification,String jobResponsiblity,String logoURL) {
         this.jobTitle = jobTitle;
         this.employerName = employerName;
         this.deadLine = deadLine;
         this.joblocation=joblocation;
         this.vacancy=vacancy;
+        this.jobDescription=jobDescription;
         this.salary=salary;
+        this.logoURL=logoURL;
         this.jobResponsiblity=jobResponsiblity;
         this.educationalQualification = educationalQualification;
 

@@ -4,21 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class FAQs_paage extends AppCompatActivity implements Adapter_FAQs.OnNoteListener {
+public class Application_list extends AppCompatActivity implements Adapter_FAQs.OnNoteListener{
 
     RecyclerView recyclerView_faq;
     Adapter_FAQs adapterFAQs;
     ArrayList<FAQ_Items> faq_arrayList;
     RecyclerView.LayoutManager layoutManager,jobType_layoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faqs_paage);
+        setContentView(R.layout.activity_application_list);
+
+
+
+
 
         recyclerView_faq=findViewById(R.id.faqrcvw);
 
@@ -29,12 +35,11 @@ public class FAQs_paage extends AppCompatActivity implements Adapter_FAQs.OnNote
         Adapter_FAQs.OnNoteListener faq_onNoteListener=  this;
 
 
-        faq_arrayList.add(new FAQ_Items(" Question : how to apply for a Job ????","Answer : see the tutorial"));
-        faq_arrayList.add(new FAQ_Items(" Question : how to Post a job ????","Answer : see the tutorial"));
-        faq_arrayList.add(new FAQ_Items(" Question : how to Make resume ????","Answer : see the tutorial"));
-        faq_arrayList.add(new FAQ_Items(" Question : how to Update resume ????","Answer : see the tutorial"));
-        faq_arrayList.add(new FAQ_Items(" Question : how to Download resume ????","Answer : see the tutorial"));
-
+        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
 
 
         adapterFAQs =new Adapter_FAQs(faq_arrayList,faq_onNoteListener);
@@ -49,9 +54,15 @@ public class FAQs_paage extends AppCompatActivity implements Adapter_FAQs.OnNote
 
     }
 
-
     @Override
     public Void onNoteclick(int position) {
+
+        Intent i=new Intent(getApplicationContext(),Application_detail.class);
+        //i.putExtra("button_visible",false);
+        startActivity(i);
+
         return null;
+
+
     }
 }
