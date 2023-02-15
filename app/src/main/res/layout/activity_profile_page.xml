@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Profile_Page">
@@ -308,7 +309,12 @@
 
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn_shape"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:textSize="25dp"
@@ -560,7 +566,12 @@
 
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_shape"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
                         android:layout_height="wrap_content"
                         android:text="Add Education"
                         android:layout_gravity="center_horizontal"
@@ -761,9 +772,14 @@
                     </LinearLayout>
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_shape"
                         android:layout_height="wrap_content"
-                        android:text="Save"
+                        android:text="Save Skill"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="20dp"
                         android:textSize="25dp"
                         android:onClick="addSkill"
                         android:layout_gravity="center_horizontal"
@@ -965,10 +981,15 @@
 
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
-                        android:text="+Add"
+                        android:background="@drawable/btn_shape"
+                        android:text="Save Experience"
                         android:layout_gravity="center_horizontal"
                         ></Button>
 
@@ -1002,11 +1023,11 @@
         Experience information
         -->
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="this is exp information"
-            ></TextView>
+            ></TextView>-->
 
     </LinearLayout>
 

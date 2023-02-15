@@ -479,12 +479,16 @@
 
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Apply"
                 android:textSize="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:visibility="visible"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/btn_shape"
                 android:backgroundTint="#B10C82"
                 android:id="@+id/apply"

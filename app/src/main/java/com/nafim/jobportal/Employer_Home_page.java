@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -27,7 +28,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
 
     RecyclerView recyclerView;
     AdapterEmployer adapter;
-    FloatingActionButton btnFloating;
+    ExtendedFloatingActionButton btnFloating;
     //RecyclerView.LayoutManager layoutManager;
     ArrayList<ItemEmployer> arrayList;
 
