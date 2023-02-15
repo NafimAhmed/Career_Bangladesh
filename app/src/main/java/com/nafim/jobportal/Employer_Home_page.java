@@ -28,7 +28,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
 
     RecyclerView recyclerView;
     AdapterEmployer adapter;
-    ExtendedFloatingActionButton btnFloating;
+    FloatingActionButton btnFloating;
     //RecyclerView.LayoutManager layoutManager;
     ArrayList<ItemEmployer> arrayList;
 
