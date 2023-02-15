@@ -71,7 +71,7 @@
                     android:paddingEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
-                    android:backgroundTint="@color/grey"
+                    android:backgroundTint="#CDCDCD"
                     android:layout_marginEnd="10dp"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -82,7 +82,7 @@
                     android:text="Active jobs"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:backgroundTint="@color/grey"
+                    android:backgroundTint="#CDCDCD"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
@@ -95,7 +95,7 @@
                     android:text="Inactive jobs"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:backgroundTint="@color/grey"
+                    android:backgroundTint="#CDCDCD"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
@@ -109,7 +109,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:layout_marginStart="10dp"
-                    android:backgroundTint="@color/grey"
+                    android:backgroundTint="#CDCDCD"
                     android:background="@drawable/btn_shape"
                     android:layout_marginEnd="10dp"
                     android:layout_height="wrap_content">
@@ -147,16 +147,16 @@
                 />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addJob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:backgroundTint="#B10C82"
-                android:id="@+id/addJob"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="73dp"
-                android:src="@drawable/ic_baseline_post_add_24">
+                android:backgroundTint="#B10C82"
+                android:src="@drawable/add_post2">
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
