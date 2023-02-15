@@ -1,9 +1,9 @@
 package com.nafim.jobportal;
 
 public class ItemEmployer {
-    String jobTitle,numb_CV,jobPostingDate,location,vacancy,salary, employerName, deadLine, educationalQualification, jobResponsiblity;
+    String jobTitle,numb_CV,jobPostingDate,location,vacancy,salary, employerName, deadLine, educationalQualification, jobResponsiblity,jobDescription;
 
-    public ItemEmployer(String jobTitle,String jobPostingDate,String location,String vacancy,String salary, String employerName, String deadLine, String educationalQualification, String jobResponsiblity,String numb_CV) {
+    public ItemEmployer(String jobTitle,String jobPostingDate,String location,String vacancy,String salary, String employerName, String deadLine, String educationalQualification, String jobResponsiblity,String numb_CV,String jobDescription) {
         this.jobTitle = jobTitle;
         this.employerName = employerName;
         this.deadLine = deadLine;
@@ -13,6 +13,7 @@ public class ItemEmployer {
         this.jobPostingDate=jobPostingDate;
         this.salary=salary;
         this.numb_CV=numb_CV;
+        this.jobDescription=jobDescription;
         this.jobResponsiblity=jobResponsiblity;
 
     }

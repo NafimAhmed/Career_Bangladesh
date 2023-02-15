@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Emplyer_job_Add_Page">
 
@@ -32,6 +33,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Job type : "
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
@@ -39,7 +41,8 @@
                     <Spinner
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:background="@drawable/edit_text_shape"
+                        android:backgroundTint="#BCBBBB"
+                        android:background="@drawable/btn_shape"
                         android:layout_margin="10dp"
                         android:id="@+id/jobTypeSpinner"
                         ></Spinner>
@@ -56,6 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Job title : "
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
@@ -64,6 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/empjobTitle"
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         android:background="@drawable/edit_text_shape"
@@ -81,6 +86,7 @@
                         android:layout_height="wrap_content"
                         android:text="Employer name : "
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         ></TextView>
 
@@ -89,6 +95,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/employerName"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
@@ -107,6 +114,7 @@
                         android:layout_height="wrap_content"
                         android:text="Job Location : "
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         ></TextView>
 
@@ -117,6 +125,7 @@
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         android:lines="5"
+                        android:textColor="@color/black"
                         android:isScrollContainer="true"
                         android:scrollbars="vertical"
                         android:verticalScrollbarPosition="right"
@@ -137,12 +146,14 @@
                         android:layout_height="wrap_content"
                         android:text="Vacancy : "
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         ></TextView>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:id="@+id/empjobvacancy"
                         android:layout_margin="10dp"
                         android:inputType="number"
@@ -162,6 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Job responsiblity : "
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
@@ -172,6 +184,7 @@
                         android:id="@+id/empJobResponsiblity"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:textColor="@color/black"
                         android:inputType="textMultiLine"
                         android:lines="10"
                         android:background="@drawable/edit_text_shape"
@@ -197,6 +210,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/emp_educationalQualification"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         android:inputType="textMultiLine"
                         android:lines="10"
@@ -215,6 +229,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Salary : "
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
@@ -224,6 +239,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/Salary"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         android:inputType="numberDecimal"
                         android:background="@drawable/edit_text_shape"
@@ -242,6 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Application deadline : "
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
@@ -251,6 +268,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/deadline"
                         android:clickable="true"
+                        android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         android:inputType="date"
@@ -260,10 +278,15 @@
 
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Confirm Post"
+                    android:background="@drawable/btn_shape"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="30dp"
                     android:id="@+id/confirmPost"
                     ></Button>
 

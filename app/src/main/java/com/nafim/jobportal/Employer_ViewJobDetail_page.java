@@ -19,7 +19,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
     RadioGroup radioGroup;
     ArrayList<String> buttonNames;
     Button allApp;
-    TextView numb_CV,jbttl,emp,ddln,edqual,jopPostingDate,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
+    TextView numb_CV,jbdsc,jbttl,emp,ddln,edqual,jopPostingDate,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +74,8 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         jbttl=findViewById(R.id.jobTitleDetail);
         emp=findViewById(R.id.employerDetail);
         ddln=findViewById(R.id.deadlineDetail);
+        jbdsc=findViewById(R.id.jbdsc);
+
         edqual=findViewById(R.id.educationalQualificationDetail);
         locationDetail=findViewById(R.id.locationDetail);
         vacancyDetail=findViewById(R.id.vacancyDetail);
@@ -87,11 +89,12 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,employer,postingDate,deadLine,eduQualification,vacancy,location,salary,jobResp,cvnmb;
+        String jobTitle,employer,postingDate,jbdisc,deadLine,eduQualification,vacancy,location,salary,jobResp,cvnmb;
         jobTitle= extras.getString("jobTitle");
         employer=extras.getString("employer");
         deadLine=extras.getString("deadLine");
         vacancy= extras.getString("vacancy");
+        jbdisc=extras.getString("jbdesc");
         location=extras.getString("location");
         cvnmb=extras.getString("numb_cv");
         postingDate=extras.getString("postingDate");
@@ -109,7 +112,11 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         vacancyDetail.setText(vacancy);
         SalaryDetail.setText(salary);
         numb_CV.setText(cvnmb);
+
         jbResponsiblity.setText(jobResp);
+        jbdsc.setText(jbdisc);
+
+
 
 
 

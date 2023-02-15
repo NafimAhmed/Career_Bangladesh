@@ -29,6 +29,7 @@
             android:textSize="25dp"
             android:layout_margin="10dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:text="Job Detail"
             >
 

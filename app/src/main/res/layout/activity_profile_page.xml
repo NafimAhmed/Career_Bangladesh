@@ -101,6 +101,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="NID number : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -111,6 +112,7 @@
                             android:inputType="number"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
                     </LinearLayout>
@@ -125,6 +127,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Father's Name : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -135,6 +138,7 @@
                             android:inputType="textCapWords"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
                     </LinearLayout>
@@ -150,6 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mother's Name : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -160,6 +165,7 @@
                             android:inputType="textCapWords"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
                     </LinearLayout>
@@ -174,6 +180,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Phone Number : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -184,6 +191,7 @@
                             android:inputType="phone"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
                     </LinearLayout>
@@ -224,6 +232,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Date of birth : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -234,6 +243,7 @@
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:gravity="center"
+                            android:textColor="@color/black"
                             android:id="@+id/DOB"
                             android:clickable="true"
                             android:background="@drawable/edit_text_shape"
@@ -268,6 +278,7 @@
                             android:layout_height="wrap_content"
                             android:text="Present Address : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -277,6 +288,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:lines="5"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -293,6 +305,7 @@
                             android:layout_height="wrap_content"
                             android:text="Permanent Address : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -302,6 +315,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:lines="5"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -414,6 +428,7 @@
                             android:layout_height="wrap_content"
                             android:text="Education Level : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -421,7 +436,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:id="@+id/edulevel"
-                            android:background="@drawable/edit_text_shape"
+                            android:backgroundTint="@color/grey"
+                            android:textAlignment="center"
+                            android:background="@drawable/btn_shape"
                             android:layout_margin="10dp"
                             ></Spinner>
                     </LinearLayout>
@@ -437,6 +454,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Major/Board : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -444,8 +462,10 @@
                         <Spinner
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
-                            android:background="@drawable/edit_text_shape"
+                            android:background="@drawable/btn_shape"
                             android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:backgroundTint="@color/grey"
                             android:id="@+id/eduMajorSpinner"
                             ></Spinner>
 
@@ -475,6 +495,7 @@
                             android:layout_height="wrap_content"
                             android:text="Institution : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -484,6 +505,7 @@
                             android:id="@+id/eduInstitute"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -500,13 +522,14 @@
                             android:text=" Group/Faculty : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/edugroup"
-
+                            android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
@@ -525,14 +548,16 @@
                             android:text="Result type : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <Spinner
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
-
+                            android:textAlignment="center"
+                            android:backgroundTint="@color/grey"
                             android:id="@+id/eduResultTypeSpinner"
-                            android:background="@drawable/edit_text_shape"
+                            android:background="@drawable/btn_shape"
                             android:layout_margin="10dp"
                             ></Spinner>
                     </LinearLayout>
@@ -548,6 +573,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Result/mark : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -559,6 +585,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></EditText>
                     </LinearLayout>
 
@@ -664,6 +691,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Add Skill : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             ></TextView>
@@ -674,6 +702,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></EditText>
                     </LinearLayout>
 
@@ -690,6 +719,7 @@
                             android:text="Cirtification Title : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -698,6 +728,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></EditText>
                     </LinearLayout>
 
@@ -713,6 +744,7 @@
                             android:text="Cirtification Validity From : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -721,6 +753,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></EditText>
                     </LinearLayout>
 
@@ -736,6 +769,7 @@
                             android:text="Cirtification Validity To : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -743,6 +777,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -760,6 +795,7 @@
                             android:text="Certificate issuing organization : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -767,6 +803,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -832,6 +869,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:orientation="vertical"
                     >
 
@@ -849,6 +887,7 @@
                             android:text="Company Name : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -856,6 +895,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -874,6 +914,7 @@
                             android:text="Designetion : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <EditText
@@ -881,6 +922,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
@@ -898,6 +940,7 @@
                             android:text="Joining Date : "
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:textColor="@color/black"
                             ></TextView>
 
                         <TextView
@@ -905,6 +948,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:id="@+id/JoiningDate_Text"
                             android:textSize="25dp"
                             ></TextView>
@@ -923,6 +967,7 @@
                             android:layout_height="wrap_content"
                             android:text="Resigning Date : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -932,6 +977,7 @@
                             android:id="@+id/resigningDate_Text"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
                     </LinearLayout>
@@ -964,6 +1010,7 @@
                             android:layout_height="wrap_content"
                             android:text="Responsiblity  : "
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>
 
@@ -973,6 +1020,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:lines="5"
+                            android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class Confirm_Apply_page extends AppCompatActivity {
 
@@ -34,6 +35,7 @@ public class Confirm_Apply_page extends AppCompatActivity {
                     checkbox_condition.setTextColor(Color.parseColor("#FF000000"));
                     Intent intent=new Intent(getApplicationContext(),Apply_done_page.class);
                     startActivity(intent);
+                    finish();
 
                 }else{
 
@@ -42,9 +44,11 @@ public class Confirm_Apply_page extends AppCompatActivity {
                     //checkbox_condition.setTextScaleX(1);
                     checkbox_condition.setTextColor(Color.parseColor("#ff0006"));
 
+                    Toast.makeText(Confirm_Apply_page.this, "Please check out the term and condition", Toast.LENGTH_SHORT).show();
+
                 }
 
-                finish();
+
 
             }
         });
