@@ -19,6 +19,12 @@
                     android:title="Edit Profile" />
 
                 <item
+                    android:id="@+id/savedjob"
+                    android:icon="@drawable/bookmark"
+                    android:title="Saved job" />
+
+
+                <item
                     android:id="@+id/download_resume"
                     android:icon="@drawable/ic_baseline_home_24"
                     android:title="Download Resume" />

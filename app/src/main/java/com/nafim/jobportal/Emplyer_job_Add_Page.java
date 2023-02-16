@@ -37,6 +37,8 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emplyer_job_add_page);
 
+        getSupportActionBar().setTitle("Post a new job");
+
         ////////////////////////////
 
 

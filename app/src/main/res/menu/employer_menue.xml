@@ -13,10 +13,6 @@
                     android:icon="@drawable/profile"
                     android:title="Profile" />
 
-                <!--<item
-                    android:id="@+id/edit_profile"
-                    android:icon="@drawable/edit_profile"
-                    android:title="Edit Profile" />-->
 
                 <!--<item
                     android:id="@+id/download_resume"

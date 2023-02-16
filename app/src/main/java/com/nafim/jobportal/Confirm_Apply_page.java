@@ -8,12 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class Confirm_Apply_page extends AppCompatActivity {
 
     Button btn_apply_ok;
+    TextView condition;
     CheckBox checkbox_condition;
+
+    String cond="Terms and Condition : Careers Bangladesh শুধুমাত্রই নিয়োগকর্তা এবং চাকরিপ্রার্থীদের মাঝে যোগাযোগ মাধ্যম হিসেবে কাজ করে। বিডিজবস ওয়েবসাইটের মাধ্যমে চাকরিতে আবেদন করার পর কোম্পানি যদি আপনার সাথে কোনো আর্থিক লেনদেন অথবা অনিয়ম/প্রতারণা করে তার জন্য Careers Bangladesh লিমিটেড দায়ী থাকবে না।";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +29,8 @@ public class Confirm_Apply_page extends AppCompatActivity {
         btn_apply_ok=findViewById(R.id.btn_apply_ok);
 
         checkbox_condition.setTextSize(17);
+        condition=findViewById(R.id.condition);
+        condition.setText(cond);
 
 
         checkbox_condition.isChecked();

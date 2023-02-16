@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="20dp"
-                android:background="#B10C82"
+                android:background="#B6B6B6"
                 >
 
                 <TextView
@@ -269,11 +269,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="post now"
+
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/btn_shape"
+                android:background="@drawable/item_shape"
                 android:layout_marginRight="10dp"
+                android:backgroundTint="#BD106A"
                 android:id="@+id/btnpost"
                 android:textSize="20dp"
                 android:layout_gravity="center_horizontal"

@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -134,6 +135,13 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                         drawerLayout.closeDrawers();
                         break;
 
+                    case R.id.savedjob:
+                        Toast.makeText(Home_page.this, "faq_page", Toast.LENGTH_SHORT).show();
+                        Intent savedJobpage=new Intent(getApplicationContext(),Saved_Job_list.class);
+                        startActivity(savedJobpage);
+                        drawerLayout.closeDrawers();
+                        break;
+
                     case R.id.edit_profile:
                         Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
                         Intent in=new Intent(getApplicationContext(),Profile_Page.class);
@@ -162,6 +170,11 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                         Intent cvDownload=new Intent(getApplicationContext(),Download_Resume.class);
                         startActivity(cvDownload);
                         drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.logout:
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
                         break;
 
                 }

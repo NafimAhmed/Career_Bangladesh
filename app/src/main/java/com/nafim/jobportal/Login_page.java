@@ -219,6 +219,8 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
 
     public void forgotPass(View view){
         Toast.makeText(getApplicationContext(),"This function is not available yet",Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(getApplicationContext(),forgot_password.class);
+        startActivity(intent);
     }
 
 

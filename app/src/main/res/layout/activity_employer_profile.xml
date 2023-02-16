@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Employer_profile">
 
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:id="@+id/basic_info"
         android:orientation="vertical"
+        android:background="@color/white"
         android:visibility="visible"
         android:layout_height="wrap_content">
 
@@ -52,6 +54,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="vertical"
 
                             >
 
@@ -59,6 +62,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Company Logo : "
+                                android:textColor="@color/black"
                                 android:textStyle="bold"
                                 android:textSize="20dp"
                                 ></TextView>
@@ -67,10 +71,11 @@
                                 android:layout_width="170dp"
                                 android:layout_height="170dp"
                                 android:clickable="true"
+                                android:layout_gravity="center_horizontal"
                                 android:onClick="imagechooser"
                                 android:autofillHints="Select Company logo"
                                 android:id="@+id/roundedImageView"
-                                android:src="@drawable/add_a_photo_24"
+                                android:src="@drawable/logo"
                                 ></ImageView>
                         </LinearLayout>
 
@@ -89,6 +94,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Company name : "
+                                android:textColor="@color/black"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
                                 ></TextView>
@@ -98,6 +104,10 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="textCapWords"
                                 android:layout_margin="10dp"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:hint="Gorgious Bangladesh"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 android:background="@drawable/edit_text_shape"
                                 ></EditText>
@@ -114,6 +124,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Year of Establishment : "
                                 android:layout_margin="10dp"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 ></TextView>
 
@@ -123,6 +134,10 @@
                                 android:inputType="datetime"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:hint="01/01/2023"
+                                android:textColor="@color/black"
                                 android:background="@drawable/edit_text_shape"
                                 ></EditText>
                         </LinearLayout>
@@ -137,8 +152,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Number of emplyee's : "
+                                android:text="Number of Current emplyee's : "
                                 android:layout_margin="10dp"
+
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 ></TextView>
 
@@ -148,6 +165,10 @@
                                 android:inputType="textPersonName"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
+                                android:hint="12"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:textColor="@color/black"
                                 android:background="@drawable/edit_text_shape"
                                 ></EditText>
                         </LinearLayout>
@@ -163,6 +184,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Contact Number : "
                                 android:layout_margin="10dp"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 ></TextView>
 
@@ -172,6 +194,10 @@
                                 android:inputType="phone"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:hint="01797609439"
+                                android:textColor="@color/black"
                                 android:background="@drawable/edit_text_shape"
                                 ></EditText>
                         </LinearLayout>
@@ -187,6 +213,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Email : "
+                                android:textColor="@color/black"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
                                 ></TextView>
@@ -196,6 +223,10 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="textEmailAddress"
                                 android:layout_margin="10dp"
+                                android:gravity="center_horizontal"
+                                android:hint="re@gmail.com"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/grey"
                                 android:textSize="25dp"
                                 android:background="@drawable/edit_text_shape"
                                 ></EditText>
@@ -219,6 +250,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Company Address : "
+                                android:textColor="@color/black"
                                 android:layout_margin="10dp"
                                 android:textSize="25dp"
                                 ></TextView>
@@ -228,6 +260,10 @@
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/edit_text_shape"
                                 android:layout_margin="10dp"
+                                android:hint="Uttara dhaka"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:textColor="@color/black"
                                 android:lines="5"
                                 android:textSize="25dp"
                                 ></EditText>
@@ -245,6 +281,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Business/Trade licence Number : "
                                 android:layout_margin="10dp"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 ></TextView>
 
@@ -253,6 +290,10 @@
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/edit_text_shape"
                                 android:layout_margin="10dp"
+                                android:hint="125455"
+                                android:gravity="center_horizontal"
+                                android:textColorHint="@color/grey"
+                                android:textColor="@color/black"
                                 android:lines="2"
                                 android:textSize="25dp"
                                 ></EditText>
@@ -260,9 +301,15 @@
 
 
                         <Button
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="30dp"
                             android:layout_gravity="center_horizontal"
+                            android:background="@drawable/btn_shape"
                             android:textSize="25dp"
                             android:text="Save"
                             ></Button>

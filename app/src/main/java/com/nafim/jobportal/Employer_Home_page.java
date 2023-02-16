@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -151,6 +152,10 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
                         startActivity(contact);
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.logout:
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
+                        break;
 //                    case R.id.download_resume:
 //                        Toast.makeText(Employer_Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
 ////                        Intent cvDownload=new Intent(getApplicationContext(),Download_Resume.class);
@@ -188,12 +193,12 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","4","this is job description"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
         arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","6","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","7","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","8","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","9","this is job description"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
+        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
         adapter=new AdapterEmployer(arrayList,onNoteListener);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);

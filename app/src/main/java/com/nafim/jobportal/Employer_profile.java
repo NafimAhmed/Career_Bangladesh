@@ -29,6 +29,7 @@ public class Employer_profile extends AppCompatActivity {
 
         roundedImageView=findViewById(R.id.roundedImageView);
         scrlvw=findViewById(R.id.scrlvw);
+        getSupportActionBar().setTitle("Profile");
 
 
         btnFloating=findViewById(R.id.addJob);
@@ -37,8 +38,8 @@ public class Employer_profile extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent=new Intent(getApplicationContext(),Emplyer_job_Add_Page.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getApplicationContext(),Emplyer_job_Add_Page.class);
+//                startActivity(intent);
 
                 Toast.makeText(getApplicationContext(),"Floating is clicked",Toast.LENGTH_SHORT).show();
 
