@@ -277,17 +277,17 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         Adapter.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new Item("Android Developer","A Group","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
+        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
                 "Software development","https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","B Group","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
+        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
                 ,"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
-        arrayList.add(new Item("Android Developer","C Group","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
+        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
                 "Mobile app development","https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","D Group","this is a development related job","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",
+        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",
                 ".NET development","https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
-        arrayList.add(new Item("Android Developer","E Group","this is a development related job","1/5/23","Bongshal, Dhaka","2","12000","MSc. In Computer Science","PHP development"
+        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Bongshal, Dhaka","2","12000","MSc. In Computer Science","PHP development"
                 ,"https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","AF Group","this is a development related job","1/5/23","Mirpur 12, Dhaka","2","12000","MSc. In Computer Science",
+        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Mirpur 12, Dhaka","2","12000","MSc. In Computer Science",
                 "Software development","https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
         adapter=new Adapter(arrayList,onNoteListener,Home_page.this);
         layoutManager=new LinearLayoutManager(getApplicationContext());

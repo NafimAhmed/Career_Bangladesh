@@ -3,6 +3,8 @@ package com.nafim.jobportal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -17,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class forgot_password extends AppCompatActivity {
 
     EditText edtx;
-    FirebaseAuth m;
+
 
 
     @Override
@@ -38,10 +40,41 @@ public class forgot_password extends AppCompatActivity {
             @Override
             public void onSuccess(Void unused) {
 
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(forgot_password.this);
+
+                // Set the message show for the Alert time
+                builder.setMessage(" A Password resetting link has been sent to your mail. Please checkout the mail to reset password");
+
+                // Set Alert Title
+                builder.setTitle("Alert !");
+
+                // Set Cancelable false for when the user clicks on the outside the Dialog Box then it will remain show
+                builder.setCancelable(false);
+
+                // Set the positive button with yes name Lambda OnClickListener method is use of DialogInterface interface.
+                builder.setPositiveButton("Ok", (DialogInterface.OnClickListener) (dialog, which) -> {
+                    // When the user click yes button then app will close
+                    finish();
+                });
+
+                // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
+
+
+                // Create the Alert dialog
+                AlertDialog alertDialog = builder.create();
+                // Show the Alert Dialog box
+                alertDialog.show();
+
+
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+
+                Toast.makeText(getApplicationContext(), "Something wrong. Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -50,38 +83,7 @@ public class forgot_password extends AppCompatActivity {
 
 
 
-        //String email = "user@example.com";
-//        try {
-//            String link = FirebaseAuth.getInstance().generatePasswordResetLink(
-//                    email, actionCodeSettings);
-//            // Construct email verification template, embed the link and send
-//            // using custom SMTP server.
-//            sendCustomEmail(email, displayName, link);
-//        } catch (FirebaseAuthException e) {
-//            System.out.println("Error generating email link: " + e.getMessage());
-//        }
-//                m.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
-//
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//               // loadingBar.dismiss();
-//                if(task.isSuccessful())
-//                {
-//                    // if isSuccessful then done message will be shown
-//                    // and you can change the password
-//                    Toast.makeText(forgot_password.this,"Done sent",Toast.LENGTH_LONG).show();
-//                }
-//                else {
-//                    Toast.makeText(forgot_password.this,"Error Occurred",Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                //loadingBar.dismiss();
-//                Toast.makeText(forgot_password.this,"Error Failed",Toast.LENGTH_LONG).show();
-//            }
-//        });
+
     }
 
 
