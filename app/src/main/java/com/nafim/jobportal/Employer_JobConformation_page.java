@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Employer_JobConformation_page extends AppCompatActivity {
 
-    TextView jobTitleDetail,JobResponsiblity,jobType,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
+    TextView jobTitleDetail,jbdesc,JobResponsiblity,jobType,locationDetail,employerDetail,vacancyDetail,SalaryDetail,deadlineDetail,educationalQualificationDetail;
 
     Button btnPost;
     @Override
@@ -25,6 +25,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         employerDetail=findViewById(R.id.employerDetail);
         locationDetail=findViewById(R.id.locationDetail);
         jobType=findViewById(R.id.jobType);
+        jbdesc=findViewById(R.id.jbdesc);
         JobResponsiblity=findViewById(R.id.JobResponsiblity);
         SalaryDetail=findViewById(R.id.SalaryDetail);
         deadlineDetail=findViewById(R.id.deadlineDetail);
@@ -48,10 +49,11 @@ public class Employer_JobConformation_page extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,jobtype,empjobvacancy,jobLocation,employer,deadLine,eduQualification,employerName,empJobResponsiblity,Salary,deadline;
+        String jobTitle,jobtype,empJobdescription,empjobvacancy,jobLocation,employer,deadLine,eduQualification,employerName,empJobResponsiblity,Salary,deadline;
         jobTitle= extras.getString("jobTitle");
         jobtype=extras.getString("jobType");
         employer=extras.getString("employerName");
+        empJobdescription=extras.getString("empJobdescription");
 
         eduQualification=extras.getString("emp_educationalQualification");
         empJobResponsiblity= extras.getString("empJobResponsiblity");
@@ -61,7 +63,7 @@ public class Employer_JobConformation_page extends AppCompatActivity {
         deadline= extras.getString("deadline");
 
 
-
+        jbdesc.setText(empJobdescription);
         jobTitleDetail.setText(jobTitle);
         employerDetail.setText(employer);
         deadlineDetail.setText(deadline);

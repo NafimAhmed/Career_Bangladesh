@@ -95,7 +95,7 @@
                 android:textSize="23dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Educational Qualification : "
+                android:text="Qualification : "
                 ></TextView>
 
 

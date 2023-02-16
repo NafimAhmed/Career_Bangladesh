@@ -162,6 +162,34 @@
                         ></EditText>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job Description : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/empJobdescription"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -200,7 +228,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Educational Qualification : "
+                        android:text="Qualification : "
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>

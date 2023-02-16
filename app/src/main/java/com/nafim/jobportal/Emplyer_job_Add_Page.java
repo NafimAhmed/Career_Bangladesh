@@ -28,7 +28,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
     Spinner jobTypeSpiner;
     TextView deadline;
 
-    EditText empjobTitle,employerName,empjobLocation,empjobvacancy,emp_educationalQualification,empJobResponsiblity,Salary;
+    EditText empjobTitle,employerName,empJobdescription,empjobLocation,empjobvacancy,emp_educationalQualification,empJobResponsiblity,Salary;
     Button confirmBtn;
 
 
@@ -53,6 +53,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
         jobTypeSpiner.setOnItemSelectedListener(this);
         employerName=findViewById(R.id.employerName);
         empjobTitle=findViewById(R.id.empjobTitle);
+        empJobdescription=findViewById(R.id.empJobdescription);
         empjobvacancy=findViewById(R.id.empjobvacancy);
         empjobLocation=findViewById(R.id.empjobLocation);
         empjobLocation.setVerticalScrollBarEnabled(true);
@@ -108,6 +109,7 @@ public class Emplyer_job_Add_Page extends AppCompatActivity implements AdapterVi
                 intent.putExtra("employerName",employerName.getText().toString());
                 intent.putExtra("empjobvacancy",empjobvacancy.getText().toString());
                 intent.putExtra("empjobLocation",empjobLocation.getText().toString());
+                intent.putExtra("empJobdescription",empJobdescription.getText().toString());
                 intent.putExtra("emp_educationalQualification",emp_educationalQualification.getText().toString());
                 intent.putExtra("empJobResponsiblity",empJobResponsiblity.getText().toString());
                 intent.putExtra("Salary",Salary.getText().toString());
