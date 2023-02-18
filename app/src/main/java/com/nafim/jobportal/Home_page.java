@@ -55,7 +55,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
     ImageView imageMenu;
 
-    Adapter.OnNoteListener onNoteListener=this;
+
 
     //////////////////////////
 
@@ -269,6 +269,8 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
 
 
+
+
         ////////////////////////////////
 
 
@@ -283,7 +285,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
         arrayList=new ArrayList<>();
 
-//        Adapter.OnNoteListener onNoteListener=this;
+        Adapter.OnNoteListener onNoteListener=this;
 
 
         arrayList.add(new Item("Flutter Developer","Neat.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
@@ -430,6 +432,9 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         // creating a new array list to filter our data.
         ArrayList<Item> filteredlist = new ArrayList<Item>();
 
+
+        Adapter.OnNoteListener onListener=this;
+
         // running a for loop to compare elements.
         for (Item itm : arrayList) {
             // checking if the entered string matched with any item of our recycler view.
@@ -444,11 +449,14 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
             }
         }
         if (filteredlist.isEmpty()) {
+
+
             // if no item is added in filtered list we are
             // displaying a toast message as no data found.
             Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show();
         } else {
-            adapter=new Adapter(filteredlist,onNoteListener,Home_page.this);
+            arrayList=filteredlist;
+            adapter=new Adapter(arrayList,onListener,Home_page.this);
             layoutManager=new LinearLayoutManager(getApplicationContext());
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(layoutManager);

@@ -2,7 +2,25 @@ package com.nafim.jobportal;
 
 public class Item
 {
-    String jobTitle,jobDescription,joblocation,vacancy, salary, employerName, deadLine, educationalQualification,jobResponsiblity,logoURL;
+    String jobTitle;
+    String jobDescription;
+    String joblocation;
+    String vacancy;
+    String salary;
+    String employerName;
+    String deadLine;
+    String educationalQualification;
+    String jobResponsiblity;
+
+    public String getLogoURL() {
+        return logoURL;
+    }
+
+    public void setLogoURL(String logoURL) {
+        this.logoURL = logoURL;
+    }
+
+    String logoURL;
 
     public Item(String jobTitle, String employerName,String jobDescription, String deadLine,String joblocation, String vacancy, String salary, String educationalQualification,String jobResponsiblity,String logoURL) {
         this.jobTitle = jobTitle;

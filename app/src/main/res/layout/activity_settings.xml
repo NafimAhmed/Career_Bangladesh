@@ -18,6 +18,7 @@
         android:switchMinWidth="56dp"
         android:text="Dark Mode : "
         android:textSize="25dp"
+        android:textColor="@color/black"
         android:checked="false"
         android:textOff="OFF"
         android:textOn="ON"/>
