@@ -6,11 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -40,6 +44,8 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
 
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
+
+    CheckBox checkbox_showPass;
 
 
 
@@ -102,12 +108,28 @@ public class Login_page extends AppCompatActivity implements AdapterView.OnItemS
         editTextEmail=findViewById(R.id.loginEmail);
         editTextPassword=findViewById(R.id.loginPassword);
         btnLogin=findViewById(R.id.loginBtn);
+        checkbox_showPass=findViewById(R.id.checkbox_showPass);
+
+        ////////////////////////check box//////////////////////////
 
 
+        checkbox_showPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    editTextPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+                else{
+                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+                }
+
+            }
+        });
 
 
-
-
+        ////////////////////////check box///////////////////////////
 
         loginSpiner=findViewById(R.id.loginSpinner);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,

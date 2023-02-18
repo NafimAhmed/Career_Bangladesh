@@ -10,6 +10,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/btn_shape.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/btn_shape2.xml" value="0.124" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/contact2.xml" value="0.124" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/contact_background.xml" value="0.124" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/contact_us.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/edit_profile.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/drawable/edit_text_shape.xml" value="0.1" />
@@ -20,7 +21,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_application_detail.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_application_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_apply_contact.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_confirm_apply_page.xml" value="0.265625" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_confirm_apply_page.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_contact_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_done_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_download_resume.xml" value="0.25416666666666665" />
@@ -45,6 +46,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/header.xml" value="0.265625" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/item2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/item3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/item_employer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/job_type_item.xml" value="0.253125" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/search_alert_dialog.xml" value="0.253125" />

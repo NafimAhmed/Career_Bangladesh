@@ -36,10 +36,10 @@ public class Application_list extends AppCompatActivity implements Adapter_FAQs.
 
 
         faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
-        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
-        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
-        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
-        faq_arrayList.add(new FAQ_Items("Name : Nafim Ahmed","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Asad Hossain","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Amina Aziz","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Nafisa Afnan","CV ID : 123456789"));
+        faq_arrayList.add(new FAQ_Items("Name : Amir Ahmed","CV ID : 123456789"));
 
 
         adapterFAQs =new Adapter_FAQs(faq_arrayList,faq_onNoteListener);

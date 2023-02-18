@@ -101,8 +101,9 @@ public class Job_Detail extends AppCompatActivity {
         aplyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Resume_Detail.class);
-                intent.putExtra("button_visible",true);
+//                Intent intent = new Intent(getApplicationContext(),Resume_Detail.class);
+//                intent.putExtra("button_visible",true);
+                Intent intent=new Intent(getApplicationContext(),Confirm_Apply_page.class);
                 startActivity(intent);
             }
         });

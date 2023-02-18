@@ -151,6 +151,7 @@
                     android:layout_height="wrap_content"
                     android:scrollbars="horizontal"
                     android:scrollbarSize="10dp"
+                    android:visibility="gone"
                     android:background="@color/white"
                     android:id="@+id/rcvw_job_type"
 

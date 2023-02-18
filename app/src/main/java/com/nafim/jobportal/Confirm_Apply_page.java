@@ -19,7 +19,7 @@ public class Confirm_Apply_page extends AppCompatActivity {
     TextView condition;
     CheckBox checkbox_condition;
 
-    String cond="Terms and Condition : Careers Bangladesh শুধুমাত্রই নিয়োগকর্তা এবং চাকরিপ্রার্থীদের মাঝে যোগাযোগ মাধ্যম হিসেবে কাজ করে। বিডিজবস ওয়েবসাইটের মাধ্যমে চাকরিতে আবেদন করার পর কোম্পানি যদি আপনার সাথে কোনো আর্থিক লেনদেন অথবা অনিয়ম/প্রতারণা করে তার জন্য Careers Bangladesh লিমিটেড দায়ী থাকবে না।";
+    String cond="Terms and Condition : Careers Bangladesh শুধুমাত্রই নিয়োগকর্তা এবং চাকরিপ্রার্থীদের মাঝে যোগাযোগ মাধ্যম হিসেবে কাজ করে। Careers Bangladesh ওয়েবসাইটের মাধ্যমে চাকরিতে আবেদন করার পর কোম্পানি যদি আপনার সাথে কোনো আর্থিক লেনদেন অথবা অনিয়ম/প্রতারণা করে তার জন্য Careers Bangladesh লিমিটেড দায়ী থাকবে না।";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

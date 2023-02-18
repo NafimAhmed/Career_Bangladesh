@@ -16,14 +16,7 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:padding="10dp"
-            android:id="@+id/condition"
-            android:textColor="@color/black"
-            ></TextView>
+
 
 
 
@@ -53,6 +46,14 @@
             ></EditText>
 
     </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:id="@+id/condition"
+            android:textColor="@color/black"
+            ></TextView>
 
         <LinearLayout
             android:layout_width="match_parent"

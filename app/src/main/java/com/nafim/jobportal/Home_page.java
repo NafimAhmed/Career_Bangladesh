@@ -100,8 +100,14 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
         TextView tv=headerView.findViewById(R.id.profileName);
         TextView tv2=headerView.findViewById(R.id.emlid);
-        tv.setText("Re Ahmed");
-        tv2.setText("re@gmail.com");
+
+
+
+
+       // String nm=FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+       String em=FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        tv.setText(em);
+        tv2.setText(em);
 
 
         ////////////////////////////////////
@@ -277,19 +283,39 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         Adapter.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
-                "Software development","https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
-                ,"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
-        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
-                "Mobile app development","https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",
-                ".NET development","https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
-        arrayList.add(new Item("Android Developer","Youtube.inc","this is a development related job","1/5/23","Bongshal, Dhaka","2","12000","MSc. In Computer Science","PHP development"
-                ,"https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"));
-        arrayList.add(new Item("Android Developer","Google.inc","this is a development related job","1/5/23","Mirpur 12, Dhaka","2","12000","MSc. In Computer Science",
-                "Software development","https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"));
-        adapter=new Adapter(arrayList,onNoteListener,Home_page.this);
+        arrayList.add(new Item("Flutter Developer","Neat.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
+                "Software development","https://i.ibb.co/MpKCcWf/logo-01.png"));
+        arrayList.add(new Item("Android Developer","Gorgious Bangladesh Limited.","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
+                ,"https://i.ibb.co/djkwb8Y/gbl-logo.png"));
+        arrayList.add(new Item(".Net Developer","Cocacola.inc","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
+                "Mobile app development","https://i.ibb.co/4j1RBt3/logo-02.png"));
+        arrayList.add(new Item("Anguler Developer","Google.inc","this is a development related job","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",
+                ".NET development","https://i.ibb.co/xCQnZzX/logo-04.png"));
+        arrayList.add(new Item("Python Developer","BSA.inc","this is a development related job","1/5/23","Bongshal, Dhaka","2","12000","MSc. In Computer Science","PHP development"
+                ,"https://i.ibb.co/4PNrtb0/logo-05.png"));
+        arrayList.add(new Item("HR","TravelGenies.inc","this is a development related job","1/5/23","Mirpur 12, Dhaka","2","12000","MSc. In Computer Science",
+                "Software development","https://i.ibb.co/k1SF5JP/logo-06.png"));
+
+        arrayList.add(new Item("Flutter Developer","Twitter.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
+                "Software development","https://i.ibb.co/xDL6W5q/logo-07.png"));
+        arrayList.add(new Item("Android Developer","Facebook.Inc","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
+                ,"https://i.ibb.co/GR3GzKw/logo-08.png"));
+        arrayList.add(new Item(".Net Developer","Febco.inc","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
+                "Mobile app development","https://i.ibb.co/WNhwDdN/logo-09.png"));
+        //arrayList.add(new Item("Anguler Developer","Google.inc","this is a development related job","1/5/23","Motijheel, Dhaka","2","12000","MSc. In Computer Science",
+
+        arrayList.add(new Item("Flutter Developer","Twitter.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
+                "Software development","https://i.ibb.co/HDt1LPP/logo-10.png"));
+        arrayList.add(new Item("Android Developer","Facebook.Inc","this is a development related job","1/5/23","Banani, Dhaka","2","12000","MSc. In Computer Science","Node JS development"
+                ,"https://i.ibb.co/WNhwDdN/logo-09.png"));
+        arrayList.add(new Item(".Net Developer","Febco.inc","this is a development related job","1/5/23","Dhanmondi, Dhaka","2","12000","MSc. In Computer Science",
+                "Mobile app development","https://i.ibb.co/GR3GzKw/logo-08.png"));
+
+
+
+
+
+                adapter=new Adapter(arrayList,onNoteListener,Home_page.this);
         layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
