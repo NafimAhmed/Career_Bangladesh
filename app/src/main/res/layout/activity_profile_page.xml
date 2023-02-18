@@ -776,15 +776,17 @@
                             android:textColor="@color/black"
                             ></TextView>
 
-                        <EditText
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            android:clickable="true"
+                            android:id="@+id/certificate_valid_from"
                             android:padding="5dp"
                             android:textColor="@color/black"
-                            ></EditText>
+                            ></TextView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -802,15 +804,17 @@
                             android:textColor="@color/black"
                             ></TextView>
 
-                        <EditText
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:padding="5dp"
+                            android:clickable="true"
+                            android:id="@+id/certificate_valid_to"
                             android:textColor="@color/black"
                             android:textSize="25dp"
-                            ></EditText>
+                            ></TextView>
                     </LinearLayout>
 
 
@@ -983,6 +987,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:padding="5dp"
+                            android:clickable="true"
                             android:textColor="@color/black"
                             android:id="@+id/JoiningDate_Text"
                             android:textSize="25dp"
@@ -1012,6 +1017,7 @@
                             android:id="@+id/resigningDate_Text"
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
+                            android:clickable="true"
                             android:textColor="@color/black"
                             android:textSize="25dp"
                             ></TextView>

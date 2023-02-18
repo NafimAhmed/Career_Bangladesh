@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.DatePickerDialog;
+import android.app.AlertDialog;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,7 +28,7 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
     RecyclerView recyclerView,recyclerViewSkill;
     Adapter2 adapter;
     Adapter3 adapter_skill;
-    TextView DOB;
+    TextView DOB,JoiningDate_Text,resigningDate_Text,certificate_valid_to,certificate_valid_from;
     final Calendar myCalendar= Calendar.getInstance();
 
     EditText eduResultType,eduResult;
@@ -59,33 +60,217 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
         skill=findViewById(R.id.skill_info);
         exp=findViewById(R.id.Experience_info);
         DOB=findViewById(R.id.DOB);
+        JoiningDate_Text=findViewById(R.id.JoiningDate_Text);
+        certificate_valid_to=findViewById(R.id.certificate_valid_to);
+        certificate_valid_from=findViewById(R.id.certificate_valid_from);
 
         //eduLevel=findViewById(R.id.edulevel);
         //eduMajor=findViewById(R.id.eduMajor);
         eduResultType=findViewById(R.id.eduResult);
         eduResult=findViewById(R.id.eduResult);
+        resigningDate_Text=findViewById(R.id.resigningDate_Text);
 
 
 
         ////////////////Date picker Dialogue///////////////////////
 
-        DatePickerDialog.OnDateSetListener date =new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+//        DatePickerDialog.OnDateSetListener date =new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+//
+//                myCalendar.set(Calendar.YEAR, year);
+//                myCalendar.set(Calendar.MONTH,month);
+//                myCalendar.set(Calendar.DAY_OF_MONTH,day);
+//                updateLabel();
+//
+//            }
+//
+//
+//        };
 
-                myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH,month);
-                myCalendar.set(Calendar.DAY_OF_MONTH,day);
-                updateLabel();
+        certificate_valid_from.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Page.this);
+                builder.setTitle("Select Date");
+
+                // set the custom layout
+                final View customLayout = getLayoutInflater().inflate(R.layout.date_picker_dialogue, null);
+                builder.setView(customLayout);
+
+                // add a button
+                builder.setPositiveButton("Select", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+                    DatePicker date = customLayout.findViewById(R.id.datePicker);
+                    certificate_valid_from.setText(date.getDayOfMonth()+"/"+(date.getMonth()+1)+"/"+date.getYear());
+                    //filter(editText.getText().toString());
+                }).setNegativeButton("Cancel", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+
+
 
             }
+        });
 
 
-        };
+
+        certificate_valid_to.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Page.this);
+                builder.setTitle("Select Date");
+
+                // set the custom layout
+                final View customLayout = getLayoutInflater().inflate(R.layout.date_picker_dialogue, null);
+                builder.setView(customLayout);
+
+                // add a button
+                builder.setPositiveButton("Select", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+                    DatePicker date = customLayout.findViewById(R.id.datePicker);
+                    certificate_valid_to.setText(date.getDayOfMonth()+"/"+(date.getMonth()+1)+"/"+date.getYear());
+                    //filter(editText.getText().toString());
+                }).setNegativeButton("Cancel", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+
+
+            }
+        });
+
+
+
+        resigningDate_Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Page.this);
+                builder.setTitle("Select Date");
+
+                // set the custom layout
+                final View customLayout = getLayoutInflater().inflate(R.layout.date_picker_dialogue, null);
+                builder.setView(customLayout);
+
+                // add a button
+                builder.setPositiveButton("Select", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+                    DatePicker date = customLayout.findViewById(R.id.datePicker);
+                    resigningDate_Text.setText(date.getDayOfMonth()+"/"+(date.getMonth()+1)+"/"+date.getYear());
+                    //filter(editText.getText().toString());
+                }).setNegativeButton("Cancel", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+        JoiningDate_Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Page.this);
+                builder.setTitle("Select Date");
+
+                // set the custom layout
+                final View customLayout = getLayoutInflater().inflate(R.layout.date_picker_dialogue, null);
+                builder.setView(customLayout);
+
+                // add a button
+                builder.setPositiveButton("Select", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+                    DatePicker date = customLayout.findViewById(R.id.datePicker);
+                    JoiningDate_Text.setText(date.getDayOfMonth()+"/"+(date.getMonth()+1)+"/"+date.getYear());
+                    //filter(editText.getText().toString());
+                }).setNegativeButton("Cancel", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
         DOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(Profile_Page.this,date,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Page.this);
+                builder.setTitle("Select Date");
+
+                // set the custom layout
+                final View customLayout = getLayoutInflater().inflate(R.layout.date_picker_dialogue, null);
+                builder.setView(customLayout);
+
+                // add a button
+                builder.setPositiveButton("Select", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+                    DatePicker date = customLayout.findViewById(R.id.datePicker);
+                    DOB.setText(date.getDayOfMonth()+"/"+(date.getMonth()+1)+"/"+date.getYear());
+                    //filter(editText.getText().toString());
+                }).setNegativeButton("Cancel", (dialog, which) -> {
+                    // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+                });
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+
+
+                //new DatePickerDialog(Profile_Page.this,date,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
 
