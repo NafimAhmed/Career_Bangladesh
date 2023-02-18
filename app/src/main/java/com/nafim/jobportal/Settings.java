@@ -2,6 +2,7 @@ package com.nafim.jobportal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,7 +11,7 @@ import android.widget.Spinner;
 
 public class Settings extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    Spinner loginSpiner;
+    Spinner languageSpiner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +20,16 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
 
 
 
-        loginSpiner=findViewById(R.id.loginSpinner);
+        languageSpiner =findViewById(R.id.loginSpinner);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,
                 R.array.language,
                 //android.R.layout.simple_spinner_item,
                 R.layout.spinner_text
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        loginSpiner.setAdapter(adapter);
+        languageSpiner.setAdapter(adapter);
 
-        loginSpiner.setOnItemSelectedListener(this);
+        languageSpiner.setOnItemSelectedListener(this);
 
 
 
@@ -43,5 +44,10 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void changePass(View view){
+        Intent intent=new Intent(getApplicationContext(),forgot_password.class);
+        startActivity(intent);
     }
 }

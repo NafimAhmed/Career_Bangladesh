@@ -13,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, JobType_Adapter.JobType_OnNoteListener,ExampleDialog.ExampleDialogListener{
+public class Home_page extends AppCompatActivity implements Adapter.OnNoteListener, JobType_Adapter.JobType_OnNoteListener{
 
     RecyclerView recyclerView,recyclerView_Jobtype;
     Adapter adapter;
@@ -53,6 +54,8 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     ActionBarDrawerToggle toggle;
 
     ImageView imageMenu;
+
+    Adapter.OnNoteListener onNoteListener=this;
 
     //////////////////////////
 
@@ -280,7 +283,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
         arrayList=new ArrayList<>();
 
-        Adapter.OnNoteListener onNoteListener=this;
+//        Adapter.OnNoteListener onNoteListener=this;
 
 
         arrayList.add(new Item("Flutter Developer","Neat.inc","this is a development related job","1/5/23","Uttara, Dhaka","2","12000","MSc. In Computer Science",
@@ -382,34 +385,85 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
 
 
-    public void search_Visible(View view){
-
-        openDialog();
 
 
+//    public void openDialog() {
+//        ExampleDialog exampleDialog = new ExampleDialog();
+//        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+//    }
 
-//        if (searchLayout.getVisibility()== View.VISIBLE) {
-//
-//
-//
-//            searchLayout.setVisibility(View.GONE);
-//        } else {
-//
-//            searchLayout.setVisibility(View.VISIBLE);
-//        }
+    public void showAlertDialogButtonClicked(View view) {
+        // Create an alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Search a job");
 
+        // set the custom layout
+        final View customLayout = getLayoutInflater().inflate(R.layout.search_alert_dialog, null);
+        builder.setView(customLayout);
 
-
+        // add a button
+        builder.setPositiveButton("Search", (dialog, which) -> {
+            // send data from the AlertDialog to the Activity
+            EditText editText = customLayout.findViewById(R.id.edit_search);
+            sendDialogDataToActivity(editText.getText().toString());
+            filter(editText.getText().toString());
+        }).setNegativeButton("Cancel", (dialog, which) -> {
+            // send data from the AlertDialog to the Activity
+//            EditText editText = customLayout.findViewById(R.id.edit_search);
+//            sendDialogDataToActivity(editText.getText().toString());
+        });
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
-    public void openDialog() {
-        ExampleDialog exampleDialog = new ExampleDialog();
-        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    // Do something with the data coming from the AlertDialog
+    private void sendDialogDataToActivity(String data) {
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
     }
 
 
-    @Override
-    public void applyTexts(String username) {
 
+
+
+    private void filter(String text) {
+        // creating a new array list to filter our data.
+        ArrayList<Item> filteredlist = new ArrayList<Item>();
+
+        // running a for loop to compare elements.
+        for (Item itm : arrayList) {
+            // checking if the entered string matched with any item of our recycler view.
+            if (itm.jobTitle.toLowerCase().contains(text.toLowerCase())||itm.employerName.toLowerCase().contains(text.toLowerCase())) {
+                // if the item is matched we are
+                // adding it to our filtered list.
+
+                filteredlist.add(new Item(itm.jobTitle,itm.employerName,itm.jobDescription,itm.deadLine,itm.joblocation,itm.vacancy,itm.salary,itm.educationalQualification,
+                        itm.jobResponsiblity,itm.logoURL));
+
+
+            }
+        }
+        if (filteredlist.isEmpty()) {
+            // if no item is added in filtered list we are
+            // displaying a toast message as no data found.
+            Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show();
+        } else {
+            adapter=new Adapter(filteredlist,onNoteListener,Home_page.this);
+            layoutManager=new LinearLayoutManager(getApplicationContext());
+            recyclerView.setAdapter(adapter);
+            recyclerView.setLayoutManager(layoutManager);
+
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
 }

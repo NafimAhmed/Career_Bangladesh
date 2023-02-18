@@ -45,7 +45,7 @@ public class forgot_password extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(forgot_password.this);
 
                 // Set the message show for the Alert time
-                builder.setMessage(" A Password resetting link has been sent to your mail. Please checkout the mail to reset password");
+                builder.setMessage(" A Password resetting link has been sent to your mail. Please checkout the mail to change or reset password");
 
                 // Set Alert Title
                 builder.setTitle("Alert !");

@@ -11,7 +11,7 @@
 
 
     <EditText
-        android:id="@+id/edit_username"
+        android:id="@+id/edit_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -24,36 +24,6 @@
         android:hint="Search by keyword" />
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:background="@drawable/edit_text_shape"
-        >
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/job_catagory"
-
-            ></TextView>
-
-        <Spinner
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="10dp"
-            android:gravity="center"
-            android:id="@+id/searchSpinner"
-            android:backgroundTint="#93066B"
-
-            ></Spinner>
-
-
-
-    </LinearLayout>
 
 
 

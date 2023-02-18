@@ -92,8 +92,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-
-        android:textColor="@color/black" android:text="Change Password"></TextView>
+        android:clickable="true"
+        android:onClick="changePass"
+        android:textColor="@color/black"
+        android:text="Change Password"></TextView>
 
     <TextView
         android:layout_width="wrap_content"
