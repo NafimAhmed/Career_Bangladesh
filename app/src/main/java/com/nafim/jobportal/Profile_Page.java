@@ -23,11 +23,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteListener, Adapter2.OnNoteListener, AdapterView.OnItemSelectedListener{
+public class Profile_Page extends AppCompatActivity implements Adapter_Exp.OnNoteListener,Adapter3.OnNoteListener, Adapter2.OnNoteListener, AdapterView.OnItemSelectedListener{
 
-    RecyclerView recyclerView,recyclerViewSkill;
+    RecyclerView recyclerView,recyclerViewSkill,rcvw_experience;
     Adapter2 adapter;
     Adapter3 adapter_skill;
+    Adapter_Exp adapter_exp;
     TextView DOB,JoiningDate_Text,resigningDate_Text,certificate_valid_to,certificate_valid_from;
     final Calendar myCalendar= Calendar.getInstance();
 
@@ -37,13 +38,15 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
     //RecyclerView.LayoutManager layoutManager;
     ArrayList<Item2> arrayList;
     ArrayList<Item3> arrayList_skill;
+    ArrayList<Exp_Item> arrayList_ex;
     ArrayList<String>arrayList_edulevel;
 
     //Adapter.OnNoteListener onNoteListener=this;
 
-    RecyclerView.LayoutManager layoutManager,layoutManager_skill;
+    RecyclerView.LayoutManager layoutManager,layoutManager_skill,layoutManager_exp;
     Adapter2.OnNoteListener onNoteListener=this;
     Adapter3.OnNoteListener onNoteListenerSkill=this;
+    Adapter_Exp.OnNoteListener onNoteListenerExp=this;
     Spinner eduMajorSpin,eduResultTypeSpinner, eduLevelSpinner;
 
 
@@ -60,6 +63,7 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
         skill=findViewById(R.id.skill_info);
         exp=findViewById(R.id.Experience_info);
         DOB=findViewById(R.id.DOB);
+        rcvw_experience=findViewById(R.id.rcvw_experience);
         JoiningDate_Text=findViewById(R.id.JoiningDate_Text);
         certificate_valid_to=findViewById(R.id.certificate_valid_to);
         certificate_valid_from=findViewById(R.id.certificate_valid_from);
@@ -335,6 +339,7 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
         recyclerViewSkill.setClickable(true);
 
         arrayList_skill=new ArrayList<>();
+        arrayList_ex=new ArrayList<>();
 
         ////////////////////////////////////
 
@@ -438,6 +443,25 @@ public class Profile_Page extends AppCompatActivity implements Adapter3.OnNoteLi
 
 
     }
+
+
+    public void addexp(View v)
+    {
+
+        arrayList_ex.add(new Exp_Item("rfjwfje","4fkjj4jk","12","13","ir3hh"));
+
+//        arrayList_exp.add(new Item3("yudsgasg","sdhweidhqwih","12/05/23","uihdwhehhed"));
+        adapter_exp=new Adapter_Exp(arrayList_ex,onNoteListenerExp);
+       layoutManager_exp=new LinearLayoutManager(getApplicationContext());
+        rcvw_experience.setAdapter(adapter_exp);
+        rcvw_experience.setLayoutManager(layoutManager_exp);
+
+
+    }
+
+
+
+
 
 
     @Override
