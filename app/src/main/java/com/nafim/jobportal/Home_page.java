@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -37,6 +39,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
     Adapter adapter;
     JobType_Adapter jobType_adapter;
     EditText jobSearch;
+    private static final String CHANNEL_ID="My Channel";
 
     LinearLayout searchLayout;
 
@@ -462,6 +465,25 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
             recyclerView.setLayoutManager(layoutManager);
 
         }
+    }
+
+
+
+    public void note(){
+
+        Toast.makeText(getApplicationContext(),"clicked",Toast.LENGTH_SHORT).show();
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.logo)
+                .setContentTitle("Message")
+                .setContentText("this is a sample message")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(100, builder.build());
+
     }
 
 
