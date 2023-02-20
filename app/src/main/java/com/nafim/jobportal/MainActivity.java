@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                Intent intent=new Intent(getApplicationContext(), Login_page.class);
+                Intent intent=new Intent(getApplicationContext(), Slider_page.class);
                 startActivity(intent);
                 finish();
 
