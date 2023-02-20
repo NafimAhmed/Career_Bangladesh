@@ -26,6 +26,7 @@ public class Slider_page extends AppCompatActivity {
         setContentView(R.layout.activity_slider_page);
 
 
+
         backbtn=findViewById(R.id.backbtn);
         nextbtn=findViewById(R.id.nextbtn);
         skipbtn=findViewById(R.id.skipbtn);
