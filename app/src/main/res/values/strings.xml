@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Job Portal</string>
+    <string name="slider1">Search for job</string>
+    <string name="slider2">Apply for job</string>
+    <string name="slider3">Show your skill</string>
+    <string name="slider4">Get the Job</string>
+    <string name="desc1">search a appropriate job for you</string>
+    <string name="desc2">apply the perfect job from Careers Bangladesh</string>
+    <string name="desc3">Show your skill to the employer</string>
+    <string name="desc4">Get the perfect job for you</string>
 
     <string-array name="number">
         <item>Select</item>

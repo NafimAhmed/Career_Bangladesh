@@ -77,8 +77,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/callTo"
             android:clickable="true"
-            android:onClick="callTo"
             android:text="+8801797609439"
             android:textColor="@color/purple_500"
             android:textSize="25dp"
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/purple_500"
             android:clickable="true"
-            android:onClick="mailTo"
+            android:id="@+id/mailTo"
             android:text="recentnafimahmed@gmail.com"
             android:textSize="25dp"
             ></TextView>

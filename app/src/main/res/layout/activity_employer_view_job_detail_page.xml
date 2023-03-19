@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:checked="false"
-
+                    android:textColor="@color/black"
                     android:text="Active"
                     android:textAlignment="center"
                     android:textSize="20sp" />
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:checked="false"
-
+                    android:textColor="@color/black"
                     android:text="Inactive"
                     android:textAlignment="center"
                     android:textSize="20sp" />
@@ -71,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:checked="false"
+                    android:textColor="@color/black"
                     android:padding="4dp"
                     android:text="Closed"
                     android:textAlignment="center"

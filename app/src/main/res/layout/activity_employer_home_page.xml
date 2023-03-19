@@ -10,6 +10,10 @@
     tools:context=".Employer_Home_page">
 
 
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -146,19 +150,42 @@
 
                 />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/addJob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="73dp"
-                android:backgroundTint="#B10C82"
-                android:src="@drawable/add_post2">
 
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="right"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addJob"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="10dp"
+                    app:backgroundTint="@color/purple_500" >
+
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Post\nA Job"
+                    android:elevation="6dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:id="@+id/addjobtext"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    app:layout_anchor="@id/addJob"
+                    app:layout_anchorGravity="center"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
 
 
             <!--<Button

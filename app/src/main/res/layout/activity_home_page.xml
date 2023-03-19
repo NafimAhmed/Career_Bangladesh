@@ -82,7 +82,8 @@
                             android:layout_gravity="right"
                             android:src="@drawable/search"
                             android:clickable="true"
-                            android:onClick="showAlertDialogButtonClicked"
+                            android:id="@+id/srch"
+
                             app:tint="#570606" ></ImageView>
 
 

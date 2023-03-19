@@ -32,7 +32,7 @@
                 android:padding="5dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
-                android:onClick="BasicInfo"
+                android:id="@+id/basic"
                 ></TextView>
 
 
@@ -47,7 +47,7 @@
                 android:backgroundTint="#CAC8C8"
                 android:padding="5dp"
                 android:clickable="true"
-                android:onClick="EduInfo"
+                android:id="@+id/eduinf"
                 ></TextView>
 
             <TextView
@@ -60,7 +60,7 @@
                 android:padding="5dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
-                android:onClick="SkillInfo"
+                android:id="@+id/skillinf"
                 ></TextView>
 
             <TextView
@@ -73,7 +73,7 @@
                 android:padding="5dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
-                android:onClick="ExpInfo"
+                android:id="@+id/expinf"
                 ></TextView>
 
         </LinearLayout>
@@ -629,7 +629,7 @@
                         android:layout_height="wrap_content"
                         android:text="Add Education"
                         android:layout_gravity="center_horizontal"
-                        android:onClick="addEdu"
+                        android:id="@+id/addedu"
                         android:textSize="25dp"
 
                         ></Button>
@@ -854,7 +854,7 @@
                         android:layout_marginBottom="30dp"
                         android:layout_marginTop="20dp"
                         android:textSize="25dp"
-                        android:onClick="addSkill"
+                        android:id="@+id/addskill"
                         android:layout_gravity="center_horizontal"
                         ></Button>
 
@@ -1088,7 +1088,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
-                        android:onClick="addexp"
+                        android:id="@+id/addexp"
                         android:background="@drawable/btn_shape"
                         android:text="Save Experience"
                         android:layout_gravity="center_horizontal"

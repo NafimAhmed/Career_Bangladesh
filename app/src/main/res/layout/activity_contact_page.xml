@@ -43,7 +43,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textStyle="bold"
-        android:onClick="callTo"
         android:textColor="#0F76F4"
         android:clickable="true"
         android:textSize="20dp"
@@ -58,7 +57,6 @@
         android:clickable="true"
         android:textStyle="bold"
         android:textColor="#0F76F4"
-        android:onClick="mailTo"
         android:textSize="20dp"
         ></TextView>
 

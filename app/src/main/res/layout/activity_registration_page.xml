@@ -10,131 +10,164 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="15dp"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:orientation="vertical">
 
 
-
             <ImageView
-                android:layout_width="200dp"
                 android:id="@+id/imz"
-                android:foregroundGravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="imagechooser"
-                android:src="@drawable/person"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_shape"
                 android:clickable="true"
-                android:layout_height="200dp">
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                android:src="@drawable/person">
 
             </ImageView>
 
-
-           <!-- <com.makeramen.roundedimageview.RoundedImageView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="50dp"
-                android:scaleType="fitCenter"
-                android:id="@+id/imz"
-                android:onClick="imagechooser"
-                android:src="@drawable/person"
-                app:riv_border_color="#4CAAF4"
-                app:riv_border_width="5dp"
-                app:riv_corner_radius="100dp"
-                app:riv_mutate_background="true"
-                app:riv_oval="false"
-                android:clickable="true"
-                app:riv_tile_mode="repeat"></com.makeramen.roundedimageview.RoundedImageView>-->
+                android:layout_marginBottom="10dp"
+                android:text="image must be in 512x512 size"
+                android:textSize="15dp"></TextView>
 
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/edit_text_shape"
-                android:hint="Name"
+                android:hint="Full Name"
                 android:inputType="textCapWords"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHint="#757373"></EditText>
 
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:id="@+id/email"
                 android:background="@drawable/edit_text_shape"
                 android:hint="Email"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHint="#757373"></EditText>
 
 
-
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:id="@+id/password"
-                android:background="@drawable/edit_text_shape"
-                android:hint="Password"
-                android:padding="20dp"
-                android:textColor="@color/black"
-                android:textColorHint="#757373"></EditText>
-
-
-
-            <EditText
+                android:id="@+id/phoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/edit_text_shape"
                 android:hint="Phone Number"
-                android:padding="20dp"
+                android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHint="#757373"></EditText>
 
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text_shape"
+                android:hint="Enter Password at least 8 character"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757373"></EditText>
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text_shape"
+                android:hint="Confirm Password"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757373"></EditText>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Please Select role : "
+                    android:text="Please Select Role : "
                     android:textColor="@color/black"
                     android:textSize="20dp"></TextView>
 
-                <Spinner
-                    android:id="@+id/loginSpinner"
-                    android:layout_width="130dp"
-                    android:layout_height="40dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_shape"
-                    android:backgroundTint="#93066B"></Spinner>
+                    android:backgroundTint="#93066B"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/loginSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+
+
+                        >
+
+                    </Spinner>
+
+
+
+                </LinearLayout>
+
+
+
 
 
             </LinearLayout>
 
 
+            <CheckBox android:id="@+id/checkbox_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="15dp"
+                android:text="I am agree with the term and condition"
+                />
+
+
+
             <Button
+                android:id="@+id/register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_shape"
                 android:backgroundTint="#B10C82"
                 android:text="Sign up"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/btn_shape"
-                android:id="@+id/register"
                 android:textSize="25dp"></Button>
 
 

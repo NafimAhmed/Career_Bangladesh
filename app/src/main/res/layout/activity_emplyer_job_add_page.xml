@@ -38,14 +38,24 @@
                         android:textSize="25dp"
                         ></TextView>
 
-                    <Spinner
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:backgroundTint="#BCBBBB"
-                        android:background="@drawable/btn_shape"
-                        android:layout_margin="10dp"
-                        android:id="@+id/jobTypeSpinner"
-                        ></Spinner>
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/edit_text_shape"
+                        >
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_margin="0dp"
+                            android:textAlignment="center"
+                            android:id="@+id/jobTypeSpinner"
+                            ></Spinner>
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
 
@@ -63,11 +73,11 @@
                         android:layout_margin="10dp"
                         android:textSize="25dp"
                         ></TextView>
-
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/empjobTitle"
+                        android:padding="10dp"
                         android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
@@ -92,10 +102,11 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/employerName"
                         android:layout_margin="10dp"
                         android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
                         android:textSize="25dp"
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
@@ -124,6 +135,7 @@
                         android:id="@+id/empjobLocation"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:paddingHorizontal="10dp"
                         android:lines="5"
                         android:textColor="@color/black"
                         android:isScrollContainer="true"
@@ -152,9 +164,10 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:textColor="@color/black"
                         android:id="@+id/empjobvacancy"
+                        android:paddingHorizontal="10dp"
                         android:layout_margin="10dp"
                         android:inputType="number"
                         android:textSize="25dp"
@@ -240,6 +253,7 @@
                         android:layout_margin="10dp"
                         android:textColor="@color/black"
                         android:textSize="25dp"
+                        android:paddingHorizontal="10dp"
                         android:inputType="textMultiLine"
                         android:lines="10"
                         android:background="@drawable/edit_text_shape"
@@ -264,8 +278,9 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/Salary"
+                        android:paddingHorizontal="10dp"
                         android:layout_margin="10dp"
                         android:textColor="@color/black"
                         android:textSize="25dp"
@@ -293,9 +308,10 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:id="@+id/deadline"
                         android:clickable="true"
+                        android:gravity="center"
                         android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
@@ -319,24 +335,7 @@
                     ></Button>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </LinearLayout>
-
-
-
 
         </ScrollView>
 

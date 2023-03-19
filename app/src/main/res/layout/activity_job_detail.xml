@@ -46,7 +46,7 @@
             android:id="@+id/saveimg"
             android:paddingEnd="21dp"
             android:clickable="true"
-            android:onClick="save"
+
             android:layout_height="wrap_content"
             ></TextView>
 

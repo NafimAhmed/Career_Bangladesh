@@ -18,16 +18,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:gravity="center_horizontal"
             android:layout_height="match_parent">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Welcome"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Please login or signup to continue\nusing this app"
+                android:gravity="center_horizontal"
+                android:textSize="20dp"
+                ></TextView>
 
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/logo"
-                    android:layout_gravity="center"
-                    ></ImageView>
+
+
+
+
+            <!--                <ImageView-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    android:src="@drawable/logo"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    ></ImageView>-->
 
 
                <!-- <TextView
@@ -51,6 +76,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         >
 
         <TextView
@@ -58,18 +85,36 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:fontFamily="@font/opensence_variable"
-            android:text="Please Select role : "
+            android:text="Please Select Role : "
             android:textSize="20dp"
             ></TextView>
 
-        <Spinner
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:gravity="center_horizontal"
-            android:id="@+id/loginSpinner"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:backgroundTint="#93066B"
+            android:gravity="end"
             android:background="@drawable/edit_text_shape"
-            ></Spinner>
+
+            >
+
+
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/loginSpinner"
+
+
+                ></Spinner>
+
+
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
@@ -81,7 +126,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="email"
+        android:hint="Email"
         android:fontFamily="@font/opensence_variable"
         android:textColorHint="#595757"
         android:textColor="@color/black"
@@ -120,18 +165,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot password"
+                android:text="Forgot password ??"
                 android:textSize="20dp"
 
                 android:fontFamily="@font/opensence_variable"
                 android:textColor="#BD106A"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="end"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="30dp"
                 android:layout_marginBottom="20dp"
                 android:id="@+id/forgotPassword"
                 android:clickable="true"
-                android:onClick="forgotPass"
+
                 ></TextView>
 
 
@@ -172,13 +217,12 @@
                 >
 
 
-               <LinearLayout
+              <LinearLayout
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginLeft="20dp"
                    android:padding="10dp"
                    android:clickable="true"
-
                    android:id="@+id/google_signin"
                    android:background="@drawable/btn_shape"
                    android:backgroundTint="@color/white"
@@ -189,16 +233,16 @@
                        android:layout_height="40dp"
                        android:src="@drawable/google"
                        ></ImageView>
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:textSize="20dp"
-                       android:textStyle="bold"
-                       android:textColor="@color/grey"
-                       android:layout_gravity="center"
-                       android:gravity="center"
-                       android:text="  Google "
-                       ></TextView>
+<!--                   <TextView-->
+<!--                       android:layout_width="wrap_content"-->
+<!--                       android:layout_height="wrap_content"-->
+<!--                       android:textSize="20dp"-->
+<!--                       android:textStyle="bold"-->
+<!--                       android:textColor="@color/grey"-->
+<!--                       android:layout_gravity="center"-->
+<!--                       android:gravity="center"-->
+<!--                       android:text="  Google "-->
+<!--                       ></TextView>-->
 
                </LinearLayout>
 
@@ -218,16 +262,16 @@
                         android:layout_height="40dp"
                         android:src="@drawable/fb"
                         ></ImageView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/grey"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="  Facebook"
-                        ></TextView>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/grey"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="  Facebook"-->
+<!--                        ></TextView>-->
 
                 </LinearLayout>
 
@@ -239,21 +283,19 @@
 
 
 
-
-
             <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+                android:fontFamily="@font/opensence_variable"
         android:text="Don't have account? Signup"
         android:textSize="20dp"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/black"
         android:layout_marginTop="30dp"
-                android:fontFamily="@font/opensence_variable"
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dp"
         android:id="@+id/signupTxt"
         android:clickable="true"
-        android:onClick="register"
+
         ></TextView>
 
 
