@@ -1,9 +1,9 @@
 package com.careers.app;
 
 public class ItemEmployer {
-    String jobTitle,numb_CV,jobPostingDate,location,vacancy,salary, employerName, deadLine, educationalQualification, jobResponsiblity,jobDescription;
+    String jobTitle,jobId,numb_CV,employerEmail,jobPostingDate,location,vacancy,salary, employerName, deadLine, educationalQualification, jobResponsiblity,jobDescription;
 
-    public ItemEmployer(String jobTitle,String jobPostingDate,String location,String vacancy,String salary, String employerName, String deadLine, String educationalQualification, String jobResponsiblity,String numb_CV,String jobDescription) {
+    public ItemEmployer(String jobId,String jobTitle,String employerEmail,String jobPostingDate,String location,String vacancy,String salary, String employerName, String deadLine, String educationalQualification, String jobResponsiblity,String numb_CV,String jobDescription) {
         this.jobTitle = jobTitle;
         this.employerName = employerName;
         this.deadLine = deadLine;
@@ -15,6 +15,8 @@ public class ItemEmployer {
         this.numb_CV=numb_CV;
         this.jobDescription=jobDescription;
         this.jobResponsiblity=jobResponsiblity;
+        this.employerEmail=employerEmail;
+        this.jobId=jobId;
 
     }
 

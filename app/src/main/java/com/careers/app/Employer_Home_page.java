@@ -24,6 +24,13 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Employer_Home_page extends AppCompatActivity implements AdapterEmployer.OnNoteListener  {
 
@@ -46,6 +53,10 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
     ImageView imageMenu;
     TextView addjobtext;
 
+    String em=FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
+    AdapterEmployer.OnNoteListener onNoteListener=this;
+
+
 
 
 
@@ -60,6 +71,8 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         setContentView(R.layout.activity_employer_home_page);
 
        // getSupportActionBar().setTitle("Previous job post");
+
+        Intent i=getIntent();
 
 
 
@@ -109,8 +122,15 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
 
         TextView tv=headerView.findViewById(R.id.profileName);
         TextView tv2=headerView.findViewById(R.id.emlid);
-        tv.setText("Re Ahmed");
-        tv2.setText("re@gmail.com");
+
+
+
+
+        // String nm=FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+        //String em=FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
+        tv.setText(em);
+        tv2.setText(em);
+
 
 
         ////////////////////////////////////
@@ -194,19 +214,85 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
 
         arrayList=new ArrayList<>();
 
-        AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","A Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","B Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","C Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","D Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        arrayList.add(new ItemEmployer("Android Developer","1/2/23","Uttara,dhaka","2","12000","E Group","02/02/23","MSc. In Computer Science","devlopment","5","this is job description"));
-        adapter=new AdapterEmployer(arrayList,onNoteListener);
-        layoutManager=new LinearLayoutManager(getApplicationContext());
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(layoutManager);
+        /////Data retrive///////////////////////////https://careers-bangladesh-server.vercel.app/postedjob?email=jahid@gmail.com
+
+
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHoldeEmpty jsonPlaceHolderemp=retrofit.create(JsonPlaceHoldeEmpty.class);
+
+        Call<List<PostEmployer>> call= jsonPlaceHolderemp.getPost("/postedjob?email="+em);
+
+        call.enqueue(new Callback<List<PostEmployer>>() {
+            @Override
+            public void onResponse(Call<List<PostEmployer>> call, Response<List<PostEmployer>> response) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+response.code(),Toast.LENGTH_SHORT).show();
+                if(response.isSuccessful())
+                {
+                    List<PostEmployer> posts=response.body();
+                    String ttl = null;
+
+
+                    for (PostEmployer post:posts)
+                    {
+
+                        arrayList.add(new ItemEmployer(
+                                "63f305bd5c3c0e24b96e1b50",
+                                post.getJobTitle(),
+                                post.getEmail(),
+                                post.getPostDate(),
+                                post.getLocation(),
+                                post.getVacancies(),
+                                post.getSalaryFrom() + " to " + post.getSalaryTo(),
+                                post.getOrganization(), post.getDeadLine(),
+                                post.getEducation() + "\n\nRequired Experience : " + post.getExperience()
+                                , post.getJobResponst(), "0", post.getJobContext()));
+
+                        adapter=new AdapterEmployer(arrayList,onNoteListener);
+                        layoutManager=new LinearLayoutManager(getApplicationContext());
+                        recyclerView.setAdapter(adapter);
+                        recyclerView.setLayoutManager(layoutManager);
+
+
+
+
+
+
+
+                    }
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<PostEmployer>> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+t.getMessage(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+
+
+
+        ////Data retrive//////////////////////////////////////////
+
+
+
+
+
+
+
 
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -251,6 +337,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         String postingDate=item.jobPostingDate;
         String vacan=item.vacancy;
         String salar=item.salary;
+        String jbid=item.jobId;
         String jbdesc=item.jobDescription;
         String cvNumb=item.numb_CV;
         String jbResp=item.jobResponsiblity;
@@ -268,6 +355,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         intent.putExtra("deadLine",deadLine);
         intent.putExtra("educationalQualification",educationalQualification);
         intent.putExtra("location",loc);
+        intent.putExtra("jobId",jbid);
         intent.putExtra("postingDate",postingDate);
         intent.putExtra("vacancy",vacan);
         intent.putExtra("numb_cv",cvNumb);
@@ -293,6 +381,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
         context.startActivity(shr);
         //getApplicationContext().startActivity(shr);
     }
+
 
 
 

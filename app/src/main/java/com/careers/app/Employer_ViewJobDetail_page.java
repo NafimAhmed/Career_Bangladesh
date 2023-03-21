@@ -1,6 +1,7 @@
 package com.careers.app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import android.content.Intent;
@@ -13,11 +14,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
     RadioGroup radioGroup;
-    ArrayList<String> buttonNames;
+    String jobID;
+
     Button allApp;
     TextView numb_CV,jbdsc,jbttl,emp,ddln,edqual,jopPostingDate,locationDetail,vacancyDetail,SalaryDetail,jbResponsiblity;
     @Override
@@ -56,6 +65,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(getApplicationContext(),Application_list.class);
 
+                i.putExtra("id",jobID);
                 startActivity(i);
             }
         });
@@ -98,6 +108,7 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
         location=extras.getString("location");
         cvnmb=extras.getString("numb_cv");
         postingDate=extras.getString("postingDate");
+        jobID=extras.getString("jobId");
 
 
         salary=extras.getString("salary");
@@ -118,8 +129,66 @@ public class Employer_ViewJobDetail_page extends AppCompatActivity {
 
 
 
+        ////dropped applications//////////////////////////////////////////////////////
 
 
+
+        /////Data retrive///////////////////////////https://careers-bangladesh-server.vercel.app/postedjob?email=jahid@gmail.com
+
+
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderApplicant jsonPlaceHolderemp=retrofit.create(JsonPlaceHolderApplicant.class);
+
+        Call<List<PostApplicat>> call= jsonPlaceHolderemp.getPostApplicant("/jobapplicant?jobId="+jobID);
+
+        call.enqueue(new Callback<List<PostApplicat>>() {
+            @Override
+            public void onResponse(Call<List<PostApplicat>> call, Response<List<PostApplicat>> response) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+response.code(),Toast.LENGTH_SHORT).show();
+                if(response.isSuccessful())
+                {
+                    List<PostApplicat> posts=response.body();
+
+                    numb_CV.setText(" "+posts.size());
+
+
+//                    for (PostApplicat post:posts)
+//                    {
+//                       // buttonNames.add(new FAQ_Items("Name : "+post.getEmail(),"Email : "+post.getEmail()));
+//                    }
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<PostApplicat>> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+t.getMessage(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+
+
+
+        ////Data retrive//////////////////////////////////////////
+
+
+
+
+
+
+
+        /////dropped applications/////////////////////////////
 
     }
 }

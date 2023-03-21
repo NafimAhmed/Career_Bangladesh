@@ -120,6 +120,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                 {
                     List<Post> posts=response.body();
                     String ttl = null;
+
                     for (Post post:posts)
                     {
                         //ttl+=post.getJobTitle().toString()+"\n";
@@ -216,6 +217,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
         // Drawar click event
         // Drawer item Click event ------
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -317,43 +319,78 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
         JobType_Adapter.JobType_OnNoteListener jobType_onNoteListener=this;
 
-        JobType_arrayList.add(new JobType_Item("Bank/Non-Bank Fin. Institution"));
-        JobType_arrayList.add(new JobType_Item("Accounting/Finance"));
-        JobType_arrayList.add(new JobType_Item("Education/Training"));
-        JobType_arrayList.add(new JobType_Item("Garments/Textile"));
-        JobType_arrayList.add(new JobType_Item("HR/Org. Development"));
 
-        JobType_arrayList.add(new JobType_Item("Design/Creative"));
-        JobType_arrayList.add(new JobType_Item("IT & Telecommunication"));
-        JobType_arrayList.add(new JobType_Item("Marketing/Sales"));
-        JobType_arrayList.add(new JobType_Item("Media/Ad./Event Mgt."));
-        JobType_arrayList.add(new JobType_Item("Law/Legal"));
 
-        JobType_arrayList.add(new JobType_Item("Electrician/Construction/Repair"));
-        JobType_arrayList.add(new JobType_Item("Research/Consultancy"));
-        JobType_arrayList.add(new JobType_Item("Production/Operation"));
-        JobType_arrayList.add(new JobType_Item("Beauty Care/ Health & Fitness"));
-        JobType_arrayList.add(new JobType_Item("Hospitality/ Travel/ Tourism"));
 
-        JobType_arrayList.add(new JobType_Item("Data Entry/Operator/BPO"));
-        JobType_arrayList.add(new JobType_Item("FHR/Org. Development"));
-        JobType_arrayList.add(new JobType_Item("Customer Service/Call Centre"));
-        JobType_arrayList.add(new JobType_Item("Gen Mgt/Admin"));
-        JobType_arrayList.add(new JobType_Item(" Secretary/Receptionist"));
 
-        JobType_arrayList.add(new JobType_Item("Driving/Motor Technician"));
-        JobType_arrayList.add(new JobType_Item("Commercial"));
-        JobType_arrayList.add(new JobType_Item("Agro (Plant/Animal/Fisheries)"));
+        //JobType_arrayList.add(new JobType_Item("Agro (Plant/Animal/Fisheries)"));
 
 
 
 
 
 
-        jobType_adapter= new JobType_Adapter(JobType_arrayList,jobType_onNoteListener);
-        jobType_layoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
-        recyclerView_Jobtype.setAdapter(jobType_adapter);
-        recyclerView_Jobtype.setLayoutManager(jobType_layoutManager);
+        Retrofit retrofitJobType=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderJobcatagory jsonPlaceHolderJobcatagory=retrofit.create(JsonPlaceHolderJobcatagory.class);
+
+        Call<List<PostCatagory>> callJobType= jsonPlaceHolderJobcatagory.getPostCatagory();
+
+        callJobType.enqueue(new Callback<List<PostCatagory>>() {
+            @Override
+            public void onResponse(Call<List<PostCatagory>> call, Response<List<PostCatagory>> response) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+response.code(),Toast.LENGTH_SHORT).show();
+                if(response.isSuccessful())
+                {
+                    List<PostCatagory> posts=response.body();
+
+                    for (PostCatagory postJC:posts)
+                    {
+                        //ttl+=post.getJobTitle().toString()+"\n";
+
+                        JobType_arrayList.add(new JobType_Item(postJC.getName()));
+
+
+
+                        jobType_adapter= new JobType_Adapter(JobType_arrayList,jobType_onNoteListener);
+                        jobType_layoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+                        recyclerView_Jobtype.setAdapter(jobType_adapter);
+                        recyclerView_Jobtype.setLayoutManager(jobType_layoutManager);
+
+
+
+                    }
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<PostCatagory>> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+t.getMessage(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+//        jobType_adapter= new JobType_Adapter(JobType_arrayList,jobType_onNoteListener);
+//        jobType_layoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+//        recyclerView_Jobtype.setAdapter(jobType_adapter);
+//        recyclerView_Jobtype.setLayoutManager(jobType_layoutManager);
 
 
 
@@ -447,6 +484,8 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
     @Override
     public Void onNoteclick(int position) {
+
+
         return null;
     }
 
