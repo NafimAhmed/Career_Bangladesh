@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,11 +24,17 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.jetbrains.annotations.Nullable;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class registration_page extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     Spinner loginSpiner;
-    ImageView roundedImageView;
-    EditText email,password,name,phoneNumber,confirmPassword;
+    //ImageView roundedImageView;
+    EditText email,password,name/*,phoneNumber*/,confirmPassword;
     Button register;
     int role=0;
     FirebaseAuth mAuth;
@@ -40,22 +47,22 @@ public class registration_page extends AppCompatActivity implements AdapterView.
 
 
         //getSupportActionBar().setTitle("Registration");
-        roundedImageView=findViewById(R.id.imz);
+       // roundedImageView=findViewById(R.id.imz);
         register=findViewById(R.id.register);
 
         mAuth = FirebaseAuth.getInstance();
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
         name=findViewById(R.id.name);
-        phoneNumber=findViewById(R.id.phoneNumber);
+        //phoneNumber=findViewById(R.id.phoneNumber);
         confirmPassword=findViewById(R.id.confirmPassword);
 
-        roundedImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imagechooser();
-            }
-        });
+//        roundedImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                imagechooser();
+//            }
+//        });
 
 
 
@@ -94,6 +101,11 @@ public class registration_page extends AppCompatActivity implements AdapterView.
                     return;
 
                 }
+                else if(!Patterns.EMAIL_ADDRESS.matcher(mail).matches()){
+                    email.setError("Enter Correct email address");
+                    email.setFocusable(true);
+                    return;
+                }
                 else if(name.getText().toString().isEmpty())
                 {
                     name.setError("Enter name");
@@ -101,13 +113,13 @@ public class registration_page extends AppCompatActivity implements AdapterView.
                     return;
 
                 }
-                else if(phoneNumber.getText().toString().isEmpty())
-                {
-                    phoneNumber.setError("Enter phone number");
-                    phoneNumber.setFocusable(true);
-                    return;
-
-                }
+//                else if(phoneNumber.getText().toString().isEmpty())
+//                {
+//                    phoneNumber.setError("Enter phone number");
+//                    phoneNumber.setFocusable(true);
+//                    return;
+//
+//                }
                 else if(confirmPassword.getText().toString().isEmpty())
                 {
                     confirmPassword.setError("Enter password");
@@ -128,6 +140,9 @@ public class registration_page extends AppCompatActivity implements AdapterView.
                 }
                 else{
                     Register(mail,pass);
+
+                    regByAPI();
+
                 }
 
 
@@ -235,23 +250,80 @@ public class registration_page extends AppCompatActivity implements AdapterView.
 
     }
 
-    public void imagechooser(){
+//    public void imagechooser(){
+//
+//        Intent intent=new Intent();
+//        intent.setType("image/*");
+//        intent.setAction(Intent.ACTION_GET_CONTENT);
+//        startActivityForResult(intent,1001);
+//
+//    }
 
-        Intent intent=new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent,1001);
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if(requestCode == 1001 && resultCode==RESULT_OK)
+//        {
+//            roundedImageView.setImageURI(data.getData());
+//
+//        }
+//    }
+
+
+    public void regByAPI()
+    {
+
+        Reg_API reg_api=new Reg_API(
+                name.getText().toString(),
+                email.getText().toString(),
+                loginSpiner.getSelectedItem().toString()
+        );
+//        Apply_Job apply_job=new Apply_Job(
+//                jobId,
+//                ApplicantEmail,
+//                "fim",
+//                "jahid@gmail.com",
+//                "100000",
+//                JobTitle,
+//                organization,
+//                "HR/Org. Development",
+//                "2023-03-13"
+//        );
+
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderAPI jsonPlaceHolderAPI=retrofit.create(JsonPlaceHolderAPI.class);
+
+
+        Call<Reg_API> call= jsonPlaceHolderAPI.Registration(reg_api);
+
+        call.enqueue(new Callback<Reg_API>() {
+            @Override
+            public void onResponse(Call<Reg_API> call, Response<Reg_API> response) {
+                Toast.makeText(getApplicationContext(), "Resp code : "+response.code()+response.body(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Reg_API> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), "error"+t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == 1001 && resultCode==RESULT_OK)
-        {
-            roundedImageView.setImageURI(data.getData());
 
-        }
-    }
+
+
+
+
+
+
 }

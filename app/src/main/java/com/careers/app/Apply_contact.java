@@ -10,11 +10,12 @@ import android.widget.TextView;
 
 public class Apply_contact extends AppCompatActivity {
 
-    TextView callTo,mailTo;
+    TextView callTo,mailTo,nam,adrss;
 
-    String phone="+8801797609439";
-    String mail="recentnafimahmed@gmail.com";
-    String Address="MAG House, House#20,\nShah Mokhdum Avenue, Sector#11\n, Uttara, Dhaka-1230, Bangladesh";
+    String phone="";
+    String mail="";
+    String Add="";
+    String naam="";
 
 
     @Override
@@ -22,10 +23,25 @@ public class Apply_contact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_contact);
 
+        Bundle extras = getIntent().getExtras();
+        phone=extras.getString("Phone");
+        mail=extras.getString("Email");
+        Add=extras.getString("Address");
+        naam=extras.getString("Name");
+
 
         callTo=findViewById(R.id.callTo);
         mailTo=findViewById(R.id.mailTo);
-        mailTo=findViewById(R.id.mailTo);
+        adrss=findViewById(R.id.adrss);
+        nam=findViewById(R.id.naam);
+
+        nam.setText(naam);
+        adrss.setText(Add);
+        callTo.setText(phone);
+        mailTo.setText(mail);
+
+
+
 
         mailTo.setOnClickListener(new View.OnClickListener() {
             @Override

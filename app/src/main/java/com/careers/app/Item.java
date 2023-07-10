@@ -2,7 +2,7 @@ package com.careers.app;
 
 public class Item
 {
-    String jobTitle;
+    String jobTitle,id,Poster_Email,Job_Catagory;
     String jobDescription;
     String joblocation;
     String vacancy;
@@ -22,7 +22,7 @@ public class Item
 
     String logoURL;
 
-    public Item(String jobTitle, String employerName,String jobDescription, String deadLine,String joblocation, String vacancy, String salary, String educationalQualification,String jobResponsiblity,String logoURL) {
+    public Item(String id,String Poster_Email,String Job_Catagory,String jobTitle, String employerName,String jobDescription, String deadLine,String joblocation, String vacancy, String salary, String educationalQualification,String jobResponsiblity,String logoURL) {
         this.jobTitle = jobTitle;
         this.employerName = employerName;
         this.deadLine = deadLine;
@@ -33,6 +33,9 @@ public class Item
         this.logoURL=logoURL;
         this.jobResponsiblity=jobResponsiblity;
         this.educationalQualification = educationalQualification;
+        this.id=id;
+        this.Poster_Email=Poster_Email;
+        this.Job_Catagory=Job_Catagory;
 
     }
 

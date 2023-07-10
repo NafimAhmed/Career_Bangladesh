@@ -17,10 +17,18 @@
         android:theme="@style/Theme.JobPortal"
         tools:targetApi="31">
         <activity
+            android:name=".Profile_page2"
+            android:exported="false" />
+        <activity
+            android:name=".Exp_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Education_Profile"
+            android:exported="false" />
+        <activity
             android:name=".Slider_page"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".Saved_Job_list"
             android:exported="false" />
@@ -102,17 +110,9 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Profile_Page"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".registration_page"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

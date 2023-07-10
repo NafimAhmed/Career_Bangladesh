@@ -53,7 +53,7 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
     ImageView imageMenu;
     TextView addjobtext;
 
-    String em=FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
+    String em=FirebaseAuth.getInstance().getCurrentUser().getEmail();
     AdapterEmployer.OnNoteListener onNoteListener=this;
 
 
@@ -236,14 +236,15 @@ public class Employer_Home_page extends AppCompatActivity implements AdapterEmpl
                 if(response.isSuccessful())
                 {
                     List<PostEmployer> posts=response.body();
-                    String ttl = null;
+                    //String ttl = null;
 
 
                     for (PostEmployer post:posts)
                     {
 
                         arrayList.add(new ItemEmployer(
-                                "63f305bd5c3c0e24b96e1b50",
+                                //"63f305bd5c3c0e24b96e1b50",
+                                post._id,
                                 post.getJobTitle(),
                                 post.getEmail(),
                                 post.getPostDate(),

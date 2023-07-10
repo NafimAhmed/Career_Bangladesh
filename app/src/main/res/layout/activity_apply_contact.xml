@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Nafim Ahmed"
+            android:id="@+id/naam"
             android:textSize="25dp"
             ></TextView>
 
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Faidabad, Dakshin Khan, Dhaka."
+            android:id="@+id/adrss"
             android:textSize="25dp"
             ></TextView>
 

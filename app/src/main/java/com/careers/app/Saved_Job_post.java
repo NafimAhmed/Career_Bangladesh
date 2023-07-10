@@ -1,11 +1,14 @@
 package com.careers.app;
 
+import com.google.gson.annotations.SerializedName;
+
+//public class Saved_Job_post
 
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
-public class PostEmployer {
-    public String _id;
+public class Saved_Job_post {
+    private String id;
     private String email;
     private String postersName;
     private String category;
@@ -30,11 +33,51 @@ public class PostEmployer {
     private String salaryTo;
     private String yearlyBonus;
     private String salaryReview;
-    private String status;
     private String others;
+    private Object companySize;
+    private String status;
 
-    public String getID() { return _id; }
-    public void setID(String value) { this._id = value; }
+
+    public Saved_Job_post(String id, String email, String postersName, String category,
+                          String jobTitle, String companyLogo, String organization, String orgaType,
+                          String location, String vacancies, String education, String experience,
+                          String postDate, String deadLine, String applyStatus, String employmentStatus,
+                          String businessDescription, String jobLevel, String workPlace, String jobContext, String jobResponst,
+                          String salaryFrom, String salaryTo, String yearlyBonus, String salaryReview,
+                          String others, Object companySize, String status)
+    {
+        this.id = id;
+        this.email = email;
+        this.postersName = postersName;
+        this.category = category;
+        this.jobTitle = jobTitle;
+        this.companyLogo = companyLogo;
+        this.organization = organization;
+        this.orgaType = orgaType;
+        this.location = location;
+        this.vacancies = vacancies;
+        this.education = education;
+        this.experience = experience;
+        this.postDate = postDate;
+        this.deadLine = deadLine;
+        this.applyStatus = applyStatus;
+        this.employmentStatus = employmentStatus;
+        this.businessDescription = businessDescription;
+        this.jobLevel = jobLevel;
+        this.workPlace = workPlace;
+        this.jobContext = jobContext;
+        this.jobResponst = jobResponst;
+        this.salaryFrom = salaryFrom;
+        this.salaryTo = salaryTo;
+        this.yearlyBonus = yearlyBonus;
+        this.salaryReview = salaryReview;
+        this.others = others;
+        this.companySize = companySize;
+        this.status = status;
+    }
+
+    public String getID() { return id; }
+    public void setID(String value) { this.id = value; }
 
     public String getEmail() { return email; }
     public void setEmail(String value) { this.email = value; }
@@ -108,9 +151,12 @@ public class PostEmployer {
     public String getSalaryReview() { return salaryReview; }
     public void setSalaryReview(String value) { this.salaryReview = value; }
 
-    public String getStatus() { return status; }
-    public void setStatus(String value) { this.status = value; }
-
     public String getOthers() { return others; }
     public void setOthers(String value) { this.others = value; }
+
+    public Object getCompanySize() { return companySize; }
+    public void setCompanySize(Object value) { this.companySize = value; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String value) { this.status = value; }
 }

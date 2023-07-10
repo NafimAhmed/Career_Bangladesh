@@ -16,18 +16,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Job_Detail extends AppCompatActivity {
 
     TextView jbttl,emp,jobDescriptionDetail,ddln,edqual,locationdt,vacancydt,salarydt,jbResponsiblitydt,saveimg;
     Button aplyNow;
     ImageView companyLogo;
+    String jobTitle,JobseekerName,employer,jbDesription,location,vacancy,salary,jbResponsiblity,deadLine,eduQualification;
 
     int i=0;
     @Override
@@ -40,6 +50,74 @@ public class Job_Detail extends AppCompatActivity {
         //saveimg=findViewById(R.id.saveimg);
 
 //////////////////////////////////////////////////////////////////////
+
+        /////Data retrive///////////////////////////https://careers-bangladesh-server.vercel.app/postedjob?email=jahid@gmail.com
+
+        String email= FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+        //String email="salam@gmail.com";
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app/jobSeekersPersonal/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderAPI jsonPlaceHolderemp=retrofit.create(JsonPlaceHolderAPI.class);
+
+        Call<jovSeekerDetail> call= jsonPlaceHolderemp.getjobSeekerDetail(email);
+
+        call.enqueue(new Callback<jovSeekerDetail>() {
+            @Override
+            public void onResponse(Call<jovSeekerDetail> call, Response<jovSeekerDetail> response) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+response.code(),Toast.LENGTH_SHORT).show();
+                if(response.isSuccessful())
+                {
+                    jovSeekerDetail jovSeekerDetail=response.body();
+
+                    JobseekerName=jovSeekerDetail.getName();
+
+//                    name.setText(jovSeekerDetail.getName());
+//                    address.setText(jovSeekerDetail.getPresentAddress()+", "+jovSeekerDetail.getPresentAddressLine2());
+//                    phone_number.setText(jovSeekerDetail.getPhone());
+//                    Email.setText(jovSeekerDetail.getEmail());
+//                    fathername.setText(jovSeekerDetail.getFathersName());
+//                    motherame.setText(jovSeekerDetail.getMothersName());
+//                    NID_number.setText(jovSeekerDetail.getNationalID());
+//                    relagion.setText(jovSeekerDetail.getReligion());
+//                    Picasso.get().load(jovSeekerDetail.getImage()).into(jobSeekerImage);
+//                    maritalstat.setText(jovSeekerDetail.getMaritalStatus());
+//                    gender.setText(jovSeekerDetail.getGender());
+//                    DOB.setText(jovSeekerDetail.getBirthDate());
+//                    careerObjective.setText(jovSeekerDetail.getCareerObjective());
+//                    permanentAddress.setText(jovSeekerDetail.getPermanentAddress()+", "+jovSeekerDetail.getPermanentAddressLine2());
+
+
+
+                }
+
+
+//                Toast.makeText(getApplicationContext(),posts.get(1).getJobID(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<jovSeekerDetail> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(),"resp code :"+t.getMessage(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+        //.makeText(getApplicationContext(),posts.get(1).getJobID(),Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+        ////Data retrive//////////////////////////////////////////
+
 
 
 
@@ -77,7 +155,7 @@ public class Job_Detail extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String jobTitle,employer,jbDesription,location,vacancy,salary,jbResponsiblity,deadLine,eduQualification;
+
         jobTitle= extras.getString("jobTitle");
         employer=extras.getString("employer");
         location=extras.getString("location");
@@ -87,6 +165,11 @@ public class Job_Detail extends AppCompatActivity {
         jbResponsiblity=extras.getString("jbResponsiblity");
         deadLine=extras.getString("deadLine");
         String img=extras.getString("img");
+        String jobId=extras.getString("id");
+        String JobCatagory=extras.getString("JobCatagory");
+        String PosterEmail=extras.getString("PosterEmail");
+
+        Toast.makeText(getApplicationContext(),"Job ID : "+jobId,Toast.LENGTH_SHORT).show();
 
         eduQualification=extras.getString("educationalQualification");
 
@@ -104,6 +187,7 @@ public class Job_Detail extends AppCompatActivity {
         Glide.with(this).load(img).into(companyLogo);
 
 
+        String em= FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
 
         aplyNow.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +196,13 @@ public class Job_Detail extends AppCompatActivity {
 //                Intent intent = new Intent(getApplicationContext(),Resume_Detail.class);
 //                intent.putExtra("button_visible",true);
                 Intent intent=new Intent(getApplicationContext(),Confirm_Apply_page.class);
+                intent.putExtra("jobid",jobId);
+                intent.putExtra("ApplicantEmail",em);
+                intent.putExtra("JobTitle",jobTitle);
+                intent.putExtra("organization",employer);
+                intent.putExtra("PosterEmail",PosterEmail);
+                intent.putExtra("JobCatagory",JobCatagory);
+                intent.putExtra("JobseekerName",JobseekerName);
                 startActivity(intent);
             }
         });
@@ -139,6 +230,11 @@ public class Job_Detail extends AppCompatActivity {
                 }
             }
 
+
+            SaveAJob();
+
+
+
         }
         else{
             i=0;
@@ -151,6 +247,67 @@ public class Job_Detail extends AppCompatActivity {
         }
 
 
+
+    }
+
+
+
+    public void SaveAJob()
+    {
+
+        Saved_Job_post saved_job_post=new Saved_Job_post("6419654c0dd5022450231606",
+                "salam@gmail.com",
+                "Jahid hasan",
+                "63e9c2b49ff0b29304ec7c32",
+                "IT Manager",
+                "https://i.ibb.co/7zt3BBv/talktalkbdltd.png",
+                "Government",
+                "Whole Bangladesh",
+                "Whole Bangladesh",
+                "100",
+                "MSC  in CSE",
+                "2 years",
+                "2023-03-21",
+                "2023-04-30",
+                "Apply Online",
+                "Full Time",
+                "Arise awaken and stop not till the goal reached. Arise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reached",
+                "Mid",
+                "Hybrid",
+                "Arise awaken and stop not till the goal reached. Arise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reached",
+                "Arise awaken and stop not till the goal reached. Arise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reached",
+                "60000",
+                "80000",
+                "3",
+                "1",
+                "Arise awaken and stop not till the goal reached. Arise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reachedArise awaken and stop not till the goal reached",
+                null,
+                "Active"
+                );
+
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("https://careers-bangladesh-server.vercel.app")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderSavedJob jsonPlaceHolderSavedJob=retrofit.create(JsonPlaceHolderSavedJob.class);
+
+
+        Call<Saved_Job_post> call= jsonPlaceHolderSavedJob.savedJob(saved_job_post);
+
+        call.enqueue(new Callback<Saved_Job_post>() {
+            @Override
+            public void onResponse(Call<Saved_Job_post> call, Response<Saved_Job_post> response) {
+                Toast.makeText(getApplicationContext(), "Resp code : "+response.code()+response.body(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Saved_Job_post> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), "error"+t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 

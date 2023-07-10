@@ -3,85 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Profile_Page">
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:scrollbarSize="10dp"
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@color/purple_200"
-            android:backgroundTint="@color/white"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-
-                android:text="basic Information"
-                android:background="@drawable/btn_shape"
-                android:backgroundTint="#CAC8C8"
-                android:padding="5dp"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:id="@+id/basic"
-                ></TextView>
+    tools:context=".Profile_page2">
 
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="Educational Information"
-                android:layout_margin="10dp"
-                android:background="@drawable/btn_shape"
-                android:backgroundTint="#CAC8C8"
-                android:padding="5dp"
-                android:clickable="true"
-                android:id="@+id/eduinf"
-                ></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="Skill"
-                android:background="@drawable/btn_shape"
-                android:backgroundTint="#CAC8C8"
-                android:padding="5dp"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:id="@+id/skillinf"
-                ></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="Experience"
-                android:background="@drawable/btn_shape"
-                android:backgroundTint="#CAC8C8"
-                android:padding="5dp"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:id="@+id/expinf"
-                ></TextView>
-
-        </LinearLayout>
-
-
-
-
-    </HorizontalScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,6 +32,41 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
 
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport size photo :"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        ></TextView>
+
+
+
+
+
+                    <ImageView
+                        android:id="@+id/imz"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edit_text_shape"
+                        android:clickable="true"
+                        android:foregroundGravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/person">
+
+                    </ImageView>
+
+
+
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -126,11 +87,62 @@
                             android:layout_height="wrap_content"
                             android:inputType="number"
                             android:padding="5dp"
+                            android:id="@+id/Nid_number"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Name : "
+                            android:textColor="@color/black"
+                            android:textSize="25dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/Name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/edit_text_shape"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"></EditText>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="Mother's Name : "
+                                android:textColor="@color/black"
+                                android:textSize="25dp"></TextView>
+
+                            <EditText
+                                android:id="@+id/mothername"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/edit_text_shape"
+                                android:inputType="textCapWords"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"></EditText>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -155,6 +167,7 @@
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:padding="5dp"
+                            android:id="@+id/fathername"
                             android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
@@ -170,7 +183,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mother's Name : "
+                            android:text="Gender : "
                             android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
@@ -181,12 +194,111 @@
                             android:layout_height="wrap_content"
                             android:inputType="textCapWords"
                             android:layout_margin="10dp"
+                            android:id="@+id/gender"
                             android:textSize="25dp"
                             android:padding="5dp"
                             android:textColor="@color/black"
                             android:background="@drawable/edit_text_shape"
                             ></EditText>
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nationality : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:layout_margin="10dp"
+                            android:id="@+id/Nationality"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Marital Status : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:layout_margin="10dp"
+                            android:id="@+id/MaritalStatus"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Religion : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:layout_margin="10dp"
+                            android:id="@+id/Religion"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -207,6 +319,276 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="phone"
+                            android:id="@+id/phone_number"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/email"
+
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+
+                        <!-- <CalendarView
+                             android:id="@+id/calendar"
+                             android:layout_gravity="center_horizontal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                         </CalendarView>-->
+
+                        <!-- <EditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:inputType="textEmailAddress"
+                             android:layout_margin="10dp"
+                             android:textSize="25dp"
+                             android:background="@drawable/edit_text_shape"
+                             ></EditText>-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Passport No : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/PassportNo"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/DateOfBirth"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Present district : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/presentDistrict"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Present Thana : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/PresentThana"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Present Post Office : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/PresentPostOffice"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent District : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/permanentDistrict"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent Thana : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/PermanentThana"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edit_text_shape"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent Post Office : "
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:id="@+id/permanentPostOffice"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
                             android:padding="5dp"
@@ -268,22 +650,69 @@
                             android:background="@drawable/edit_text_shape"
                             ></TextView>
 
-                       <!-- <CalendarView
-                            android:id="@+id/calendar"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                        </CalendarView>-->
+                        <!-- <CalendarView
+                             android:id="@+id/calendar"
+                             android:layout_gravity="center_horizontal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                         </CalendarView>-->
 
-                       <!-- <EditText
-                            android:layout_width="match_parent"
+                        <!-- <EditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:inputType="textEmailAddress"
+                             android:layout_margin="10dp"
+                             android:textSize="25dp"
+                             android:background="@drawable/edit_text_shape"
+                             ></EditText>-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress"
+                            android:text="Career Objective : "
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
                             android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:lines="5"
+                            android:textColor="@color/black"
+                            android:id="@+id/CareerObj"
+                            android:clickable="true"
                             android:background="@drawable/edit_text_shape"
-                            ></EditText>-->
+                            ></EditText>
+
+                        <!-- <CalendarView
+                             android:id="@+id/calendar"
+                             android:layout_gravity="center_horizontal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+                         </CalendarView>-->
+
+                        <!-- <EditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:inputType="textEmailAddress"
+                             android:layout_margin="10dp"
+                             android:textSize="25dp"
+                             android:background="@drawable/edit_text_shape"
+                             ></EditText>-->
                     </LinearLayout>
+
+
 
 
                     <LinearLayout
@@ -307,11 +736,41 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:lines="5"
+                            android:id="@+id/presentAddress"
                             android:padding="5dp"
                             android:textColor="@color/black"
                             android:textSize="25dp"
                             ></EditText>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Skill : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/Skills"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
 
 
                     <LinearLayout
@@ -335,6 +794,7 @@
                             android:background="@drawable/edit_text_shape"
                             android:layout_margin="10dp"
                             android:lines="5"
+                            android:id="@+id/permanentAddress"
                             android:padding="5dp"
                             android:textColor="@color/black"
                             android:textSize="25dp"
@@ -349,11 +809,12 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="30dp"
                         android:layout_marginTop="20dp"
+                        android:id="@+id/basic_info_Save"
                         android:background="@drawable/btn_shape"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:textSize="25dp"
-                        android:text="Save"
+                        android:text="Save Basic info"
                         ></Button>
 
 
@@ -399,13 +860,15 @@
 
     </LinearLayout>
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/Edu_info"
+        android:id="@+id/skill_info"
         android:orientation="vertical"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_height="wrap_content">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -417,13 +880,11 @@
                 android:layout_height="wrap_content"
                 >
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
-
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
@@ -431,282 +892,9 @@
 
                         android:scrollbars="vertical"
                         android:scrollbarSize="10dp"
-                        android:id="@+id/rcvw"
+                        android:id="@+id/rcvw_Skill"
 
                         ></androidx.recyclerview.widget.RecyclerView>
-
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Education Level : "
-                            android:layout_margin="10dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <Spinner
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:id="@+id/edulevel"
-                            android:padding="5dp"
-                            android:backgroundTint="#B1B0B0"
-                            android:textAlignment="center"
-                            android:background="@drawable/btn_shape"
-                            android:layout_margin="10dp"
-                            ></Spinner>
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Major/Board : "
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <Spinner
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@drawable/btn_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:textAlignment="center"
-                            android:backgroundTint="#AFAFAF"
-                            android:id="@+id/eduMajorSpinner"
-                            ></Spinner>
-
-                        <!--<EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/eduMajor"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            ></EditText>-->
-                    </LinearLayout>
-
-
-
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Institution : "
-                            android:layout_margin="10dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/eduInstitute"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></EditText>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" Group/Faculty : "
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/edugroup"
-                            android:textColor="@color/black"
-                            android:padding="5dp"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            ></EditText>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Result type : "
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></TextView>
-
-                        <Spinner
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:textAlignment="center"
-                            android:backgroundTint="#B8B8B8"
-                            android:padding="5dp"
-                            android:id="@+id/eduResultTypeSpinner"
-                            android:background="@drawable/btn_shape"
-                            android:layout_margin="10dp"
-                            ></Spinner>
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Result/mark : "
-                            android:textColor="@color/black"
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/eduResult"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></EditText>
-                    </LinearLayout>
-
-
-
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:background="@drawable/btn_shape"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="30dp"
-                        android:layout_height="wrap_content"
-                        android:text="Add Education"
-                        android:layout_gravity="center_horizontal"
-                        android:id="@+id/addedu"
-                        android:textSize="25dp"
-
-                        ></Button>
-
-
-
-
-
-
-
-
-
-
-
-
-                </LinearLayout>
-
-
-
-
-
-
-
-            </ScrollView>
-
-
-
-        </LinearLayout>
-        
-        
-
-        <!--
-        Educational information
-        -->
-
-        <!--<EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="this is basic information"
-            android:textSize="25dp"
-            ></EditText>-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/skill_info"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-
-                   <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:scrollbars="vertical"
-                    android:scrollbarSize="10dp"
-                    android:id="@+id/rcvw_Skill"
-
-                    ></androidx.recyclerview.widget.RecyclerView>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -844,6 +1032,14 @@
                             ></EditText>
                     </LinearLayout>
 
+
+
+
+
+
+
+
+
                     <Button
                         android:layout_width="match_parent"
                         android:background="@drawable/btn_shape"
@@ -877,262 +1073,6 @@
             ></TextView>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/Experience_info"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_height="wrap_content">
-
-
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:scrollbars="vertical"
-                        android:scrollbarSize="10dp"
-                        android:id="@+id/rcvw_experience"
-
-                        ></androidx.recyclerview.widget.RecyclerView>
-
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Company Name : "
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></EditText>
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Designetion : "
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></EditText>
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Joining Date : "
-                            android:layout_margin="10dp"
-                            android:textSize="25dp"
-                            android:textColor="@color/black"
-                            ></TextView>
-
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:padding="5dp"
-                            android:clickable="true"
-                            android:textColor="@color/black"
-                            android:id="@+id/JoiningDate_Text"
-                            android:textSize="25dp"
-                            ></TextView>
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Resigning Date : "
-                            android:layout_margin="10dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/resigningDate_Text"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:clickable="true"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        >
-
-                        <CheckBox android:id="@+id/checkbox_condition"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="20dp"
-                            android:text="Currently working"
-                            />
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Responsiblity  : "
-                            android:layout_margin="10dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></TextView>
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/edit_text_shape"
-                            android:layout_margin="10dp"
-                            android:lines="5"
-                            android:padding="5dp"
-                            android:textColor="@color/black"
-                            android:textSize="25dp"
-                            ></EditText>
-                    </LinearLayout>
-
-
-
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="30dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content"
-                        android:textSize="25dp"
-                        android:id="@+id/addexp"
-                        android:background="@drawable/btn_shape"
-                        android:text="Save Experience"
-                        android:layout_gravity="center_horizontal"
-                        ></Button>
-
-
-
-
-
-
-
-
-                </LinearLayout>
-
-
-
-
-
-            </ScrollView>
-
-
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
-        <!--
-        Experience information
-        -->
-
-        <!--<TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="this is exp information"
-            ></TextView>-->
-
-    </LinearLayout>
-
-
 
 
 

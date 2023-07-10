@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exp_profile">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/Experience_info"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Experience 1 : "
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        >
+                    </TextView>
+
+                    <!--                    <androidx.recyclerview.widget.RecyclerView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+
+                    <!--                        android:scrollbars="vertical"-->
+                    <!--                        android:scrollbarSize="10dp"-->
+                    <!--                        android:id="@+id/rcvw_experience"-->
+
+                    <!--                        ></androidx.recyclerview.widget.RecyclerView>-->
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyOneName"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Business : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/copanyOneBusiness"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Designetion : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyOneDesignetion"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Department : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyOneDepartment"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Joining Date : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/JoiningDateOne"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resigning Date : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/resigningDateOne"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <CheckBox android:id="@+id/checkbox_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:text="Currently workingOne"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Responsiblity  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbResponsiblityOne"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Experties  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbExpertiesOne"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Job Location  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbLocationOne"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+
+
+                    <!-- //////////////////////////////////////////// -->
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Experience 2 : "
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        >
+                    </TextView>
+
+                    <!--                    <androidx.recyclerview.widget.RecyclerView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+
+                    <!--                        android:scrollbars="vertical"-->
+                    <!--                        android:scrollbarSize="10dp"-->
+                    <!--                        android:id="@+id/rcvw_experience"-->
+
+                    <!--                        ></androidx.recyclerview.widget.RecyclerView>-->
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Name : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyTwoName"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company Business : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/copanyTwoBusiness"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Designetion : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyTwoDesignetion"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Department : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:id="@+id/CompanyTwoDepartment"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Joining Date : "
+                            android:layout_margin="10dp"
+                            android:textSize="25dp"
+                            android:textColor="@color/black"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/JoiningDateTwo"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resigning Date : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/resigningDateTwo"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        >-->
+
+                    <!--                        <CheckBox android:id="@+id/checkbox_conditionTwo"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="20dp"-->
+                    <!--                            android:text="Currently workingOne"-->
+                    <!--                            />-->
+
+
+                    <!--                    </LinearLayout>-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Responsiblity  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbResponsiblityTwo"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Experties  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbExpertiesTwo"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Job Location  : "
+                            android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:layout_margin="10dp"
+                            android:lines="5"
+                            android:id="@+id/jbLocationTwo"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            ></EditText>
+                    </LinearLayout>
+
+
+
+
+
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:id="@+id/addexp"
+                        android:background="@drawable/btn_shape"
+                        android:text="Save Experience"
+                        android:layout_gravity="center_horizontal"
+                        ></Button>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </ScrollView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <!--
+        Experience information
+        -->
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="this is exp information"
+            ></TextView>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

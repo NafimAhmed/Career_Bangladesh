@@ -2,10 +2,10 @@ package com.careers.app;
 
 
 
-import java.time.LocalDate;
 
-public class PostEmployer {
-    public String _id;
+
+public class PostJobDetail {
+    private String id;
     private String email;
     private String postersName;
     private String category;
@@ -32,9 +32,10 @@ public class PostEmployer {
     private String salaryReview;
     private String status;
     private String others;
+    private Object companySize;
 
-    public String getID() { return _id; }
-    public void setID(String value) { this._id = value; }
+    public String getID() { return id; }
+    public void setID(String value) { this.id = value; }
 
     public String getEmail() { return email; }
     public void setEmail(String value) { this.email = value; }
@@ -113,4 +114,7 @@ public class PostEmployer {
 
     public String getOthers() { return others; }
     public void setOthers(String value) { this.others = value; }
+
+    public Object getCompanySize() { return companySize; }
+    public void setCompanySize(Object value) { this.companySize = value; }
 }

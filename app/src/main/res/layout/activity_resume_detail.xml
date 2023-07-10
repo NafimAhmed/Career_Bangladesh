@@ -53,6 +53,7 @@
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:id="@+id/jobSeekerImage"
                         android:src="@drawable/logo"
                         ></ImageView>
 
@@ -101,7 +102,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Address : "
+                            android:text="Present Address : "
                             android:textColor="@color/black"
                             android:textSize="20dp"
                             ></TextView>
@@ -109,6 +110,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="address"
+                            android:textColor="@color/black"
                             android:id="@+id/address"
                             android:textSize="20dp"
                             ></TextView>
@@ -134,6 +136,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Phone number"
+                            android:textColor="@color/black"
                             android:id="@+id/phone_number"
                             android:textSize="20dp"
                             ></TextView>
@@ -158,13 +161,42 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="NID number"
+                            android:hint="email"
+                            android:textColor="@color/black"
                             android:id="@+id/email"
                             android:textSize="20dp"
                             ></TextView>
 
 
                     </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent Address : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="permanent"
+                            android:textColor="@color/black"
+                            android:id="@+id/permanentAddress"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
 
 
 
@@ -187,6 +219,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Name"
+                            android:textColor="@color/black"
                             android:id="@+id/fathername"
                             android:textSize="20dp"
                             ></TextView>
@@ -212,6 +245,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Mother's Name"
+                            android:textColor="@color/black"
                             android:id="@+id/motherame"
                             android:textSize="20dp"
                             ></TextView>
@@ -240,12 +274,43 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="relagion"
+                            android:textColor="@color/black"
                             android:id="@+id/relagion"
                             android:textSize="20dp"
                             ></TextView>
 
 
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="relagion"
+                            android:textColor="@color/black"
+                            android:id="@+id/DOB"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -264,12 +329,100 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="NID number"
+                            android:textColor="@color/black"
                             android:id="@+id/NID_number"
                             android:textSize="20dp"
                             ></TextView>
 
 
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="gender"
+                            android:textColor="@color/black"
+                            android:id="@+id/gender"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Marital Status : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="stat"
+                            android:textColor="@color/black"
+                            android:id="@+id/maritalstat"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Career Objective : "
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="obj"
+                            android:textColor="@color/black"
+                            android:id="@+id/careerObjective"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+
 
 
                     <LinearLayout
@@ -287,8 +440,16 @@
                             android:textSize="20dp"
                             ></TextView>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:id="@+id/EmploymentHistory"
+                            ></TextView>
 
-                        <TableLayout
+
+                       <!-- <TableLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fitsSystemWindows="true"
@@ -341,7 +502,7 @@
 
 
 
-                        </TableLayout>
+                        </TableLayout>-->
 
 
 
@@ -375,7 +536,16 @@
                             ></TextView>
 
 
-                        <TableLayout
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:id="@+id/academicHistory"
+                            ></TextView>
+
+
+                       <!-- <TableLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fitsSystemWindows="true"
@@ -440,7 +610,7 @@
 
 
 
-                        </TableLayout>
+                        </TableLayout>-->
 
 
 

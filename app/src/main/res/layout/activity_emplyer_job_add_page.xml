@@ -23,6 +23,31 @@
                 android:layout_height="wrap_content">
 
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company Logo :"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    ></TextView>
+                <ImageView
+                    android:id="@+id/imz"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:clickable="true"
+                    android:foregroundGravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/person">
+
+                </ImageView>
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -43,6 +68,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/purple_500"
                         android:layout_marginHorizontal="10dp"
+                        android:padding="5dp"
                         android:background="@drawable/edit_text_shape"
                         >
 
@@ -50,6 +76,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
                             android:layout_margin="0dp"
+                            android:background="@color/sky"
+
                             android:textAlignment="center"
                             android:id="@+id/jobTypeSpinner"
                             ></Spinner>
@@ -84,6 +112,40 @@
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job Level : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/empjobLevel"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
+
+
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,6 +185,66 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Organization name : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/OrganizationName"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Organization Type : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/organizationType"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Job Location : "
                         android:layout_margin="10dp"
                         android:textColor="@color/black"
@@ -145,6 +267,92 @@
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Work place : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/workPlace"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Company Size : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/CompanySize"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post Date : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/PostDate"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
 
 
                 <LinearLayout
@@ -174,6 +382,38 @@
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Business Description : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/BusinesDesciption"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -232,6 +472,38 @@
                         ></EditText>
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job Context : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/JobContext"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -244,6 +516,7 @@
                         android:text="Qualification : "
                         android:layout_margin="10dp"
                         android:textSize="25dp"
+                        android:textColor="@color/black"
                         ></TextView>
 
                     <EditText
@@ -260,6 +533,34 @@
                         ></EditText>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Experience : "
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/Experience"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -270,7 +571,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Salary : "
+                        android:text="Salary from : "
                         android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:textSize="25dp"
@@ -288,6 +589,124 @@
                         android:background="@drawable/edit_text_shape"
                         ></EditText>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salary to : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/Salaryto"
+                        android:paddingHorizontal="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yearly Bonus : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/yearlyBonus"
+                        android:paddingHorizontal="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salary Revies : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/SalaryReview"
+                        android:paddingHorizontal="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Others : "
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="25dp"
+                        ></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/Others"
+                        android:paddingHorizontal="10dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:background="@drawable/edit_text_shape"
+                        ></EditText>
+                </LinearLayout>
+
+
+
+
 
 
 

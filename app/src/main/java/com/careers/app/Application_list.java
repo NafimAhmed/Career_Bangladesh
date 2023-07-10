@@ -133,7 +133,13 @@ public class Application_list extends AppCompatActivity implements Adapter_Appli
     public Void onNoteclick(int position) {
 
         Intent i=new Intent(getApplicationContext(),Application_detail.class);
-        //i.putExtra("button_visible",false);
+       // i.putExtra("button_visible",false);
+
+        Applicant_Item applicant_item=faq_arrayList.get(position);
+
+        String eml=applicant_item.getEmail();
+        i.putExtra("Email",eml);
+
         startActivity(i);
 
         return null;

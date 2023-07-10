@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Application_detail">
 
     <ScrollView
@@ -14,63 +14,53 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp"
             android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/addJob"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:backgroundTint="#B10C82"
-                    android:id="@+id/addJob"
-                    android:text="Contact"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="73dp"
-                    app:iconSize="30dp"
-                    app:iconTint="@color/white"
+                    android:backgroundTint="#B10C82"
+                    android:text="Contact"
                     android:textColor="@color/white"
                     android:textSize="15dp"
-                    app:icon="@drawable/contact2">
+                    app:icon="@drawable/contact2"
+                    app:iconSize="30dp"
+                    app:iconTint="@color/white">
 
                 </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
                 <LinearLayout
                     android:layout_width="match_parent"
 
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/logo"
-                        ></ImageView>
-
-
-
-
-
-
-
+                        android:id="@+id/jobSeekerImage"
+                        android:src="@drawable/logo"></ImageView>
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <!-- <TextView
                              android:layout_width="wrap_content"
@@ -79,15 +69,14 @@
                              android:textSize="20dp"
                              ></TextView>-->
                         <TextView
+                            android:id="@+id/name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name"
 
+                            android:text="Name"
                             android:textColor="@color/purple_500"
-                            android:textStyle="bold"
-                            android:id="@+id/name"
                             android:textSize="29dp"
-                            ></TextView>
+                            android:textStyle="bold"></TextView>
 
 
                     </LinearLayout>
@@ -97,23 +86,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="50dp"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Address : "
                             android:textColor="@color/black"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textSize="20dp"></TextView>
+
                         <TextView
+                            android:id="@+id/address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="address"
-                            android:id="@+id/address"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
 
 
                     </LinearLayout>
@@ -122,23 +110,22 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Phone number : "
                             android:textColor="@color/black"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textSize="20dp"></TextView>
+
                         <TextView
+                            android:id="@+id/phone_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Phone number"
-                            android:id="@+id/phone_number"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
 
 
                     </LinearLayout>
@@ -147,21 +134,45 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Email : "
                             android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Permanent Address : "
+                            android:textColor="@color/black"
                             android:textSize="20dp"
                             ></TextView>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="NID number"
-                            android:id="@+id/email"
+                            android:hint="permanent"
+                            android:textColor="@color/black"
+                            android:id="@+id/permanentAddress"
                             android:textSize="20dp"
                             ></TextView>
 
@@ -170,28 +181,25 @@
 
 
 
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Father's Name : "
                             android:textColor="@color/black"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textSize="20dp"></TextView>
+
                         <TextView
+                            android:id="@+id/fathername"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="Name"
-                            android:id="@+id/fathername"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textColor="@color/black"
+                            android:hint="fathername"
+                            android:textSize="20dp"></TextView>
 
 
                     </LinearLayout>
@@ -200,49 +208,118 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mother's Name : "
                             android:textColor="@color/black"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textSize="20dp"></TextView>
+
                         <TextView
+                            android:id="@+id/motherame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:hint="Mother's Name"
-                            android:id="@+id/motherame"
-                            android:textSize="20dp"
-                            ></TextView>
+                            android:textSize="20dp"></TextView>
 
 
                     </LinearLayout>
 
 
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Relagion : "
                             android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/relagion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="relagion"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth : "
+                            android:textColor="@color/black"
                             android:textSize="20dp"
                             ></TextView>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="relagion"
-                            android:id="@+id/relagion"
+                            android:hint="DOB"
+                            android:textColor="@color/black"
+                            android:id="@+id/DOB"
+                            android:textSize="20dp"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NID/passport number : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/NID_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="NID number"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender : "
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="gender"
+                            android:textColor="@color/black"
+                            android:id="@+id/gender"
                             android:textSize="20dp"
                             ></TextView>
 
@@ -258,15 +335,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="NID/passport number : "
+                            android:text="Marital Status : "
                             android:textColor="@color/black"
                             android:textSize="20dp"
                             ></TextView>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="NID number"
-                            android:id="@+id/NID_number"
+                            android:hint="stat"
+                            android:textColor="@color/black"
+                            android:id="@+id/maritalstat"
                             android:textSize="20dp"
                             ></TextView>
 
@@ -283,68 +361,93 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
+                            android:text="Career Objective : "
                             android:textColor="@color/purple_500"
-                            android:text="Emploument history : "
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            ></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="obj"
+                            android:textColor="@color/black"
+                            android:id="@+id/careerObjective"
                             android:textSize="20dp"
                             ></TextView>
 
 
-                        <TableLayout
+                    </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emploument history : "
+                            android:textColor="@color/purple_500"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fitsSystemWindows="true"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:id="@+id/EmploymentHistory"
+                            ></TextView>
 
+
+                        <!--<TableLayout
                             android:id="@+id/tabl_exp"
-                            >
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fitsSystemWindows="true">
 
                             <TableRow
-                                android:background="#1EF8BA"
                                 android:layout_width="200dp"
-                                >
+                                android:background="#1EF8BA">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:padding="10dp"
                                     android:text="Company"
-                                    android:textStyle="bold"
-                                    android:padding="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
+                                    android:textStyle="bold"></TextView>
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Responsiblity"
-                                    android:textStyle="bold"
                                     android:padding="10dp"
+                                    android:text="Responsiblity"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
+                                    android:textStyle="bold"></TextView>
 
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Duration"
-                                    android:textStyle="bold"
                                     android:padding="10dp"
+                                    android:text="Duration"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
-
-
-
+                                    android:textStyle="bold"></TextView>
 
 
                             </TableRow>
 
 
-
-
-                        </TableLayout>
-
+                        </TableLayout>-->
 
 
                         <!--<TextView
@@ -359,91 +462,85 @@
                     </LinearLayout>
 
 
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        >
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:textColor="@color/purple_500"
                             android:text="Academic history : "
+                            android:textColor="@color/purple_500"
                             android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:id="@+id/academicHistory"
                             ></TextView>
 
 
-                        <TableLayout
+
+
+
+                        <!--<TableLayout
+                            android:id="@+id/tabl_academic"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fitsSystemWindows="true"
 
-                            android:id="@+id/tabl_academic"
-                            >
+                            android:fitsSystemWindows="true">
 
                             <TableRow
-                                android:background="#1EF8BA"
                                 android:layout_width="200dp"
-                                >
+                                android:background="#1EF8BA">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:padding="10dp"
                                     android:text="Exam"
-                                    android:textStyle="bold"
-                                    android:padding="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
+                                    android:textStyle="bold"></TextView>
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:padding="10dp"
                                     android:text="Major\nor\ngroup"
-                                    android:textStyle="bold"
-                                    android:padding="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
+                                    android:textStyle="bold"></TextView>
 
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:padding="10dp"
                                     android:text="Result"
-                                    android:textStyle="bold"
-                                    android:padding="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
+                                    android:textStyle="bold"></TextView>
 
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Institute"
-                                    android:textStyle="bold"
                                     android:paddingStart="5dp"
                                     android:paddingEnd="10dp"
+                                    android:text="Institute"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    ></TextView>
-
-
-
-
+                                    android:textStyle="bold"></TextView>
 
 
                             </TableRow>
 
 
-
-
-                        </TableLayout>
-
+                        </TableLayout>-->
 
 
                         <!--<TextView
@@ -456,28 +553,12 @@
 
 
                     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
 
 
                 </LinearLayout>
 
 
             </RelativeLayout>
-
-
-
-
-
-
 
 
             <!--<Button
@@ -493,12 +574,7 @@
                 ></Button>-->
 
 
-
-
-
         </LinearLayout>
-
-
 
 
     </ScrollView>

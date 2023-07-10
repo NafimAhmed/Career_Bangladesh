@@ -83,6 +83,16 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
 
 
 
+        //////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
 
         /////////////////////////////////////////
 
@@ -125,7 +135,12 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                     {
                         //ttl+=post.getJobTitle().toString()+"\n";
 
-                        arrayList.add(new Item(post.getJobTitle(),post.getOrganization(),
+                        arrayList.add(new Item(
+                                post.getId(),
+                                        post.getPostersEmail(),
+                                        post.getCategory(),
+                                        post.getJobTitle(),
+                                        post.getOrganization(),
                                         post.getBusinessDescription()+"\n"+post.getJobContext(),
                                 post.getDeadLine(),
                                 post.getLocation(),
@@ -240,13 +255,14 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                     case R.id.savedjob:
                         Toast.makeText(Home_page.this, "faq_page", Toast.LENGTH_SHORT).show();
                         Intent savedJobpage=new Intent(getApplicationContext(),Saved_Job_list.class);
+                        savedJobpage.putExtra("email",em);
                         startActivity(savedJobpage);
                         drawerLayout.closeDrawers();
                         break;
 
                     case R.id.edit_profile:
                         Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
-                        Intent in=new Intent(getApplicationContext(),Profile_Page.class);
+                        Intent in=new Intent(getApplicationContext(),Profile_page2.class);
                         startActivity(in);
                         drawerLayout.closeDrawers();
                         break;
@@ -447,6 +463,8 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         String jbdescription=item.jobDescription;
         String deadLine=item.getDeadLine();
         String educationalQualification=item.getEducationalQualification();
+        String PosterEmail=item.Poster_Email;
+        String JobCatagory=item.Job_Catagory;
 
 
         Toast.makeText(getApplicationContext(),jobTitle+employer+deadLine+educationalQualification,Toast.LENGTH_LONG).show();
@@ -462,6 +480,9 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
         intent.putExtra("vacancy",vacancy);
         intent.putExtra("salary",salary);
         intent.putExtra("img",item.logoURL);
+        intent.putExtra("id",item.id);
+        intent.putExtra("PosterEmail",PosterEmail);
+        intent.putExtra("JobCatagory",JobCatagory);
         startActivity(intent);
 
 
@@ -547,7 +568,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                 // if the item is matched we are
                 // adding it to our filtered list.
 
-                filteredlist.add(new Item(itm.jobTitle,itm.employerName,itm.jobDescription,itm.deadLine,itm.joblocation,itm.vacancy,itm.salary,itm.educationalQualification,
+                filteredlist.add(new Item(itm.id, itm.Poster_Email,itm.Job_Catagory,itm.jobTitle,itm.employerName,itm.jobDescription,itm.deadLine,itm.joblocation,itm.vacancy,itm.salary,itm.educationalQualification,
                         itm.jobResponsiblity,itm.logoURL));
 
 

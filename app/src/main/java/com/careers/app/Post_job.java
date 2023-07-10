@@ -1,60 +1,61 @@
 package com.careers.app;
 
-public class Post {
-    private String _id;
-    private String email;
-    private String postersName;
-    private String category;
-    private String jobTitle;
-    private String companyLogo;
-    private String organization;
-    private String orgaType;
-    private String location;
-    private String vacancies;
-    private String education;
-    private String experience;
-    private String postDate;
-    private String deadLine;
-    private String applyStatus;
-    private String employmentStatus;
-    private String businessDescription;
-    private String jobLevel;
-    private String workPlace;
-    private String jobContext;
-    private String jobResponst;
-    private String salaryFrom;
-    private String salaryTo;
-    private String yearlyBonus;
-    private String salaryReview;
-    private String status;
-    private String others;
-    private String postersEmail;
-    private String jobLocation;
-    private String companySize;
-    private String deadline;
+public class Post_job {
+    String Email,posterName,category,jobTitle,companyLogo,
+            organization,orgaType,location,vacancies,education,
+            experience,CompanySize,postDate,deadLine,applyStatus,
+            employmentStatus,businessDescription,jobLevel,workPlace,
+            jobContext,jobResponst,salaryFrom,salaryTo,yearlyBonus,salaryReview,status,others;
 
-    public String getId() {
-        return _id;
-    }
-
-    public void setId(String id) {
-        this._id = id;
+    public Post_job(String email, String posterName,
+                    String category, String jobTitle, String companyLogo, String organization,
+                    String orgaType, String location, String vacancies, String education, String experience,
+                    String companySize, String postDate, String deadLine, String applyStatus, String employmentStatus,
+                    String businessDescription, String jobLevel, String workPlace, String jobContext, String jobResponst,
+                    String salaryFrom, String salaryTo, String yearlyBonus, String salaryReview, String status, String others) {
+        Email = email;
+        this.posterName = posterName;
+        this.category = category;
+        this.jobTitle = jobTitle;
+        this.companyLogo = companyLogo;
+        this.organization = organization;
+        this.orgaType = orgaType;
+        this.location = location;
+        this.vacancies = vacancies;
+        this.education = education;
+        this.experience = experience;
+        CompanySize = companySize;
+        this.postDate = postDate;
+        this.deadLine = deadLine;
+        this.applyStatus = applyStatus;
+        this.employmentStatus = employmentStatus;
+        this.businessDescription = businessDescription;
+        this.jobLevel = jobLevel;
+        this.workPlace = workPlace;
+        this.jobContext = jobContext;
+        this.jobResponst = jobResponst;
+        this.salaryFrom = salaryFrom;
+        this.salaryTo = salaryTo;
+        this.yearlyBonus = yearlyBonus;
+        this.salaryReview = salaryReview;
+        this.status = status;
+        this.others = others;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
-    public String getPostersName() {
-        return postersName;
+    public String getPosterName() {
+        return posterName;
     }
 
-    public void setPostersName(String postersName) {
-        this.postersName = postersName;
+    public void setPosterName(String posterName) {
+        this.posterName = posterName;
     }
 
     public String getCategory() {
@@ -127,6 +128,14 @@ public class Post {
 
     public void setExperience(String experience) {
         this.experience = experience;
+    }
+
+    public String getCompanySize() {
+        return CompanySize;
+    }
+
+    public void setCompanySize(String companySize) {
+        CompanySize = companySize;
     }
 
     public String getPostDate() {
@@ -247,37 +256,5 @@ public class Post {
 
     public void setOthers(String others) {
         this.others = others;
-    }
-
-    public String getPostersEmail() {
-        return postersEmail;
-    }
-
-    public void setPostersEmail(String postersEmail) {
-        this.postersEmail = postersEmail;
-    }
-
-    public String getJobLocation() {
-        return jobLocation;
-    }
-
-    public void setJobLocation(String jobLocation) {
-        this.jobLocation = jobLocation;
-    }
-
-    public String getCompanySize() {
-        return companySize;
-    }
-
-    public void setCompanySize(String companySize) {
-        this.companySize = companySize;
-    }
-
-    public String getDeadline() {
-        return deadline;
-    }
-
-    public void setDeadline(String deadline) {
-        this.deadline = deadline;
     }
 }
