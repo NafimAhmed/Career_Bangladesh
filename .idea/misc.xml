@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -26,7 +25,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_contact_page.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_done_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_download_resume.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_education_profile.xml" value="0.1" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_education_profile.xml" value="0.17537449762513702" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_employer_home_page.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_employer_job_conformation_page.xml" value="0.1" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_employer_profile.xml" value="0.1" />
@@ -47,6 +46,7 @@
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_saved_job_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_slider_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/activity_training.xml" value="0.25" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/date_picker_dialogue.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/exp_item.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/recen/AndroidStudioProjects/Career_Bangladesh/app/src/main/res/layout/faq_item.xml" value="0.253125" />
@@ -66,7 +66,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

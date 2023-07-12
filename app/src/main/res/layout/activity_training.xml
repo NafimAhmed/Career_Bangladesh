@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".training">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Training 1 :"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Title : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningTitleOne"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Traing Topic : "
+                android:textColor="@color/black"
+                android:textSize="25dp"></TextView>
+
+            <EditText
+                android:id="@+id/TraningTopicOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text_shape"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="25dp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Location : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningLocationOne"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Duration : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningDurationOne"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Traing Year : "
+                    android:textColor="@color/black"
+                    android:textSize="25dp"></TextView>
+
+                <EditText
+                    android:id="@+id/TraningyearOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Training 2 :"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Title : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningTitleTwo"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Topic : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningTopicTwo"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Location : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningLocationTwo"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Duration : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningDurationTwo"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Year : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningyearTwo"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Training 3 :"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Title : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningTitleThree"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Topic : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningTopicThree"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Location : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningLocationThree"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Duration : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningDurationThree"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traing Year : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TraningyearThree"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Github Link : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Github"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Link 1 : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/link1"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Link 2 : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/link2"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Portfolio : "
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="25dp"
+                ></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/portfolio"
+                android:background="@drawable/edit_text_shape"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                ></EditText>
+        </LinearLayout>
+
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save information"
+            ></Button>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>
