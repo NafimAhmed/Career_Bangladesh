@@ -47,7 +47,7 @@ public class Exp_profile extends AppCompatActivity {
         addexp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),)
+                Intent intent=new Intent(getApplicationContext(),training.class);
             }
         });
 
