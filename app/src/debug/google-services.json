@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444909047472",
+    "project_id": "careers-bangladesh",
+    "storage_bucket": "careers-bangladesh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444909047472:android:1bee8406ec8e0fce277575",
+        "android_client_info": {
+          "package_name": "com.careers.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444909047472-i6kr0nr4nfbb3ou9f9eto07eql8gl7s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLn-XoHLHYb6Fnov73liI_1o4KEnQaZVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444909047472-i6kr0nr4nfbb3ou9f9eto07eql8gl7s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
