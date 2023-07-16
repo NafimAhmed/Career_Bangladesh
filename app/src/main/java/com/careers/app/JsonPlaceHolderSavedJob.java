@@ -6,7 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Url;
 
 public interface JsonPlaceHolderSavedJob {
@@ -16,6 +15,19 @@ public interface JsonPlaceHolderSavedJob {
 
     @GET
     Call<PostJobDetail> getPostjobDetail(@Url String url);
+
+
+    @GET
+    Call<UsersPersonal> getUserDetail(@Url String url);
+
+    @GET
+    Call<Jobseeker_Edu_Detail> getJobseekerEduDetail(@Url String url);
+
+    @GET
+    Call<Job_Seeker_Exp_Detail> getJobseekerExpDetail(@Url String url);
+
+
+
 
 
     @POST("/savedjobs")
