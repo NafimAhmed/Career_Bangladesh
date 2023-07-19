@@ -22,6 +22,8 @@ public class Exp_profile extends AppCompatActivity {
 
     Button addexp;//
 
+    String emailjobSeeker;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +50,12 @@ public class Exp_profile extends AppCompatActivity {
         jbResponsiblityTwo=findViewById(R.id.jbResponsiblityTwo);
         jbExpertiesTwo=findViewById(R.id.jbExpertiesTwo);
         jbLocationTwo=findViewById(R.id.jbLocationTwo);
-
         addexp=findViewById(R.id.addexp);
+
+
+
+        Bundle extras = getIntent().getExtras();
+        emailjobSeeker= extras.getString("Email");
 
 
 
@@ -64,7 +70,7 @@ public class Exp_profile extends AppCompatActivity {
 
         JsonPlaceHolderSavedJob jsonPlaceHolderprofile=retrofit.create(JsonPlaceHolderSavedJob.class);
 
-        Call<Job_Seeker_Exp_Detail> call= jsonPlaceHolderprofile.getJobseekerExpDetail("shamim@gmail.com");
+        Call<Job_Seeker_Exp_Detail> call= jsonPlaceHolderprofile.getJobseekerExpDetail(emailjobSeeker);
 
         call.enqueue(new Callback<Job_Seeker_Exp_Detail>() {
             @Override

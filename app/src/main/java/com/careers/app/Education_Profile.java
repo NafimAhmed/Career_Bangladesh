@@ -25,6 +25,7 @@ public class Education_Profile extends AppCompatActivity {
             ,PassingYearThree,eduInstituteThree,eduMajorSpinnerThree,edulevelThree,eduResultTwo,
             eduResultTypeSpinnerTwo,PassingYearTwo,eduInstituteTwo,edulevelTwo,eduResultOne,eduPassingYearOne,
             eduInstituteOne,eduMajorSpinnerOne;
+    String emailjobSeeker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,12 @@ public class Education_Profile extends AppCompatActivity {
 
 
 
+        Bundle extras = getIntent().getExtras();
+        emailjobSeeker= extras.getString("Email");
+
+
+
+
 
 
 
@@ -78,7 +85,7 @@ public class Education_Profile extends AppCompatActivity {
 
         JsonPlaceHolderSavedJob jsonPlaceHolderprofile=retrofit.create(JsonPlaceHolderSavedJob.class);
 
-        Call<Jobseeker_Edu_Detail> call= jsonPlaceHolderprofile.getJobseekerEduDetail("shamim@gmail.com");
+        Call<Jobseeker_Edu_Detail> call= jsonPlaceHolderprofile.getJobseekerEduDetail(emailjobSeeker);
 
         call.enqueue(new Callback<Jobseeker_Edu_Detail>() {
             @Override
@@ -177,6 +184,7 @@ public class Education_Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),Exp_profile.class);
+                intent.putExtra("Email",emailjobSeeker);
                 startActivity(intent);
             }
         });

@@ -263,6 +263,7 @@ public class Home_page extends AppCompatActivity implements Adapter.OnNoteListen
                     case R.id.edit_profile:
                         Toast.makeText(Home_page.this, "Facebook", Toast.LENGTH_SHORT).show();
                         Intent in=new Intent(getApplicationContext(),Profile_page2.class);
+                        in.putExtra("Email",em);
                         startActivity(in);
                         drawerLayout.closeDrawers();
                         break;

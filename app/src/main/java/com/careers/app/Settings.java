@@ -13,13 +13,14 @@ import android.widget.TextView;
 public class Settings extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner languageSpiner;
-    TextView changepass;
+    TextView changepass,about;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
 
 
 
@@ -46,6 +47,10 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
 
 
 
+
+
+
+
     }
 
     @Override
@@ -62,4 +67,16 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
         Intent intent=new Intent(getApplicationContext(),forgot_password.class);
         startActivity(intent);
     }
+
+    public void aboutUS(View view){
+
+        Intent intent=new Intent(getApplicationContext(),Aboutus.class);
+        startActivity(intent);
+
+    }
+
+
+
+
+
 }

@@ -109,6 +109,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="25dp"
+        android:clickable="true"
+        android:onClick="aboutUS"
         android:text="About"></TextView>
 
     <TextView

@@ -23,12 +23,17 @@ public class Profile_page2 extends AppCompatActivity {
 
     EditText NID_NO,PassportNo,email,name,phone_number,permanentAddress,presentAddress,Skills, fatherName,CareerObj, mothersName,Religion,gender,MaritalStatus,Nationality;
     Button basic_info_Save;
+    String emailjobSeeker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page2);
 
+
+
+        Bundle extras = getIntent().getExtras();
+        emailjobSeeker= extras.getString("Email");
 
 
 
@@ -68,7 +73,7 @@ public class Profile_page2 extends AppCompatActivity {
 
         JsonPlaceHolderSavedJob jsonPlaceHolderprofile=retrofit.create(JsonPlaceHolderSavedJob.class);
 
-        Call<UsersPersonal> call= jsonPlaceHolderprofile.getUserDetail("shamim@gmail.com");
+        Call<UsersPersonal> call= jsonPlaceHolderprofile.getUserDetail(emailjobSeeker/*"shamim@gmail.com"*/);
 
         call.enqueue(new Callback<UsersPersonal>() {
             @Override
@@ -146,6 +151,7 @@ public class Profile_page2 extends AppCompatActivity {
                     public void onClick(View v) {
 
                         Intent intent=new Intent(getApplicationContext(), Education_Profile.class);
+                        intent.putExtra("Email",emailjobSeeker);
                         startActivity(intent);
 
                     }

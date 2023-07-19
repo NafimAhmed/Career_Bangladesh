@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Aboutus">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:padding="20dp"
+        android:text="Careersbangladesh.com is the most innovative and one of the fast-growing online job portals in Bangladesh. Founded in 2023.
+
+Careersbangladesh.com connects jobseekers and recruiters by accurately matching candidate profiles to the relevant job openings through an advanced 2-way matching technology.
+
+While most job portals only focus on getting candidates the next job, Careersbangladesh focuses on the entire career growth of candidates.
+
+As the industry shifts towards mobile, Careersbangladesh is leading the transition and is the fastest-growing job portal on mobile devices, witnessing a 100% YOY growth in mobile traffic and also offering on-the-go jobs through the Careersbangladesh Job Search App.
+
+"
+        ></TextView>
+
+
+
+</LinearLayout>
